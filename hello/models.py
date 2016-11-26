@@ -19,7 +19,7 @@ class MultChoice(models.Model):
 	x = models.CharField(max_length=100)
 	y = models.CharField(max_length=100)
 	z = models.CharField(max_length=100)
-	correct = models.CharField(max_length=1, choices=("w","x","y","z"))
+	correct = models.CharField(max_length=1)
 
 class Question(models.Model):
 	subject = models.ForeignKey(Topics, on_delete=models.CASCADE)
