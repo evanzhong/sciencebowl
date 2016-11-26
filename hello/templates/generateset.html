@@ -4,7 +4,146 @@
 {% block content %}
 
 <div>
-  Generate a question set!
+	<div id="Back">
+		<p class="buttons" id="back">Back</p>
+	</div>
+	<div id="NOSB">
+		<p class="buttons" id="nosbButton">NOSB Question Set</p>
+	</div>
+	
+	<div id="NSB">
+		<p class="buttons" id="nsbButton">NSB Question Set</p>
+	</div>
+
+	<style type="text/css">
+		body{
+/*			background-image: url('http://eskipaper.com/images/beach-background-4.jpg');*/
+			/*background-size: cover;*/
+			background-image: url('test.png');
+			background-repeat: repeat;
+		}
+		#NOSB{
+			text-align: center;
+			margin: auto;
+			width: 145px;
+		}
+		#NSB{
+			text-align: center;
+			margin: auto;
+			width: 140px;
+		}
+		#back{
+			display: none;
+			text-align: center;
+			margin: auto;
+			width: 50px;
+		}
+		#qSelection{
+			display: none;
+			margin: auto;
+			width: 50%;
+		}
+		#nsbSubjects{
+			display: none;
+		}
+		#nosbSubjects{
+			display: none;
+		}
+		.buttons{
+			border: 2px solid black;
+
+		}
+
+		/* JS classes */
+		.visible{
+			display: block;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("#nosbButton").click(function (event){	
+			$("#qSelection").fadeIn(1000);
+			$("#nosbSubjects").fadeIn(1000);
+			$(".buttons").toggle();
+			console.log("clicked");
+
+		});
+
+		$("#nsbButton").click(function (event){	
+			$("#qSelection").fadeIn(1000);
+			$("#nsbSubjects").fadeIn(1000);
+			$(".buttons").toggle();
+			console.log("clicked");
+		});
+	
+		$("#back").click(function (event){	
+			$("#qSelection").fadeOut(300);
+			$("#nsbSubjects").fadeOut(300);
+			$("#nosbSubjects").fadeOut(300);
+			$(".buttons").toggle();
+			console.log("clicked");
+		});
+	</script>
+	
+	<div id="qSelection">
+		<form action="placeholder.html">
+			<div id="difficultyWrapper">
+				<h1>Difficulty</h1>
+				<div><label for="1">1</label><input type="checkbox" name="1" value="1"> </div>
+				<div><label for="2">2</label><input type="checkbox" name="2" value="2"> </div>
+				<div><label for="3">3</label><input type="checkbox" name="3" value="3"> </div>
+				<div><label for="4">4</label><input type="checkbox" name="4" value="4"> </div>
+				<div><label for="5">5</label><input type="checkbox" name="5" value="5"> </div>
+			</div>
+
+			<div id="rndTypeWrapper">
+				<h1>Round Type</h1>
+				<div><input type="radio" name="TossupOnly" value="1"><label for="TossupOnly">Toss-Up only</label></div>
+				<div><input type="radio" name="TossupAndBonus" value="2"><label for="TossupAndBonus">Toss-Up and Bonus</label></div>
+			</div>
+			
+			<div id="numQuestionsWrapper">
+				<h1>Number of Questions</h1>
+				<div><label for="numQs">Number of Questions: </label><input type="number" name="numQs" min="25"></div>
+			</div>
+
+
+			<div id="nsbSubjects">
+				<h1>Subtopic Percentages</h1>
+				<div><label for="generalPercent">General </label><input type="number" name="generalPercent" max="100"></div>
+				<div><label for="astronomyPercent">Astronomy </label><input type="number" name="astronomyPercent" max="100"></div>
+				<div><label for="biologyPercent">Biology </label><input type="number" name="biologyPercent" max="100"></div>
+				<div><label for="chemistryPercent">Chemistry </label><input type="number" name="chemistryPercent" max="100"></div>
+				<div><label for="earthPercent">Earth </label><input type="number" name="earthPercent" max="100"></div>
+				<div><label for="energyPercent">Energy </label><input type="number" name="energyPercent" max="100"></div>
+				<div><label for="mathPercent">Math </label><input type="number" name="mathPercent" max="100"></div>
+				<div><label for="physicsPercent">Physics </label><input type="number" name="physicsPercent" max="100"></div>
+				
+
+			</div>
+
+			<div id="nosbSubjects">
+				<h1>Subject Percentages</h1>
+				<div><label for="generalPercent">General </label><input type="number" name="generalPercent" max="100"></div>
+				<div><label for="geographyPercent">Geography </label><input type="number" name="geographyPercent" max="100"></div>
+				<div><label for="marinebiologyPercent">Marine Biology </label><input type="number" name="marinebiologyPercent" max="100"></div>
+				<div><label for="marinetechnologyPercent">Marine Technology </label><input type="number" name="marinetechnologyPercent" max="100"></div>
+				<div><label for="marinepolicyPercent">Marine Policy </label><input type="number" name="marinepolicyPercent" max="100"></div>
+				<div><label for="physicaloceanographyPercent">Physical Oceanography </label><input type="number" name="physicaloceanographyPercent" max="100"></div>
+			</div>	
+		</form>
+	</div>
+
+
+
+
+
+
+
+
+
+
 </div>
 
 {% endblock %}
