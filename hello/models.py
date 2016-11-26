@@ -8,10 +8,12 @@ class Topics(models.Model):
 	comp = models.CharField(max_length=100)
 	subject = models.CharField(max_length=100)
 	subtopic = models.CharField(max_length=100)
+	category = models.CharField(max_length=100)
 
 class Author(models.Model):
 	author_first = models.CharField(max_length=100)
 	author_last = models.CharField(max_length=100)
+	set_number = models.CharField(max_length=4)
 
 class MultChoice(models.Model):
 	w = models.CharField(max_length=100)
@@ -29,3 +31,4 @@ class Question(models.Model):
 	question_text = models.CharField(max_length=10000) # change max length?
 	short_answer_answer_text = models.CharField(max_length=10000)
 	mult_choice_choices = models.ForeignKey(MultChoice, on_delete=models.CASCADE)
+	difficulty = models.IntegerField()
