@@ -11,8 +11,7 @@ class Topics(models.Model):
 	category = models.CharField(max_length=100)
 
 class Author(models.Model):
-	author_first = models.CharField(max_length=100)
-	author_last = models.CharField(max_length=100)
+	name = models.CharField(max_length=100)
 	set_number = models.CharField(max_length=4)
 
 class MultChoice(models.Model):
