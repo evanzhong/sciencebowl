@@ -7,7 +7,7 @@ A question bank application for Science Bowl created by Albany High School stude
 Make sure you have Python [installed properly](http://install.python-guide.org).  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
 
 ```sh
-$ git clone git@github.com:andimus/sciencebowl.git
+$ git clone https://github.com/andimus/sciencebowl
 $ cd sciencebowl
 
 $ pip install -r requirements.txt
