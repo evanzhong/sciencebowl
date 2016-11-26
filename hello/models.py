@@ -14,10 +14,11 @@ class Author(models.Model):
 	author_last = models.CharField(max_length=100)
 
 class MultChoice(models.Model):
-	right_answer = models.CharField(max_length=100)
-	first_wrong = models.CharField(max_length=100)
-	second_wrong = models.CharField(max_length=100)
-	third_wrong = models.CharField(max_length=100)
+	w = models.CharField(max_length=100)
+	x = models.CharField(max_length=100)
+	y = models.CharField(max_length=100)
+	z = models.CharField(max_length=100)
+	correct = models.CharField(max_length=1, choices=("w","x","y","z"))
 
 class Question(models.Model):
 	subject = models.ForeignKey(Topics, on_delete=models.CASCADE)
