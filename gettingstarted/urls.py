@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^generateset', hello.views.generateset, name='generateset'),
     url(r'^questionset', hello.views.questionset, name='questionset'),
     url(r'^addquestions', hello.views.addquestions, name='addquestions'),
+    url(r'^questionsconfirmed', hello.views.questionsconfirmed, name='questionsconfirmed'),
     url(r'^db', hello.views.db, name='db'),
     url(r'^admin/', include(admin.site.urls)),
 ]

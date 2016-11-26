@@ -11,6 +11,9 @@ def index(request):
 def addquestions(request):
     return render(request, 'addquestions.html')
 
+def questionsconfirmed(request):
+    return render(request, 'questionsconfirmed.html')
+
 def generateset(request):
     return render(request, 'generateset.html')
 
