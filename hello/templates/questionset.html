@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div>
+  Here are your questions!
+
+  {% for question in questions %}
+  <li>{{ question.subject }}</li>
+  {% endfor %}
+
+</div>
+
+{% endblock %}
