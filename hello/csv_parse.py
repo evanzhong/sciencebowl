@@ -2,28 +2,20 @@ import csv
 from hello.models import Question
 
 def parse(text):
-    csv_stuff = csv.DictReader(text, delimiter=',', quotechar='"')
-    my_keys =["comp",
-              "subject",
-              "subtopic",
-              "category",
-              "name",
-              "set_number",
-              "date_written",
-              "date_last_mod",
-              "question_type",
-              "question_text",
-              "short_answer_answer_text",
-              "w",
-              "x",
-              "y",
-              "z",
-              "correct",
-              "difficulty"]
-    for r in csv_stuff:
-        result_dict = {}
-        for key in my_keys:
-            if key in r:
-                result_dict[key] = r[key]
-        question = Question(**result_dict)
-        question.save()
+    rows = text.split("\n")
+    types = rows[0].split(",");
+
+    for row in rows:
+        obj = row.split(",")
+        question = Question()
+        if len(obj) > 2:
+            question.question_text = obj[3];
+            question.w = obj[4];
+            question.x = obj[5];
+            question.y = obj[6];
+            question.z = obj[7];
+            question.correct = obj[8];
+            question.save()
+        else:
+            print("failed to write question (length is not right)")
+            print(obj)
