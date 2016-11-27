@@ -27,7 +27,9 @@ def questionset(request):
 @csrf_exempt
 def upload_csv(request):
     if request.method == 'POST':
-        text = request.POST['upload']
+        text = request.POST.get('upload')
+        if text == "":
+            raise RuntimeError("upload is empty!")
         csv_parse.parse(text)
     return render(request, 'index.html')
 
