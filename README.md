@@ -35,6 +35,25 @@ or
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+## Admin Functionality
+Python has some nice built in admin functionality we can use to edit the DB.
+
+Create a superuser
+```
+$ python manage.py createsuperuser
+```
+
+You should be able to use the admin page at: [http://localhost:5000/admin](http://localhost:5000/admin)
+
+Note: don't forget to add new tables to `admin.py` to be able to edit them.
+
+## Changing Schema
+After a schema change, you'll need to migrate your database locally to work. To do this run:
+```
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
 ## Documentation
 
 For more information about using Python on Heroku, see these Dev Center articles:

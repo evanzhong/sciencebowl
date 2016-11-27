@@ -25,7 +25,5 @@ def parse(text):
         for key in my_keys:
             if key in r:
                 result_dict[key] = r[key]
-            else:
-                result_dict[key] = ""
         question = Question(**result_dict)
         question.save()
