@@ -4,7 +4,16 @@
 {% block content %}
 
 <div>
-  Add a question!
+<!-- 	<form action="upload-csv" method="post" enctype="multipart/form-data">
+	    Select file to upload:
+	    <input type="file" name="fileToUpload" id="fileToUpload">
+	    <input type="submit" value="UploadFile" name="submit">
+	</form> -->
+
+	<form action="upload-csv" method="post">
+		<label for="upload">Paste CSV output here: </label><input type="textarea" name="upload">
+		<input type="submit" name="submit">
+	</form>
 </div>
 
 {% endblock %}
