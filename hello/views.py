@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from .models import Greeting
 from .models import Question
 
+import csv_parse
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -24,7 +26,7 @@ def questionset(request):
 def upload_csv(request):
     if request.method == 'POST':
         text = request.POST['upload']
-        csv_parse(text)
+        csv_parse.parse(text)
     return render(request, 'index.html')
 
 def db(request):
