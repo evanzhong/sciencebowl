@@ -11,8 +11,8 @@ class Question(models.Model):
 	category = models.CharField(max_length=100, default=None, blank=True, null=True)
 	name = models.CharField(max_length=100, default=None, blank=True, null=True)
 	set_number = models.CharField(max_length=4, default=None, blank=True, null=True)
-	date_written = models.DateTimeField('date created', auto_now_add=True, default=None, blank=True, null=True) #maybe not correct
-	date_last_mod = models.DateTimeField('date last modified', auto_now_add=True, default=None, blank=True, null=True) #maybe not correct
+	date_written = models.DateTimeField('date created', auto_now_add=True, blank=True, null=True) #maybe not correct
+	date_last_mod = models.DateTimeField('date last modified', auto_now_add=True, blank=True, null=True) #maybe not correct
 	question_type = models.CharField(max_length=20, default=None, blank=True, null=True)
 	question_text = models.CharField(max_length=10000, default=None, blank=True, null=True) # change max length?
 	short_answer_answer_text = models.CharField(max_length=10000, default=None, blank=True, null=True)
