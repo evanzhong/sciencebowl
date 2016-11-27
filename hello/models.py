@@ -14,13 +14,6 @@ class Author(models.Model):
 	name = models.CharField(max_length=100)
 	set_number = models.CharField(max_length=4)
 
-class MultChoice(models.Model):
-	w = models.CharField(max_length=100)
-	x = models.CharField(max_length=100)
-	y = models.CharField(max_length=100)
-	z = models.CharField(max_length=100)
-	correct = models.CharField(max_length=1)
-
 class Question(models.Model):
 	subject = models.ForeignKey(Topics, on_delete=models.CASCADE)
 	author = models.ForeignKey(Author, on_delete=models.CASCADE)
@@ -29,5 +22,10 @@ class Question(models.Model):
 	question_type = models.CharField(max_length=20)
 	question_text = models.CharField(max_length=10000) # change max length?
 	short_answer_answer_text = models.CharField(max_length=10000)
-	mult_choice_choices = models.ForeignKey(MultChoice, on_delete=models.CASCADE)
+	w = models.CharField(max_length=100)
+	x = models.CharField(max_length=100)
+	y = models.CharField(max_length=100)
+	z = models.CharField(max_length=100)
+	correct = models.CharField(max_length=1)
 	difficulty = models.IntegerField()
+	
