@@ -47,6 +47,13 @@ You should be able to use the admin page at: [http://localhost:5000/admin](http:
 
 Note: don't forget to add new tables to `admin.py` to be able to edit them.
 
+## Changing Schema
+After a schema change, you'll need to migrate your database locally to work. To do this run:
+```
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
 ## Documentation
 
 For more information about using Python on Heroku, see these Dev Center articles:
