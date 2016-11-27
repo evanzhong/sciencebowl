@@ -18,8 +18,8 @@ def generateset(request):
     return render(request, 'generateset.html')
 
 def questionset(request):
-    # questions = Question.objects.all()
-    return render(request, 'questionset.html')
+    questions = Question.objects.all()
+    return render(request, 'questionset.html', {'questions': questions})
 
 def upload_csv(request):
     if request.method == 'POST':
