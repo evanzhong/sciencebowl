@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Greeting
 from .models import Question
@@ -23,6 +24,7 @@ def questionset(request):
     questions = Question.objects.all()
     return render(request, 'questionset.html', {'questions': questions})
 
+@csrf_exempt
 def upload_csv(request):
     if request.method == 'POST':
         text = request.POST['upload']
