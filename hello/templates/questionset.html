@@ -7,7 +7,16 @@
   Here are your questions!
 
   {% for question in questions %}
-  <li>{{ question.subject }}</li>
+  <div>
+    {{ question.question_text }}
+    <ul>
+      <li>W: {{ question.w }}</li>
+      <li>X: {{ question.x }}</li>
+      <li>Y: {{ question.y }}</li>
+      <li>Z: {{ question.z }}</li>
+    </ul>
+    Correct Answer: {{ question.correct }}
+  </div>
   {% endfor %}
 
 </div>
