@@ -25,7 +25,7 @@ def questionset(request):
     return render(request, 'questionset.html', {'questions': questions})
 
 @csrf_exempt
-def upload_csv(request):
+def upload_tsv(request):
     if request.method == 'POST':
         text = request.POST.get('upload')
         if text == "":
