@@ -33,7 +33,6 @@
 			width: 140px;
 		}
 		#back{
-			display: none;
 			text-align: center;
 			margin: auto;
 			width: 50px;
@@ -50,8 +49,8 @@
 			display: none;
 		}
 		.buttons{
+			display: none;
 			border: 2px solid black;
-
 		}
 
 		/* JS classes */
@@ -62,6 +61,9 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script type="text/javascript">
+		$("#nosbButton.buttons").toggle();
+		$("#nsbButton.buttons").toggle();
+		
 		$("#nosbButton").click(function (event){	
 			$("#qSelection").fadeIn(1000);
 			$("#nosbSubjects").fadeIn(1000);
@@ -105,32 +107,30 @@
 			
 			<div id="numQuestionsWrapper">
 				<h1>Number of Questions</h1>
-				<div><label for="numQs">Number of Questions: </label><input type="number" name="numQs" min="25"></div>
+				<div><label for="numQs">Number of Questions: </label><input type="Number" name="numQs" min="25"></div>
 			</div>
 
 
 			<div id="nsbSubjects">
-				<h1>Subtopic Percentages</h1>
-				<div><label for="generalPercent">General </label><input type="number" name="generalPercent" max="100"></div>
-				<div><label for="astronomyPercent">Astronomy </label><input type="number" name="astronomyPercent" max="100"></div>
-				<div><label for="biologyPercent">Biology </label><input type="number" name="biologyPercent" max="100"></div>
-				<div><label for="chemistryPercent">Chemistry </label><input type="number" name="chemistryPercent" max="100"></div>
-				<div><label for="earthPercent">Earth </label><input type="number" name="earthPercent" max="100"></div>
-				<div><label for="energyPercent">Energy </label><input type="number" name="energyPercent" max="100"></div>
-				<div><label for="mathPercent">Math </label><input type="number" name="mathPercent" max="100"></div>
-				<div><label for="physicsPercent">Physics </label><input type="number" name="physicsPercent" max="100"></div>
-				
-
+				<h1>Subtopic Select</h1>
+				<div><label for="generalSelect">General </label><input type="checkbox" name="generalSelect" max="100"></div>
+				<div><label for="astronomySelect">Astronomy </label><input type="checkbox" name="astronomySelect" max="100"></div>
+				<div><label for="biologySelect">Biology </label><input type="checkbox" name="biologySelect" max="100"></div>
+				<div><label for="chemistrySelect">Chemistry </label><input type="checkbox" name="chemistrySelect" max="100"></div>
+				<div><label for="earthSelect">Earth </label><input type="checkbox" name="earthSelect" max="100"></div>
+				<div><label for="energySelect">Energy </label><input type="checkbox" name="energySelect" max="100"></div>
+				<div><label for="mathSelect">Math </label><input type="checkbox" name="mathSelect" max="100"></div>
+				<div><label for="physicsSelect">Physics </label><input type="checkbox" name="physicsSelect" max="100"></div>
 			</div>
 
 			<div id="nosbSubjects">
-				<h1>Subject Percentages</h1>
-				<div><label for="generalPercent">General </label><input type="number" name="generalPercent" max="100"></div>
-				<div><label for="geographyPercent">Geography </label><input type="number" name="geographyPercent" max="100"></div>
-				<div><label for="marinebiologyPercent">Marine Biology </label><input type="number" name="marinebiologyPercent" max="100"></div>
-				<div><label for="marinetechnologyPercent">Marine Technology </label><input type="number" name="marinetechnologyPercent" max="100"></div>
-				<div><label for="marinepolicyPercent">Marine Policy </label><input type="number" name="marinepolicyPercent" max="100"></div>
-				<div><label for="physicaloceanographyPercent">Physical Oceanography </label><input type="number" name="physicaloceanographyPercent" max="100"></div>
+				<h1>Subject Select</h1>
+				<div><label for="generalSelect">General </label><input type="checkbox" name="generalSelect" max="100"></div>
+				<div><label for="geographySelect">Geography </label><input type="checkbox" name="geographySelect" max="100"></div>
+				<div><label for="marinebiologySelect">Marine Biology </label><input type="checkbox" name="marinebiologySelect" max="100"></div>
+				<div><label for="marinetechnologySelect">Marine Technology </label><input type="checkbox" name="marinetechnologySelect" max="100"></div>
+				<div><label for="marinepolicySelect">Marine Policy </label><input type="checkbox" name="marinepolicySelect" max="100"></div>
+				<div><label for="physicaloceanographySelect">Physical Oceanography </label><input type="checkbox" name="physicaloceanographySelect" max="100"></div>
 			</div>	
 		</form>
 	</div>
