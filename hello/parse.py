@@ -5,7 +5,7 @@ def parse(text):
     types = rows[0].split("\t");
 
     for row in rows:
-        obj = row.split("\t")
+        obj = row.split("~")
         question = Question()
         if len(obj) == 13:
             question.comp = obj[0];
