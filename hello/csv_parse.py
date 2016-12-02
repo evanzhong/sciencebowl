@@ -8,7 +8,7 @@ def parse(text):
     for row in rows:
         obj = row.split("\t")
         question = Question()
-        if len(obj) = 13:
+        if len(obj) == 13:
             question.comp = obj[0];
             question.subject = obj[1];
             question.subtopic = obj[2];
