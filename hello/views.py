@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import Greeting
 from .models import Question
 
-import csv_parse
+import parse
 
 # Create your views here.
 def index(request):
@@ -25,12 +25,12 @@ def questionset(request):
     return render(request, 'questionset.html', {'questions': questions})
 
 @csrf_exempt
-def upload_tsv(request):
+def upload(request):
     if request.method == 'POST':
         text = request.POST.get('upload')
         if text == "":
             raise RuntimeError("upload is empty!")
-        csv_parse.parse(text)
+        parse.parse(text)
     return render(request, 'index.html')
 
 def db(request):

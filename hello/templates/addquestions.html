@@ -4,14 +4,14 @@
 {% block content %}
 
 <div>
-<!-- 	<form action="upload-csv" method="post" enctype="multipart/form-data">
+<!-- 	<form action="upload" method="post" enctype="multipart/form-data">
 	    Select file to upload:
 	    <input type="file" name="fileToUpload" id="fileToUpload">
 	    <input type="submit" value="UploadFile" name="submit">
 	</form> -->
 
-	<form action="upload-tsv" method="post">
-		<label for="upload">Paste TSV here: (Values from parser.py)</label><textarea name="upload" cols="1000" rows="1000"></textarea>
+	<form action="upload" method="post">
+		<label for="upload">Paste TSV here: (Values from parser.py)</label><textarea id="upload" name="upload" cols="1000" rows="1000"></textarea>
 		<input type="submit" name="submit">
 	</form>
 </div>

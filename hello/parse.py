@@ -1,4 +1,3 @@
-import csv
 from hello.models import Question
 
 def parse(text):
