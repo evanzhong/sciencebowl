@@ -3,18 +3,12 @@
 
 {% block content %}
 
-<div>
-	<div id="Back">
-		<p class="buttons" id="back">Back</p>
+<div id="main">
+	<div id="content">
+			<p class="buttons" id="back">Back</p>
+			<p class="buttons" id="nosbButton">NOSB Question Set</p>
+			<p class="buttons" id="nsbButton">NSB Question Set</p>
 	</div>
-	<div id="NOSB">
-		<p class="buttons" id="nosbButton">NOSB Question Set</p>
-	</div>
-	
-	<div id="NSB">
-		<p class="buttons" id="nsbButton">NSB Question Set</p>
-	</div>
-
 	<style type="text/css">
 		body{
 /*			background-image: url('http://eskipaper.com/images/beach-background-4.jpg');*/
@@ -22,36 +16,60 @@
 			background-image: url('test.png');
 			background-repeat: repeat;
 		}
+		#main{
+			margin-bottom: 1vh
+		}
 		h1{
 			display: none;
-			margin: 0px;
+			margin: none;
+			margin-top: 2vh;
+			margin-bottom: 2vh;
 			text-align: center;
 		}
 		h3{
 			margin-top: 25px;
 			margin-bottom: 5px;
 		}
-		#NOSB{
+		#content{
 			text-align: center;
+			height: 5vw;
+			width: 75vw;
+			padding: 1vw;
 			margin: auto;
-			width: 145px;
 		}
-		#NSB{
+		/*Buttons*/
+		.buttons{
 			text-align: center;
-			margin: auto;
-			width: 140px;
+			vertical-align: middle;
+			display: none;
+			border: 2px solid black;
+			width: 20vw;
+			line-height: 5vh;
+			/*margin: auto;*/
+			margin-top: 1vh;
+			margin-bottom: 2vh;
+			padding: 5vh;
+		}
+		#nosbButton{
+			float: left;
+			clear: left;
+		}
+		#nsbButton{
+			float: right;
+			clear: right;
 		}
 		#back{
-			text-align: center;
 			margin: auto;
-			width: 50px;
 		}
+
 		#qSelection{
 			display: none;
 			margin: auto;
 			padding: 20px;
 			width: 50%;
-			background-color: lightblue;
+			background-image: url('d.png');
+			background-repeat: repeat;
+			box-shadow: 0px 0px 15px;
 		}
 		#nsbSubjects{
 			display: none;
@@ -59,14 +77,13 @@
 		#nosbSubjects{
 			display: none;
 		}
-		.buttons{
-			display: none;
-			border: 2px solid black;
-		}
 		#sub{
 			display: block;
 			width: 75px;
 			margin: auto;
+		}
+		#difficultyWrapper h3{
+			margin-top: 5px;
 		}
 
 		/* JS classes */
@@ -80,38 +97,46 @@
 		$("#nosbButton.buttons").toggle();
 		$("#nsbButton.buttons").toggle();
 
-		$("#nosbButton").click(function (event){	
-			$("#qSelection").fadeIn(1000);
-			$("#nosbSubjects").fadeIn(1000);
-			$("#NOSBHeader").fadeIn(400);
+		$("#nosbButton").click(function (event){
 			$(".buttons").toggle();
+			setTimeout(function(){
+				$("#qSelection").fadeIn(1000);
+				$("#nosbSubjects").fadeIn(1000);
+				$("#NOSBHeader").fadeIn(400);
+			}, 100);
 			console.log("clicked");
 
 		});
 
-		$("#nsbButton").click(function (event){	
-			$("#qSelection").fadeIn(1000);
-			$("#nsbSubjects").fadeIn(1000);
-			$("#NSBHeader").fadeIn(400);
+		$("#nsbButton").click(function (event){
 			$(".buttons").toggle();
+			setTimeout(function(){
+				$("#qSelection").fadeIn(1000);
+				$("#nsbSubjects").fadeIn(1000);
+				$("#NSBHeader").fadeIn(400);
+			}, 100);
 			console.log("clicked");
 		});
 	
 		$("#back").click(function (event){	
+			$("#back").toggle();
 			$("#qSelection").fadeOut(300);
 			$("#nsbSubjects").fadeOut(300);
 			$("#nosbSubjects").fadeOut(300);
 			$("#NOSBHeader").fadeOut(300);
 			$("#NSBHeader").fadeOut(300);
-			$(".buttons").toggle();
+			setTimeout(function(){
+				$("#nosbButton").fadeIn(700);
+				$("#nsbButton").fadeIn(700);
+			}, 400);
 			console.log("clicked");
 		});
 	</script>
-	
+
+	<h1 id="NSBHeader">NSB Set Generation</h1>
+	<h1 id="NOSBHeader">NOSB Set Generation</h1>
 	<div id="qSelection">
 		<form action="placeholder">
-			<h1 id="NSBHeader">NSB Set Generation</h1>
-			<h1 id="NOSBHeader">NOSB Set Generation</h1>
 			<div id="difficultyWrapper">
 				<h3>Difficulty</h3>
 				<div><label for="1">1</label><input type="checkbox" name="1" value="1"> </div>
@@ -135,24 +160,29 @@
 
 			<div id="nsbSubjects">
 				<h3>Subtopic Select</h3>
-				<div><input type="checkbox" name="generalSelect" max="100"><label for="generalSelect">General </label></div>
-				<div><input type="checkbox" name="astronomySelect" max="100"><label for="astronomySelect">Astronomy </label></div>
-				<div><input type="checkbox" name="biologySelect" max="100"><label for="biologySelect">Biology </label></div>
-				<div><input type="checkbox" name="chemistrySelect" max="100"><label for="chemistrySelect">Chemistry </label></div>
-				<div><input type="checkbox" name="earthSelect" max="100"><label for="earthSelect">Earth </label></div>
-				<div><input type="checkbox" name="energySelect" max="100"><label for="energySelect">Energy </label></div>
-				<div><input type="checkbox" name="mathSelect" max="100"><label for="mathSelect">Math </label></div>
-				<div><input type="checkbox" name="physicsSelect" max="100"><label for="physicsSelect">Physics </label></div>
+				<div><input type="checkbox" name="generalSelect"><label for="generalSelect">General </label></div>
+				<div><input type="checkbox" name="astronomySelect"><label for="astronomySelect">Astronomy </label></div>
+				<div><input type="checkbox" name="biologySelect"><label for="biologySelect">Biology </label></div>
+				<div><input type="checkbox" name="chemistrySelect"><label for="chemistrySelect">Chemistry </label></div>
+				<div><input type="checkbox" name="earthSelect"><label for="earthSelect">Earth </label></div>
+				<div><input type="checkbox" name="energySelect"><label for="energySelect">Energy </label></div>
+				<div><input type="checkbox" name="mathSelect"><label for="mathSelect">Math </label></div>
+				<div><input type="checkbox" name="physicsSelect"><label for="physicsSelect">Physics </label></div>
 			</div>
 
 			<div id="nosbSubjects">
 				<h3>Subject Select</h3>
-				<div><input type="checkbox" name="generalSelect" max="100"><label for="generalSelect">General </label></div>
-				<div><input type="checkbox" name="geographySelect" max="100"><label for="geographySelect">Geography </label></div>
-				<div><input type="checkbox" name="marinebiologySelect" max="100"><label for="marinebiologySelect">Marine Biology </label></div>
-				<div><input type="checkbox" name="marinetechnologySelect" max="100"><label for="marinetechnologySelect">Marine Technology </label></div>
-				<div><input type="checkbox" name="marinepolicySelect" max="100"><label for="marinepolicySelect">Marine Policy </label></div>
-				<div><input type="checkbox" name="physicaloceanographySelect" max="100"><label for="physicaloceanographySelect">Physical Oceanography </label></div>
+				<div><input type="checkbox" name="generalSelect"><label for="generalSelect">General </label></div>
+				<div><input type="checkbox" name="geographySelect"><label for="geographySelect">Geography </label></div>
+				<div><input type="checkbox" name="marinebiologySelect"><label for="marinebiologySelect">Marine Biology </label></div>
+				<div><input type="checkbox" name="marinetechnologySelect"><label for="marinetechnologySelect">Marine Technology </label></div>
+				<div><input type="checkbox" name="marinepolicySelect"><label for="marinepolicySelect">Marine Policy </label></div>
+				<div><input type="checkbox" name="physicaloceanographySelect"><label for="physicaloceanographySelect">Physical Oceanography </label></div>
+			</div>
+
+			<div id="scrammbleWrapper">
+				<h3>Additional Options</h3>
+				<div><input type="checkbox" name="scrammbleQs"><label for="scrammbleQs">Scramble Question Choices</label></div>
 			</div>
 			<input type="submit" name="submit" value="submit" id="sub">	
 		</form>
