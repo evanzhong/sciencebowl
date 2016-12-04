@@ -2,13 +2,60 @@
 {% load staticfiles %}
 
 {% block content %}
-
-<div>
-  Hello Science Bowl
-  <br><br>
-  <a href="/addquestions.html">Add Questions</a>
-  <br>
-  <a href="/generateset.html">Generate Set</a>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<style type="text/css">
+	body{
+		font-family: Ubuntu, sans-serif;
+		background-image: url('test.png');
+		background-repeat: repeat;
+		font-family: 
+	}
+	h1{
+		font-size: 4.5vw;
+		text-align: center;
+		margin-bottom: 2vh;
+		padding-bottom: 7vh;
+	}
+	#content {
+    	margin-left: auto;
+    	margin-right: auto;
+    	width: 75vw;
+    	height: 60vh;
+    	background-color: white;
+    	padding-top: 7vh;
+    	padding-bottom: 7vh;
+    	padding-left: 8vw;
+    	padding-right: 8vw;
+    	box-shadow: 0px 0px 20px;
+    }
+	.choose {
+		display: block;
+		height: 5vw;
+		width: 25vw;
+		float: right;
+		line-height: 5vw;
+		padding: 5vw;
+		background-color: #FAFAFA;
+		text-align: center;
+		text-decoration: none;
+		font-size: 3.0vw;
+		box-shadow: 0px 0px 5px #BABABA;
+		color: #4149D4;
+	}
+	.choose:hover{
+		background-color: #FAFAF0;
+	}
+    #add{
+    	float: left;
+    }
+    #gen{
+    	float: right;
+    }
+</style>
+<div id="content">
+  <h1>Welcome: Science Bowl</h1>
+  <div><a href="/addquestions.html" class="choose" id="add">ADD QUESTIONS</a></div>
+  <div><a href="/generateset.html" class="choose" id="gen">GENERATE SET</a></div>
 </div>
 
 {% endblock %}
