@@ -2,17 +2,59 @@
 {% load staticfiles %}
 
 {% block content %}
-
-<div>
-<!-- 	<form action="upload" method="post" enctype="multipart/form-data">
-	    Select file to upload:
-	    <input type="file" name="fileToUpload" id="fileToUpload">
-	    <input type="submit" value="UploadFile" name="submit">
-	</form> -->
-
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<style type="text/css">
+	body{
+		background-image: url('test.png');
+		background-repeat: repeat;
+	}
+	label{
+		font-family: Ubuntu, sans-serif;
+		font-weight: bold;
+		font-size: 2.0vw;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		width: 80vw;
+		height: 5vh;
+	}
+	textarea{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		box-shadow: 0px 0px 10px;
+		width: 80vw;
+		height: 70vh;
+		overflow-x: scroll;
+		overflow-y: scroll;
+	}
+	#sub{
+		text-align: center;
+	}
+	input[type=submit] {
+		font-family: Ubuntu, sans-serif;
+		padding: 6vh;
+		padding-top: 4vh;
+		padding-bottom: 4vh;
+		color: #4149D4;
+	    background: #FAFAFA;
+		box-shadow: 0px 0px 15px #BABABA; 
+	    border: none;
+	    cursor:pointer;
+	    border-radius: 5px; 
+	}
+	input[type=submit]:hover{
+		background: #FAFAF0;
+	} 
+</style>
+<div id="formWrap">
 	<form action="upload" method="post">
-		<label for="upload">Paste TSV here: (Values from parser.py)</label><textarea id="upload" name="upload" cols="1000" rows="500"></textarea>
-		<input type="submit" name="submit">
+		<label for="upload">Paste TSV here: (Values from parser.py)</label><textarea id="upload" name="upload" cols="1000" rows="1000"></textarea>
+		<div id="sub"><input type="submit" name="submit" value="SUBMIT"></div>
 	</form>
 </div>
 
