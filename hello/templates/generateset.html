@@ -1,11 +1,11 @@
+<header>
+	<div id="home"><a href="index.html">HOME</a></div>
+</header>
 {% extends "base.html" %}
 {% load staticfiles %}
 
 {% block content %}
 <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-<header>
-	
-</header>
 <div id="main">
 	<div id="content">
 		<p class="buttons" id="back">Back</p>
@@ -14,8 +14,32 @@
 	</div>
 	<style type="text/css">
 		body{
+			margin: 0;
 			background-image: url('test.png');
 			background-repeat: repeat;
+		}
+		header{
+			background-image: url('pattern.jpg');
+			background-repeat: repeat;
+			height: 8vh;
+		}
+		#home a{
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			color: #4149D4;
+			font-family: Ubuntu, sans-serif;
+			font-size: 3.0vw;
+			background-color: #FAFAFA;
+		}
+		#home{
+			margin: auto;
+			vertical-align: middle;
+			width: 12.5vw;
+			height: 8vh;
+		}
+		#home a:hover{
+			background-color: #FAFAF0;	
 		}
 		#main{
 			margin-bottom: 1vh
@@ -61,6 +85,7 @@
 		}
 		.buttons:hover{
 			background-color: #FAFAF0;
+			cursor:pointer;
 		}
 		#back.buttons{
 			padding: 1.5vh;	
@@ -74,7 +99,26 @@
 		#back{
 			margin: auto;
 		}
-
+		/*Submit button*/
+		input[type=submit] {
+			font-family: Ubuntu, sans-serif;
+			padding: 6vh;
+			padding-top: 4vh;
+			padding-bottom: 4vh;
+			color: #4149D4;
+		    background: #FAFAFA;
+			box-shadow: 0px 0px 15px #BABABA; 
+		    border: none;
+		    cursor:pointer;
+		    border-radius: 5px; 
+		}
+		input[type=submit]:hover{
+			background: #FAFAF0;
+		} 
+		#sub{
+			margin-top: 2vh;
+			text-align: center;
+		}
 		#qSelection{
 			display: none;
 			margin: auto;
@@ -89,11 +133,6 @@
 		}
 		#nosbSubjects{
 			display: none;
-		}
-		#sub{
-			display: block;
-			width: 75px;
-			margin: auto;
 		}
 		#difficultyWrapper h3{
 			margin-top: 5px;
@@ -197,7 +236,7 @@
 				<h3>Additional Options</h3>
 				<div><input type="checkbox" value="gen" name="scrammbleQs"><label for="scrammbleQs">Scramble Question Choices</label></div>
 			</div>
-			<input type="submit" name="submit" value="submit" id="sub">	
+			<div id="sub"><input type="submit" name="submit" value="submit" id="sub"></div>
 		</form>
 	</div>
 </div>
