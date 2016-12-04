@@ -11,12 +11,30 @@
 		font-family: Ubuntu, sans-serif;
 		background-image: url('test.png');
 		background-repeat: repeat;
-		font-family: 
+		margin: 0;
 	}
 	header{
-			background-image: url('pattern.jpg');
-			background-repeat: repeat;
-			height: 8vh;
+		background-image: url('pattern.jpg');
+		background-repeat: repeat;
+		height: 8vh;
+	}
+	#home a{
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		color: #4149D4;
+		font-family: Ubuntu, sans-serif;
+		font-size: 3.0vw;
+		background-color: #FAFAFA;
+	}
+	#home{
+		margin: auto;
+		vertical-align: middle;
+		width: 12.5vw;
+		height: 8vh;
+	}
+	#home a:hover{
+		background-color: #FAFAF0;	
 	}
 	h1{
 		font-size: 4.5vw;
@@ -25,6 +43,7 @@
 		padding-bottom: 7vh;
 	}
 	#content {
+		display: none;
     	margin-left: auto;
     	margin-right: auto;
     	width: 75vw;
@@ -52,6 +71,7 @@
 	}
 	.choose:hover{
 		background-color: #FAFAF0;
+		box-shadow: 0px 0px 10px #BABABA;
 	}
     #add{
     	float: left;
@@ -62,7 +82,9 @@
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script type="text/javascript">
-	
+	$(document).ready(function() {
+		$("#content").fadeIn(1000);
+	});
 </script>
 <div id="content">
   <h1>Welcome: Science Bowl</h1>
