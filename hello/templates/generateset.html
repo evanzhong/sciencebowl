@@ -146,49 +146,51 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script type="text/javascript">
-		$("#nosbButton.buttons").toggle();
-		$("#nsbButton.buttons").toggle();
+		$(document).ready(function() {
+			$("#nosbButton.buttons").toggle();
+			$("#nsbButton.buttons").toggle();
 
-		$("#nosbButton").click(function (event){
-			$(".buttons").toggle();
-			setTimeout(function(){
-				$("#qSelection").fadeIn(1000);
-				$("#nosbSubjects").fadeIn(1000);
-				$("#NOSBHeader").fadeIn(400);
-			}, 100);
-			console.log("clicked");
+			$("#nosbButton").click(function (event){
+				$(".buttons").toggle();
+				setTimeout(function(){
+					$("#qSelection").fadeIn(1000);
+					$("#nosbSubjects").fadeIn(1000);
+					$("#NOSBHeader").fadeIn(400);
+				}, 100);
+				console.log("clicked");
 
-		});
+			});
 
-		$("#nsbButton").click(function (event){
-			$(".buttons").toggle();
-			setTimeout(function(){
-				$("#qSelection").fadeIn(1000);
-				$("#nsbSubjects").fadeIn(1000);
-				$("#NSBHeader").fadeIn(400);
-			}, 100);
-			console.log("clicked");
-		});
-	
-		$("#back").click(function (event){	
-			$("#back").toggle();
-			$("#qSelection").fadeOut(300);
-			$("#nsbSubjects").fadeOut(300);
-			$("#nosbSubjects").fadeOut(300);
-			$("#NOSBHeader").fadeOut(300);
-			$("#NSBHeader").fadeOut(300);
-			setTimeout(function(){
-				$("#nosbButton").fadeIn(700);
-				$("#nsbButton").fadeIn(700);
-			}, 400);
-			console.log("clicked");
+			$("#nsbButton").click(function (event){
+				$(".buttons").toggle();
+				setTimeout(function(){
+					$("#qSelection").fadeIn(1000);
+					$("#nsbSubjects").fadeIn(1000);
+					$("#NSBHeader").fadeIn(400);
+				}, 100);
+				console.log("clicked");
+			});
+		
+			$("#back").click(function (event){	
+				$("#back").toggle();
+				$("#qSelection").fadeOut(300);
+				$("#nsbSubjects").fadeOut(300);
+				$("#nosbSubjects").fadeOut(300);
+				$("#NOSBHeader").fadeOut(300);
+				$("#NSBHeader").fadeOut(300);
+				setTimeout(function(){
+					$("#nosbButton").fadeIn(700);
+					$("#nsbButton").fadeIn(700);
+				}, 400);
+				console.log("clicked");
+			});
 		});
 	</script>
 
 	<h1 id="NSBHeader">NSB Set Generation</h1>
 	<h1 id="NOSBHeader">NOSB Set Generation</h1>
 	<div id="qSelection">
-		<form action="placeholder">
+		<form action="placeholder" method="post">
 			<div id="difficultyWrapper">
 				<h3>Difficulty</h3>
 				<div><label for="1">1</label><input type="checkbox" name="1" value="1"> </div>
