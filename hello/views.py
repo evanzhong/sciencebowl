@@ -41,7 +41,7 @@ def generateset(request):
         # Being Q selection
         result = Question.objects.filter(comp__iexact=comp, subject__iexact=subtopic)
         result.order_by('?')[:numQs]
-    return render(request, 'questionset.html')
+    return render(request, 'generateset.html')
 
 def questionset(request):
     questions = Question.objects.all()
