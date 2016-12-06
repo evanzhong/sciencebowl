@@ -10,9 +10,9 @@ import parse
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
-    
+
 def login(request):
-    return render(request, 'login.html')
+    return render(request, 'registration/login.html')
 
 def addquestions(request):
     return render(request, 'addquestions.html')
