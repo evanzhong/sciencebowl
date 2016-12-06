@@ -196,11 +196,11 @@
 					$("#nsbButton").fadeIn(700);
 				}, 400);
 				if (clickedNSB) {
-					$("form").append("<input type=\"hidden\" name=\"comp\" value=\"NOSB\" id=\"hNOSBcomp\">");
+					$("#nosbSubjects").append("<input type=\"hidden\" name=\"comp\" value=\"NOSB\" id=\"hNOSBcomp\">");
 					console.log("reAppended hNOSB");
 				}
 				if (clickedNOSB) {
-					$("form").append("<input type=\"hidden\" name=\"comp\" value=\"NSB\" id=\"hNSBcomp\">");
+					$("#nsbSubjects").append("<input type=\"hidden\" name=\"comp\" value=\"NSB\" id=\"hNSBcomp\">");
 					console.log("reAppended hNSB");
 				}
 				clickedNOSB = false;
