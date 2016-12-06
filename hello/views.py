@@ -19,8 +19,17 @@ def questionsconfirmed(request):
 
 def generateset(request):
     if request.method == 'POST':
-        text = request.POST.get('upload')
-        if text == "":
+        diff = request.POST.get('diff')
+        if diff == "":
+            raise RuntimeError("empty values")
+        rndType = request.POST.get('rndType')
+        if rndType == "":
+            raise RuntimeError("empty values")
+        numQs = request.POST.get('numQs')
+        if numQs == "":
+            raise RuntimeError("empty values")
+        subs = request.POST.get('subs')
+        if subs == "":
             raise RuntimeError("empty values")
     return render(request, 'generateset.html')
 
