@@ -19,7 +19,7 @@ urlpatterns = [
     url(r'^db', hello.views.db, name='db'),
     url(r'^upload', hello.views.upload, name='upload'),
     # Login urls
-    url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^login', auth_views.login, name='login'),
+    url(r'^logout', auth_views.logout, name='logout'),
     url(r'^admin/', include(admin.site.urls))
 ]
