@@ -195,11 +195,11 @@
 					$("#nosbButton").fadeIn(700);
 					$("#nsbButton").fadeIn(700);
 				}, 400);
-				if (clickedNSB) {
+				if (!$("#nosbSubjects").length) {
 					$("<input type=\"hidden\" name=\"comp\" value=\"NOSB\" id=\"hNOSBcomp\">").appendTo("#nosbSubjects");
 					console.log("reAppended hNOSB");
 				}
-				if (clickedNOSB) {
+				if (!$("#nsbSubjects").length) {
 					$("<input type=\"hidden\" name=\"comp\" value=\"NSB\" id=\"hNSBcomp\">").appendTo("#nsbSubjects");
 					console.log("reAppended hNSB");
 				}
