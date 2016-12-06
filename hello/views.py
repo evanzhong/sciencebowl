@@ -18,13 +18,16 @@ def questionsconfirmed(request):
     return render(request, 'questionsconfirmed.html')
 
 def generateset(request):
+    if request.method == 'POST':
+        text = request.POST.get('upload')
+        if text == "":
+            raise RuntimeError("empty values")
     return render(request, 'generateset.html')
 
 def questionset(request):
     questions = Question.objects.all()
     return render(request, 'questionset.html', {'questions': questions})
 
-@csrf_exempt
 def upload(request):
     if request.method == 'POST':
         text = request.POST.get('upload')
