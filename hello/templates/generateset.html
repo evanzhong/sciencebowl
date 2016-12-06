@@ -196,10 +196,10 @@
 					$("#nsbButton").fadeIn(700);
 				}, 400);
 				if (clickedNSB) {
-					$("#nosbSubjects").append("<input type=\"hidden\" name=\"comp\" value=\"NOSB\" id=\"hNOSBcomp\">")
+					$("form").append("<input type=\"hidden\" name=\"comp\" value=\"NOSB\" id=\"hNOSBcomp\">")
 				}
 				if (clickedNOSB) {
-					$("#nsbSubjects").append("<input type=\"hidden\" name=\"comp\" value=\"NSB\" id=\"hNSBcomp\">")
+					$("form").append("<input type=\"hidden\" name=\"comp\" value=\"NSB\" id=\"hNSBcomp\">")
 				}
 				clickedNOSB = false;
 				clickedNSB = false;
