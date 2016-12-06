@@ -154,7 +154,8 @@
 		$(document).ready(function() {
 			$("#nosbButton.buttons").toggle();
 			$("#nsbButton.buttons").toggle();
-
+			var clickedNSB = false;
+			var clickedNOSB = false;
 			$("#nosbButton").click(function (event){
 				var clickedNOSB = true;
 				$(".buttons").toggle();
