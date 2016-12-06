@@ -38,6 +38,10 @@
   <h2>Multiple Choice</h2>
   {% for question in questions %}
   <div class="question">
+    <div><p>Competition: {{question.comp}}</p></div>
+    <div><p>Subject: {{question.subject}}</p></div>
+    <div><p>Sub-Topic: {{question.subtopic}}</p></div>
+    <div><p>MC or SA: {{question.question_type}}</p></div>
     {{ question.question_text }}
     {% if question.question_type == "Multiple Choice"%}
       <ul class="mcChoices">
