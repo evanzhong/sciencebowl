@@ -154,8 +154,6 @@
 		$(document).ready(function() {
 			$("#nosbButton.buttons").toggle();
 			$("#nsbButton.buttons").toggle();
-			var $hiddenNOSB = $("<input type=\"hidden\" name=\"comp\" value=\"NOSB\" id=\"hNOSBcomp\">"),
-			var $hiddenNSB = $("<input type=\"hidden\" name=\"comp\" value=\"NSB\" id=\"hNSBcomp\">"),
 
 			$("#nosbButton").click(function (event){
 				var clickedNOSB = true;
@@ -193,10 +191,10 @@
 					$("#nsbButton").fadeIn(700);
 				}, 400);
 				if (clickedNSB) {
-					$("#nosbSubjects").append($hiddenNOSB)
+					$("#nosbSubjects").append("<input type=\"hidden\" name=\"comp\" value=\"NOSB\" id=\"hNOSBcomp\">")
 				}
 				if (clickedNOSB) {
-					$("#nsbSubjects").append($hiddenNSB)
+					$("#nsbSubjects").append("<input type=\"hidden\" name=\"comp\" value=\"NSB\" id=\"hNSBcomp\">")
 				}
 				console.log("clicked");
 			});
