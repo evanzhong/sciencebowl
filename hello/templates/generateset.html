@@ -157,6 +157,7 @@
 
 			$("#nosbButton").click(function (event){
 				$(".buttons").toggle();
+				$("hNSBcomp").remove();
 				setTimeout(function(){
 					$("#qSelection").fadeIn(1000);
 					$("#nosbSubjects").fadeIn(1000);
@@ -168,6 +169,8 @@
 
 			$("#nsbButton").click(function (event){
 				$(".buttons").toggle();
+				$("hNOSBcomp").remove();
+				.remove();
 				setTimeout(function(){
 					$("#qSelection").fadeIn(1000);
 					$("#nsbSubjects").fadeIn(1000);
@@ -227,7 +230,7 @@
 				<div><input type="checkbox" value="energy" id="energySelect" name="subs" checked><label for="energySelect">Energy </label></div>
 				<div><input type="checkbox" value="math" id="mathSelect" name="subs" checked><label for="mathSelect">Math </label></div>
 				<div><input type="checkbox" value="physics" id="physicsSelect" name="subs" checked><label for="physicsSelect">Physics </label></div>
-				<input type="hidden" name="comp" value="NSB">
+				<input type="hidden" name="comp" value="NSB" id="hNSBcomp">
 			</div>
 
 			<div id="nosbSubjects">
@@ -238,7 +241,7 @@
 				<div><input type="checkbox" value="marine technology" id="marinetechnologySelect" name="subs" checked><label for="marinetechnologySelect">Marine Technology </label></div>
 				<div><input type="checkbox" value="marine policy" id="marinepolicySelect" name="subs" checked><label for="marinepolicySelect">Marine Policy </label></div>
 				<div><input type="checkbox" value="physical oceanography" id="physicaloceanographySelect" name="subs" checked><label for="physicaloceanographySelect">Physical Oceanography </label></div>
-				<input type="hidden" name="comp" value="NOSB">
+				<input type="hidden" name="comp" value="NOSB" id="hNOSBcomp">
 			</div>
 
 			<div id="scrammbleWrapper">
