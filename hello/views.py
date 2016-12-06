@@ -28,6 +28,7 @@ def questionset(request):
     questions = Question.objects.all()
     return render(request, 'questionset.html', {'questions': questions})
 
+@csrf_exempt
 def upload(request):
     if request.method == 'POST':
         text = request.POST.get('upload')
