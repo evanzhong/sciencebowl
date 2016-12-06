@@ -32,6 +32,9 @@ def generateset(request):
         subs = request.POST.get('subs')
         if subs == "":
             raise RuntimeError("empty values")
+        scrammbleQs = request.POST.get('scrammbleQs')
+        if scrammbleQs == "":
+            raise RuntimeError("empty values")
     return render(request, 'generateset.html')
 
 def questionset(request):
