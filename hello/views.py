@@ -33,7 +33,7 @@ def upload(request):
             raise RuntimeError("upload is empty!")
         parse.parse(text)
     return render(request, 'index.html')
-    
+
 def gen(request):
     if request.method == 'POST':
         comp = request.POST.get('comp')
@@ -54,7 +54,7 @@ def gen(request):
         scrammbleQs = request.POST.get('scrammbleQs')
         if scrammbleQs == "":
             raise RuntimeError("empty values")
-        # Being Q selection
+
         questions = Question.objects.filter(comp__iexact=comp, subject__iexact=subs)
         questions.order_by('?')[:numQs]
         return render(request, 'questionset.html', {'questions': questions})
