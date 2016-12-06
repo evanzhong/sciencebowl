@@ -19,22 +19,6 @@ def questionsconfirmed(request):
 
 @csrf_exempt
 def generateset(request):
-    return render(request, 'generateset.html')
-
-def questionset(request):
-    questions = Question.objects.all()
-    return render(request, 'questionset.html', {'questions': questions})
-
-@csrf_exempt
-def upload(request):
-    if request.method == 'POST':
-        text = request.POST.get('upload')
-        if text == "":
-            raise RuntimeError("upload is empty!")
-        parse.parse(text)
-    return render(request, 'index.html')
-
-def gen(request):
     if request.method == 'POST':
         comp = request.POST.get('comp')
         if comp == "":
@@ -58,6 +42,20 @@ def gen(request):
         questions = Question.objects.filter(comp__iexact=comp, subject__iexact=subs)
         questions.order_by('?')[:numQs]
         return render(request, 'questionset.html', {'questions': questions})
+    return render(request, 'generateset.html')
+
+def questionset(request):
+    questions = Question.objects.all()
+    return render(request, 'questionset.html', {'questions': questions})
+
+@csrf_exempt
+def upload(request):
+    if request.method == 'POST':
+        text = request.POST.get('upload')
+        if text == "":
+            raise RuntimeError("upload is empty!")
+        parse.parse(text)
+    return render(request, 'index.html')
 
 def db(request):
 
