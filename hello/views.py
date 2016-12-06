@@ -23,6 +23,12 @@ def questionsconfirmed(request):
 @csrf_exempt
 def generateset(request):
     if request.method == 'POST':
+        comp = ""
+        diff = []
+        rndType = ""
+        numQs = 0
+        subs = []
+        scrammbleQs = []
         comp = request.POST.get('comp')
         if comp == "":
             raise RuntimeError("empty values")
