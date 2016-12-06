@@ -14,7 +14,7 @@ class Question(models.Model):
 	x = models.CharField(max_length=100, default=None, blank=True, null=True)
 	y = models.CharField(max_length=100, default=None, blank=True, null=True)
 	z = models.CharField(max_length=100, default=None, blank=True, null=True)
-	correct = models.CharField(max_length=1, default=None, blank=True, null=True)
+	correct = models.CharField(max_length=100, default=None, blank=True, null=True)
 	short_answer_answer_text = models.CharField(max_length=10000, default=None, blank=True, null=True)
 	name = models.CharField(max_length=100, default=None, blank=True, null=True) #Author (First Last)
 	set_number = models.CharField(max_length=4, default=None, blank=True, null=True) 
