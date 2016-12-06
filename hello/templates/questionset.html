@@ -8,19 +8,24 @@
 
 <div>
   <h1>Here are your questions!</h1>
-
   <h2>Multiple Choice</h2>
   {% for question in questions %}
-  <div>
+  <div class="question">
     {{ question.question_text }}
-    <ul>
+    {% if question.question_type == "Multiple Choice"}
+    <ul class="mcChoices">
       <li>W: {{ question.w }}</li>
       <li>X: {{ question.x }}</li>
       <li>Y: {{ question.y }}</li>
       <li>Z: {{ question.z }}</li>
     </ul>
-    Correct Answer: {{ question.correct }}
+    <p class="correct">Answer: {{ question.correct }}</p>
+    {% endif %}
+    {% if question.question_type == "Short Answer"}
+    <p class="correct">Answer: {{ question.short_answer_answer_text }}</p>
+    {% endif %}
   </div>
+  <br>
   {% endfor %}
 
 </div>
