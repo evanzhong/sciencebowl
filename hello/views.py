@@ -23,12 +23,6 @@ def questionsconfirmed(request):
 @csrf_exempt
 def generateset(request):
     if request.method == 'POST':
-        comp = ""
-        diff = []
-        rndType = ""
-        numQs = 0
-        subs = []
-        scrammbleQs = []
         comp = request.POST.get('comp')
         if comp == "":
             raise RuntimeError("empty values")
@@ -48,8 +42,7 @@ def generateset(request):
         if scrammbleQs == "":
             raise RuntimeError("empty values")
 
-        questions = Question.objects.filter(comp__iexact=comp)#.filter(subject__in=subs)#.filter(subject__iexact=subs[0])
-        questions.order_by('?')[:numQs]
+        questions = Question.objects.filter(comp__iexact=comp).filter(subject__iexact=subs).order_by('?')[:numQs]#.filter(subject__iexact=subs[0])
         return render(request, 'questionset.html', {'questions': questions})
     return render(request, 'generateset.html')
 
