@@ -69,7 +69,9 @@ TEMPLATES = [
         },
     },
 ]
-
+TEMPLATE_DIRS = (
+    'hello/templates',
+)
 WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 
 
