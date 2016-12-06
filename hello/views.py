@@ -22,6 +22,7 @@ def generateset(request):
     if request.method == 'POST':
         comp = request.POST.get('comp')
         if comp == "":
+            raise RuntimeError("empty values")
         diff = request.POST.get('diff')
         if diff == "":
             raise RuntimeError("empty values")
