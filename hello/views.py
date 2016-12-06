@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.db.models import Q #This is necessary to make OR comparison queries
 
 from .models import Greeting
 from .models import Question
@@ -39,7 +38,7 @@ def generateset(request):
         scrammbleQs = request.POST.get('scrammbleQs')
         if scrammbleQs == "":
             raise RuntimeError("empty values")
-        questions = Question.objects.filter(comp__iexact=comp, Q(subject__iexact=subs[0]) | Q(subject__iexact=subs[1]) | Q(subject__iexact=subs[2]) | Q(subject__iexact=subs[3]) | Q(subject__iexact=subs[4]))
+        questions = Question.objects.filter(comp__iexact=comp).filter(subject__iexact=subs[0])
         questions.order_by('?')[:numQs]
         return render(request, 'questionset.html', {'questions': questions})
     return render(request, 'generateset.html')
