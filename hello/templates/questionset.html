@@ -39,7 +39,7 @@
   {% for question in questions %}
   <div class="question">
     {{ question.question_text }}
-    {% if question.question_type == "Multiple Choice"}
+    {% if question.question_type == "Multiple Choice"%}
       <ul class="mcChoices">
         <li>W: {{ question.w }}</li>
         <li>X: {{ question.x }}</li>
