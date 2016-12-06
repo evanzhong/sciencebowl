@@ -154,8 +154,11 @@
 		$(document).ready(function() {
 			$("#nosbButton.buttons").toggle();
 			$("#nsbButton.buttons").toggle();
+			var $hiddenNOSB = $("<input type=\"hidden\" name=\"comp\" value=\"NOSB\" id=\"hNOSBcomp\">"),
+			var $hiddenNSB = $("<input type=\"hidden\" name=\"comp\" value=\"NSB\" id=\"hNSBcomp\">"),
 
 			$("#nosbButton").click(function (event){
+				var clickedNOSB = true;
 				$(".buttons").toggle();
 				setTimeout(function(){
 					$("#qSelection").fadeIn(1000);
@@ -167,6 +170,7 @@
 			});
 
 			$("#nsbButton").click(function (event){
+				var clickedNSB = true;
 				$(".buttons").toggle();
 				setTimeout(function(){
 					$("#qSelection").fadeIn(1000);
@@ -188,6 +192,12 @@
 					$("#nosbButton").fadeIn(700);
 					$("#nsbButton").fadeIn(700);
 				}, 400);
+				if (clickedNSB) {
+					$("#nosbSubjects").append($hiddenNOSB)
+				}
+				if (clickedNOSB) {
+					$("#nsbSubjects").append($hiddenNSB)
+				}
 				console.log("clicked");
 			});
 		});
