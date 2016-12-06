@@ -5,6 +5,7 @@ admin.autodiscover()
 
 import hello.views
 
+from django.contrib.auth import views as auth_views #For Login system
 # Examples:
 # url(r'^$', 'gettingstarted.views.home', name='home'),
 # url(r'^blog/', include('blog.urls')),
@@ -17,5 +18,8 @@ urlpatterns = [
     url(r'^questionsconfirmed', hello.views.questionsconfirmed, name='questionsconfirmed'),
     url(r'^db', hello.views.db, name='db'),
     url(r'^upload', hello.views.upload, name='upload'),
+    # Login urls
+    url(r'^login/$', auth_views.login, name='login'),
+    url(r'^logout/$', auth_views.logout, name='logout'),
     url(r'^admin/', include(admin.site.urls))
 ]
