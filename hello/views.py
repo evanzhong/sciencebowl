@@ -41,9 +41,8 @@ def generateset(request):
         scrammbleQs = request.POST.get('scrammbleQs')
         if scrammbleQs == "":
             raise RuntimeError("empty values")
-        numSubs = len(subs)
         for sub in subs:
-            questions = Question.objects.filter(comp__iexact=comp).filter(subject__iexact=sub).order_by('?')[:numQs/numSubs]#.filter(subject__iexact=subs[0])
+            questions = Question.objects.filter(comp__iexact=comp).filter(subject__iexact=sub).order_by('?')[:numQs]#.filter(subject__iexact=subs[0])
         return render(request, 'questionset.html', {'questions': questions})
     return render(request, 'generateset.html')
 
