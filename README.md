@@ -39,7 +39,7 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 ```
 $ git push heroku master
 ```
-The app is now live at: [sciencebowl.herokuapp.com](sciencebowl.herokuapp.com).
+The app is now live at: [https://sciencebowl.herokuapp.com](https://sciencebowl.herokuapp.com).
 
 
 ## Admin Functionality
