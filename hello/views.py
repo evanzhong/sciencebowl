@@ -17,6 +17,7 @@ def addquestions(request):
 def questionsconfirmed(request):
     return render(request, 'questionsconfirmed.html')
 
+@csrf_exempt
 def generateset(request):
     if request.method == 'POST':
         diff = request.POST.get('diff')
