@@ -29,6 +29,7 @@ DEBUG = True
 
 #The redirection url for @login_required
 LOGIN_URL = 'login/'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 # Application definition
 
