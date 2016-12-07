@@ -9,21 +9,21 @@ from .models import Question
 import parse
 
 # Create your views here.
-@login_required
+@login_required(redirect_field_name='login')
 def index(request):
     return render(request, 'index.html')
 
 def login(request):
     return render(request, 'registration/login.html')
 
-@login_required
+@login_required(redirect_field_name='login')
 def addquestions(request):
     return render(request, 'addquestions.html')
-@login_required
+@login_required(redirect_field_name='login')
 def questionsconfirmed(request):
     return render(request, 'questionsconfirmed.html')
 
-@login_required
+@login_required(redirect_field_name='login')
 @csrf_exempt
 def generateset(request):
     if request.method == 'POST':
@@ -58,12 +58,12 @@ def generateset(request):
             return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
     return render(request, 'generateset.html')
 
-@login_required
+@login_required(redirect_field_name='login')
 def questionset(request):
     questions = Question.objects.all()
     return render(request, 'questionset.html', {'questions': questions})
 
-@login_required
+@login_required(redirect_field_name='login')
 @csrf_exempt
 def upload(request):
     if request.method == 'POST':
@@ -73,7 +73,7 @@ def upload(request):
         parse.parse(text)
     return render(request, 'index.html')
 
-@login_required
+@login_required(redirect_field_name='login')
 def db(request):
 
     greeting = Greeting()
