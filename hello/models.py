@@ -22,3 +22,12 @@ class Question(models.Model):
 	category = models.CharField(max_length=100, default=None, blank=True, null=True)
 	date_written = models.DateTimeField('date created', auto_now_add=True, blank=True, null=True) #maybe not correct
 	date_last_mod = models.DateTimeField('date last modified', auto_now_add=True, blank=True, null=True) #maybe not correct
+
+# Creating user to test
+from django.contrib.auth.models import User
+user = User.objects.create_user(
+    username = 'ScienceBowl',
+    password = 'cowseatcereal888',
+    email = 'evanzhong10@gmail.com'
+  )
+user.save()
