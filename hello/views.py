@@ -46,12 +46,13 @@ def generateset(request):
         if scrammbleQs == "":
             raise RuntimeError("empty values")
         if not TUAB:
-            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]#.filter(subject__iexact=subs[0])
+            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
             return render(request, 'questionset.html', {'questions': questions})
         elif TUAB:
             tt = int(numQs) * 2
-            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]#.filter(subject__iexact=subs[0])
-            return render(request, 'questionset.html', {'questions': questions})
+            counter = 0
+            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
+            return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB, 'counter': counter})
     return render(request, 'generateset.html')
 
 def questionset(request):

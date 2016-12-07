@@ -41,26 +41,34 @@
   <h1>Here are your questions!</h1>
   <h2>Multiple Choice</h2>
   {% for question in questions %}
-  <div class="question">
-    <div><p>Competition: {{question.comp}}</p></div>
-    <div><p>Subject: {{question.subject}}</p></div>
-    <div><p>Sub-Topic: {{question.subtopic}}</p></div>
-    <div><p>MC or SA: {{question.question_type}}</p></div>
-    {{ question.question_text }}
-    {% if question.question_type == "Multiple Choice"%}
-      <ul class="mcChoices">
-        <li>W: {{ question.w }}</li>
-        <li>X: {{ question.x }}</li>
-        <li>Y: {{ question.y }}</li>
-        <li>Z: {{ question.z }}</li>
-      </ul>
-      <p class="correct">Answer: {{ question.correct }}</p>
+    {%if includeBonuses%}
+      {%if counter|divisibleby:2%}
+        <h3>Toss-Up</h3>
+      {%else%}
+        <h3>Bonus</h3>
+      {% endif %}
+      {counter++}
+      <div class="question">
+        <div><p>Competition: {{question.comp}}</p></div>
+        <div><p>Subject: {{question.subject}}</p></div>
+        <div><p>Sub-Topic: {{question.subtopic}}</p></div>
+        <div><p>MC or SA: {{question.question_type}}</p></div>
+        {{ question.question_text }}
+        {% if question.question_type == "Multiple Choice"%}
+          <ul class="mcChoices">
+            <li>W: {{ question.w }}</li>
+            <li>X: {{ question.x }}</li>
+            <li>Y: {{ question.y }}</li>
+            <li>Z: {{ question.z }}</li>
+          </ul>
+          <p class="correct">Answer: {{ question.correct }}</p>
+        {% endif %}
+        {% if question.question_type == "Short Answer"%}
+        <p class="correct">Answer: {{ question.short_answer_answer_text }}</p>
+        {% endif %}
+      </div>
     {% endif %}
-    {% if question.question_type == "Short Answer"%}
-    <p class="correct">Answer: {{ question.short_answer_answer_text }}</p>
-    {% endif %}
-  </div>
-  <br>
+    <br>
   {% endfor %}
 
 </div>
