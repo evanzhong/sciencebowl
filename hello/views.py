@@ -7,8 +7,10 @@ from .models import Greeting
 from .models import Question
 
 import parse
-from django.contrib.auth.models import User 
-user = User.objects.get_or_create('ScienceBowl', '', 'cowseatcereal888')
+from django.contrib.auth.models import User
+user = User.objects.create_user(username='ScienceBowl',
+                                 email='',
+                                 password='cowseatcereal888')
 # Create your views here.
 @login_required
 def index(request):
