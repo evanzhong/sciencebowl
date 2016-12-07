@@ -7,10 +7,12 @@ from .models import Greeting
 from .models import Question
 
 import parse
-from django.contrib.auth.models import User
-user = User.objects.create_user(username='ScienceBowl',
-                                 email='',
-                                 password='cowseatcereal888')
+# #User has been created, therefore this code is commented out
+# from django.contrib.auth.models import User
+# user = User.objects.create_user(username='ScienceBowl',
+#                                  email='',
+#                                  password='cowseatcereal888')
+
 # Create your views here.
 @login_required
 def index(request):
