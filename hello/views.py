@@ -8,15 +8,6 @@ from .models import Question
 
 import parse
 
-# Creating user to test
-from django.contrib.auth.models import User
-user = User.objects.create_user(
-    username = 'ScienceBowl',
-    password = 'cowseatcereal888',
-    email = 'evanzhong10@gmail.com'
-  )
-user.save()
-
 # Create your views here.
 @login_required
 def index(request):
