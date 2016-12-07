@@ -34,7 +34,7 @@ def generateset(request):
             raise RuntimeError("empty values")
         if rndType == "1":
             TUAB = False
-        else
+        else:
             TUAB = True
         numQs = request.POST.get('numQs')
         if numQs == "":
@@ -48,7 +48,7 @@ def generateset(request):
         if !TUAB:
             questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]#.filter(subject__iexact=subs[0])
             return render(request, 'questionset.html', {'questions': questions})
-        elif TUAB
+        elif TUAB:
             tt = int(str_a) * 2
             questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]#.filter(subject__iexact=subs[0])
             return render(request, 'questionset.html', {'questions': questions})
