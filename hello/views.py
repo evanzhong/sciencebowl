@@ -50,8 +50,7 @@ def generateset(request):
             return render(request, 'questionset.html', {'questions': questions})
         elif TUAB:
             tt = int(numQs) * 2
-            counter = 0
-            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
+            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs)[:tt]
             return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
     return render(request, 'generateset.html')
 
