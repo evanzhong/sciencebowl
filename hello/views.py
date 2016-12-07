@@ -49,7 +49,7 @@ def generateset(request):
             questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]#.filter(subject__iexact=subs[0])
             return render(request, 'questionset.html', {'questions': questions})
         elif TUAB:
-            tt = int(str_a) * 2
+            tt = int(numQs) * 2
             questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]#.filter(subject__iexact=subs[0])
             return render(request, 'questionset.html', {'questions': questions})
     return render(request, 'generateset.html')
