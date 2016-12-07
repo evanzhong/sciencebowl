@@ -2,20 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 
 from .models import Greeting
 from .models import Question
 
 import parse
 
-# Creating user to test
-user = User.objects.create_user(
-    username = 'ScienceBowl',
-    password = 'cowseatcereal888',
-    email = 'evanzhong10@gmail.com'
-  )
-user.save( )
 # Create your views here.
 @login_required
 def index(request):
