@@ -32,6 +32,10 @@ def generateset(request):
         rndType = request.POST.get('rndType')
         if rndType == "":
             raise RuntimeError("empty values")
+        if rndType == "1":
+            TUAB = False
+        else
+            TUAB = True
         numQs = request.POST.get('numQs')
         if numQs == "":
             raise RuntimeError("empty values")
@@ -41,8 +45,13 @@ def generateset(request):
         scrammbleQs = request.POST.get('scrammbleQs')
         if scrammbleQs == "":
             raise RuntimeError("empty values")
-        questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]#.filter(subject__iexact=subs[0])
-        return render(request, 'questionset.html', {'questions': questions})
+        if !TUAB:
+            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]#.filter(subject__iexact=subs[0])
+            return render(request, 'questionset.html', {'questions': questions})
+        elif TUAB
+            tt = int(str_a) * 2
+            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]#.filter(subject__iexact=subs[0])
+            return render(request, 'questionset.html', {'questions': questions})
     return render(request, 'generateset.html')
 
 def questionset(request):
