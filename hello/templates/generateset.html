@@ -218,11 +218,11 @@
 		<form action="generateset" method="post">
 			<div id="difficultyWrapper">
 				<h3>Difficulty</h3>
-				<div><label for="1d">1</label><input type="checkbox" name="diff" value="1" id="1d" checked> </div>
-				<div><label for="2d">2</label><input type="checkbox" name="diff" value="2" id="2d" checked> </div>
-				<div><label for="3d">3</label><input type="checkbox" name="diff" value="3" id="3d" checked> </div>
-				<div><label for="4d">4</label><input type="checkbox" name="diff" value="4" id="4d" checked> </div>
-				<div><label for="5d">5</label><input type="checkbox" name="diff" value="5" id="5d" checked> </div>
+				<div><label for="1d">1</label><input type="checkbox" name="diff[]" value="1" id="1d" checked> </div>
+				<div><label for="2d">2</label><input type="checkbox" name="diff[]" value="2" id="2d" checked> </div>
+				<div><label for="3d">3</label><input type="checkbox" name="diff[]" value="3" id="3d" checked> </div>
+				<div><label for="4d">4</label><input type="checkbox" name="diff[]" value="4" id="4d" checked> </div>
+				<div><label for="5d">5</label><input type="checkbox" name="diff[]" value="5" id="5d" checked> </div>
 			</div>
 
 			<div id="rndTypeWrapper">
@@ -239,25 +239,25 @@
 
 			<div id="nsbSubjects">
 				<h3>Subtopic Select</h3>
-				<div><input type="checkbox" value="General" id="generalSelect" name="subs" checked><label for="generalSelect">General </label></div>
-				<div><input type="checkbox" value="Astronomy" id="astronomySelect" name="subs" checked><label for="astronomySelect">Astronomy </label></div>
-				<div><input type="checkbox" value="Biology" id="biologySelect" name="subs" checked><label for="biologySelect">Biology </label></div>
-				<div><input type="checkbox" value="Chemistry" id="chemistrySelect" name="subs" checked><label for="chemistrySelect">Chemistry </label></div>
-				<div><input type="checkbox" value="Earth Science" id="earthSelect" name="subs" checked><label for="earthSelect">Earth </label></div>
-				<div><input type="checkbox" value="Energy" id="energySelect" name="subs" checked><label for="energySelect">Energy </label></div>
-				<div><input type="checkbox" value="Math" id="mathSelect" name="subs" checked><label for="mathSelect">Math </label></div>
-				<div><input type="checkbox" value="Physics" id="physicsSelect" name="subs" checked><label for="physicsSelect">Physics </label></div>
+				<div><input type="checkbox" value="General" id="generalSelect" name="subs[]" checked><label for="generalSelect">General </label></div>
+				<div><input type="checkbox" value="Astronomy" id="astronomySelect" name="subs[]" checked><label for="astronomySelect">Astronomy </label></div>
+				<div><input type="checkbox" value="Biology" id="biologySelect" name="subs[]" checked><label for="biologySelect">Biology </label></div>
+				<div><input type="checkbox" value="Chemistry" id="chemistrySelect" name="subs[]" checked><label for="chemistrySelect">Chemistry </label></div>
+				<div><input type="checkbox" value="Earth Science" id="earthSelect" name="subs[]" checked><label for="earthSelect">Earth </label></div>
+				<div><input type="checkbox" value="Energy" id="energySelect" name="subs[]" checked><label for="energySelect">Energy </label></div>
+				<div><input type="checkbox" value="Math" id="mathSelect" name="subs[]" checked><label for="mathSelect">Math </label></div>
+				<div><input type="checkbox" value="Physics" id="physicsSelect" name="subs[]" checked><label for="physicsSelect">Physics </label></div>
 				<input type="hidden" name="comp" value="NSB" id="hNSBcomp">
 			</div>
 
 			<div id="nosbSubjects">
 				<h3>Subject Select</h3>
-				<div><input type="checkbox" value="General" id="generalSelect" name="subs" checked><label for="generalSelect">General </label></div>
-				<div><input type="checkbox" value="Geography" id="geographySelect" name="subs" checked><label for="geographySelect">Geography </label></div>
-				<div><input type="checkbox" value="Marine Biology" id="marinebiologySelect" name="subs" checked><label for="marinebiologySelect">Marine Biology </label></div>
-				<div><input type="checkbox" value="Marine Technology" id="marinetechnologySelect" name="subs" checked><label for="marinetechnologySelect">Marine Technology </label></div>
-				<div><input type="checkbox" value="Marine Policy" id="marinepolicySelect" name="subs" checked><label for="marinepolicySelect">Marine Policy </label></div>
-				<div><input type="checkbox" value="Physical Oceanography" id="physicaloceanographySelect" name="subs" checked><label for="physicaloceanographySelect">Physical Oceanography </label></div>
+				<div><input type="checkbox" value="General" id="generalSelect" name="subs[]" checked><label for="generalSelect">General </label></div>
+				<div><input type="checkbox" value="Geography" id="geographySelect" name="subs[]" checked><label for="geographySelect">Geography </label></div>
+				<div><input type="checkbox" value="Marine Biology" id="marinebiologySelect" name="subs[]" checked><label for="marinebiologySelect">Marine Biology </label></div>
+				<div><input type="checkbox" value="Marine Technology" id="marinetechnologySelect" name="subs[]" checked><label for="marinetechnologySelect">Marine Technology </label></div>
+				<div><input type="checkbox" value="Marine Policy" id="marinepolicySelect" name="subs[]" checked><label for="marinepolicySelect">Marine Policy </label></div>
+				<div><input type="checkbox" value="Physical Oceanography" id="physicaloceanographySelect" name="subs[]" checked><label for="physicaloceanographySelect">Physical Oceanography </label></div>
 				<input type="hidden" name="comp" value="NOSB" id="hNOSBcomp">
 			</div>
 
