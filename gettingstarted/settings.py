@@ -27,6 +27,8 @@ SECRET_KEY = 'i+acxn5(akgsn!sr4^qgf(^m&*@+g1@u^t@=8s@axc41ml*f=s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#The redirection url for @login_required
+LOGIN_URL = 'login.html'
 
 # Application definition
 
