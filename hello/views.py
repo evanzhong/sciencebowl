@@ -45,7 +45,7 @@ def generateset(request):
         scrammbleQs = request.POST.get('scrammbleQs')
         if scrammbleQs == "":
             raise RuntimeError("empty values")
-        if !TUAB:
+        if not TUAB:
             questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]#.filter(subject__iexact=subs[0])
             return render(request, 'questionset.html', {'questions': questions})
         elif TUAB:
