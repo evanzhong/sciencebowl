@@ -42,12 +42,12 @@
   <h2>Multiple Choice</h2>
   {% for question in questions %}
     {%if includeBonuses%}
-      {%if counter|divisibleby:2%}
+      {%if counter0|divisibleby:2%}
         <h3>Toss-Up</h3>
       {%else%}
         <h3>Bonus</h3>
       {% endif %}
-      {counter += 1}
+      {{ forloop.counter0 }}
       <div class="question">
         <div><p>Competition: {{question.comp}}</p></div>
         <div><p>Subject: {{question.subject}}</p></div>
