@@ -52,7 +52,7 @@ def generateset(request):
             tt = int(numQs) * 2
             counter = 0
             questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
-            return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB, 'counter': counter})
+            return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
     return render(request, 'generateset.html')
 
 def questionset(request):
