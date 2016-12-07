@@ -7,7 +7,8 @@ from .models import Greeting
 from .models import Question
 
 import parse
-
+from django.contrib.auth.models import User 
+user = User.objects.update_or_create('john', 'lennon@thebeatles.com', 'johnpassword')
 # Create your views here.
 @login_required
 def index(request):
