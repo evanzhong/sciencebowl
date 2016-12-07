@@ -26,7 +26,7 @@ def generateset(request):
         comp = request.POST.get('comp')
         if comp == "":
             raise RuntimeError("empty values")
-        diff = request.POST.getList('diff[]')
+        diff = request.POST.getlist('diff[]')
         if diff == "":
             raise RuntimeError("empty values")
         rndType = request.POST.get('rndType')
@@ -35,7 +35,7 @@ def generateset(request):
         numQs = request.POST.get('numQs')
         if numQs == "":
             raise RuntimeError("empty values")
-        subs = request.POST.getList('subs[]')
+        subs = request.POST.getlist('subs[]')
         if subs == "":
             raise RuntimeError("empty values")
         scrammbleQs = request.POST.get('scrammbleQs')
