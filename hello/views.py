@@ -32,30 +32,30 @@ def questionsconfirmed(request):
 @csrf_exempt
 def generateset(request):
     if request.method == 'POST':
-        comp = request.POST.get['comp']
+        comp = request.POST.get('comp')
         if comp == "":
             raise RuntimeError("empty values")
         if comp == "NSB":
             isNOSB = False
         else:
             isNOSB = True
-        diff = request.POST.getlist['diff[]']
+        diff = request.POST.getlist('diff[]')
         if diff == "":
             raise RuntimeError("empty values")
-        rndType = request.POST.get['rndType']
+        rndType = request.POST.get('rndType')
         if rndType == "":
             raise RuntimeError("empty values")
         if rndType == "1":
             TUAB = False
         else:
             TUAB = True
-        numQs = request.POST.get['numQs']
+        numQs = request.POST.get('numQs')
         if numQs == "":
             raise RuntimeError("empty values")
-        subs = request.POST.getlist['subs[]']
+        subs = request.POST.getlist('subs[]')
         if subs == "":
             raise RuntimeError("empty values")
-        scrammbleQs = request.POST.get['scrammbleQs']
+        scrammbleQs = request.POST.get('scrammbleQs')
         if scrammbleQs == "":
             raise RuntimeError("empty values")
         if not TUAB:
@@ -89,7 +89,7 @@ def questionset(request):
 @csrf_exempt
 def upload(request):
     if request.method == 'POST':
-        text = request.POST.get['upload']
+        text = request.POST.get('upload')
         if text == "":
             raise RuntimeError("upload is empty!")
         parse.parse(text)
