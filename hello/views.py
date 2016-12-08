@@ -35,6 +35,10 @@ def generateset(request):
         comp = request.POST.get('comp')
         if comp == "":
             raise RuntimeError("empty values")
+        if comp == "NSB":
+            isNOSB = False
+        else:
+            isNOSB = True
         diff = request.POST.getlist('diff[]')
         if diff == "":
             raise RuntimeError("empty values")
@@ -59,7 +63,19 @@ def generateset(request):
             return render(request, 'questionset.html', {'questions': questions})
         elif TUAB:
             tt = int(numQs) * 2
-            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
+            # vvvvvvvvv Old code vvvvvvvvv
+            # questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
+
+            # Generation of Toss-Ups
+            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
+            subsOfQuestions = {}
+            for question in questions:
+                subsOfQuestions[question.subject] = subsOfQuestions[question.subject] ? subsOfQuestions[question.subject] + 1 : 0
+
+            # Generation of Bonuses
+            bonusQuestions = {}
+            for subofQuestion in subsOfQuestions
+                bonusQuestions[subofQuestion] = Question.objects.filter(comp__iexact=comp).filter(subject__in=subofQuestion).order_by('?')[:subsOfQuestions[subofQuestion]]
             return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
     return render(request, 'generateset.html')
 
