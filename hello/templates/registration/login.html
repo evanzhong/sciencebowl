@@ -1,25 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style type="text/css">
+	
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#content").fadeIn(1200);
+	});
+</script>
 
 {% if form.errors %}
 	<p>Your username and password didn't match. Please try again.</p>
 {% endif %}
+<div id="content">
+	<form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+	{% csrf_token %}
+	<div>
+		{{ form.username.label_tag }}
+		{{ form.username }}
+	</div>
 
-<form method="post" action="{% url 'django.contrib.auth.views.login' %}">
-{% csrf_token %}
-<div>
-	{{ form.username.label_tag }}
-	{{ form.username }}
+	<div>
+		{{ form.password.label_tag }}
+		{{ form.password }}
+	</div>
+
+	<input type="submit" value="login" />
+	<input type="hidden" name="next" value="{{ next }}" />
+	</form>
 </div>
-
-<div>
-	{{ form.password.label_tag }}
-	{{ form.password }}
-</div>
-
-<input type="submit" value="login" />
-<input type="hidden" name="next" value="{{ next }}" />
-</form>
-
 {% endblock %}
