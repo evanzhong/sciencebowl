@@ -90,8 +90,8 @@
             {% if question.question_type == "Short Answer"%}
               <p class="correct">Answer: {{ question.short_answer_answer_text }}</p>
             {% endif %}
+          {% endfor %}
           </div>
-        {% endfor %}
       {%else%}
         <h3>Bonus</h3>
         <div class="bonusQuestion">
