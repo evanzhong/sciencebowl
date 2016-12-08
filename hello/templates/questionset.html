@@ -67,9 +67,9 @@
 <div>
   <h1>Here are your questions!</h1>
   <h2>Multiple Choice</h2>
-  {% for question in questions: %}
+  {% for question in questions %}
     {%if includeBonuses%}
-      {% for bonusQuestion in bonusQuestions: %}
+      {% for bonusQuestion in bonusQuestions %}
         {%if forloop.counter0|divisibleby:2%}
           <h3>Toss-Up</h3>
           <div class="question">
