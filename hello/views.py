@@ -71,7 +71,7 @@ def generateset(request):
             subsOfQuestions = {}
             for question in questions:
                 qSub = str(question.subject)
-                if not subsOfQuestions[qSub]:
+                if not hasattr(subsOfQuestions, qSub):
                     subsOfQuestions[qSub] = 0
                 if (subsOfQuestions[qSub] == qSub):
                     subsOfQuestions[qSub] += 1
