@@ -32,7 +32,7 @@ def questionsconfirmed(request):
 @csrf_exempt
 def generateset(request):
     if request.method == 'POST':
-        comp = request.POST.get("comp")
+        comp = request.POST.get('comp')
         if comp == "":
             raise RuntimeError("empty values")
         if comp == "NSB":
