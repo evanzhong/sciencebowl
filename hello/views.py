@@ -73,7 +73,8 @@ def generateset(request):
                 qSub = str(question.subject)
                 if not subsOfQuestions[qSub]:
                     subsOfQuestions[qSub] = 0
-                subsOfQuestions[qSub] = if (subsOfQuestions[qSub] == qSub): subsOfQuestions[qSub] += 1
+                if (subsOfQuestions[qSub] == qSub):
+                    subsOfQuestions[qSub] = subsOfQuestions[qSub] += 1
 
             # Generation of Bonuses
             bonusQuestions = {}
