@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 
 from .models import Greeting
@@ -28,6 +29,7 @@ def questionsconfirmed(request):
     return render(request, 'questionsconfirmed.html')
 
 @login_required
+@csrf_exempt
 def generateset(request):
     if request.method == 'POST':
         comp = request.POST.get('comp')
@@ -87,6 +89,7 @@ def questionset(request):
     return render(request, 'questionset.html', {'questions': questions})
 
 @login_required
+@csrf_exempt
 def upload(request):
     if request.method == 'POST':
         text = request.POST.get('upload')
