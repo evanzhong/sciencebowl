@@ -89,7 +89,7 @@ def questionset(request):
 @csrf_exempt
 def upload(request):
     if request.method == 'POST':
-        text = request.POST.get['upload')
+        text = request.POST.get['upload']
         if text == "":
             raise RuntimeError("upload is empty!")
         parse.parse(text)
