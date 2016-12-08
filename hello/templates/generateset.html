@@ -182,9 +182,10 @@
 			$("#nsbButton.buttons").toggle();
 			var clickedNSB = false;
 			var clickedNOSB = false;
+
 			$("#nosbButton").click(function (event){
 				var clickedNOSB = true;
-				$(".nosbSubs").checked = true;
+				document.getElementsByClassName(".nosbSubs").checked = true;
 				$(".buttons").toggle();
 				setTimeout(function(){
 					$("#qSelection").fadeIn(1000);
@@ -199,7 +200,7 @@
 
 			$("#nsbButton").click(function (event){
 				var clickedNSB = true;
-				$(".nsbSubs").checked = true;
+				document.getElementsByClassName(".nsbSubs").checked = true;
 				$(".buttons").toggle();
 				setTimeout(function(){
 					$("#qSelection").fadeIn(1000);
@@ -214,8 +215,8 @@
 		
 			$("#back").click(function (event){	
 				$("#back").toggle();
-				$(".nsbSubs").checked = true;
-				$(".nosbSubs").checked = true;
+				document.getElementsByClassName(".nsbSubs").checked = false;
+				document.getElementsByClassName(".nosbSubs").checked = false;
 				$("#qSelection").fadeOut(300);
 				$("#nsbSubjects").fadeOut(300);
 				$("#nosbSubjects").fadeOut(300);
