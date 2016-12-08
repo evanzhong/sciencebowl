@@ -185,7 +185,7 @@
 
 			$("#nosbButton").click(function (event){
 				var clickedNOSB = true;
-				document.getElementsByClassName("nosbSubs").prop('checked', true);
+				document.getElementsByClassName("nosbSubs").attr('checked','checked');
 				$(".buttons").toggle();
 				setTimeout(function(){
 					$("#qSelection").fadeIn(1000);
@@ -200,7 +200,7 @@
 
 			$("#nsbButton").click(function (event){
 				var clickedNSB = true;
-				document.getElementsByClassName("nsbSubs").prop('checked', true);
+				document.getElementsByClassName("nsbSubs").attr('checked','checked');
 				$(".buttons").toggle();
 				setTimeout(function(){
 					$("#qSelection").fadeIn(1000);
@@ -215,8 +215,8 @@
 		
 			$("#back").click(function (event){	
 				$("#back").toggle();
-				document.getElementsByClassName("nsbSubs").prop('checked', false);
-				document.getElementsByClassName("nosbSubs").prop('checked', false);
+				document.getElementsByClassName("nsbSubs").attr('checked','');
+				document.getElementsByClassName("nosbSubs").attr('checked','');
 				$("#qSelection").fadeOut(300);
 				$("#nsbSubjects").fadeOut(300);
 				$("#nosbSubjects").fadeOut(300);
