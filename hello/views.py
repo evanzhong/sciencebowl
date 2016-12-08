@@ -78,9 +78,7 @@ def generateset(request):
             # Generation of Bonuses
             bonusQuestions = []
             for key, value in subsOfQuestions.items():
-                bonusQuestions[key] = Question.objects.filter(comp__iexact=comp).filter(subject__in=value).order_by('?')[:1]
-                if key == len(questions):
-                    break
+                bonusQuestions[key-1] = Question.objects.filter(comp__iexact=comp).filter(subject__in=value).order_by('?')[:1]
             print bonusQuestions
             return render(request, 'questionset.html', {'questions': questions, 'bonusQuestions': bonusQuestions, 'includeBonuses': TUAB})
     return render(request, 'generateset.html')
