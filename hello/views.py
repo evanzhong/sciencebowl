@@ -70,7 +70,8 @@ def generateset(request):
             questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
             subsOfQuestions = {}
             for question in questions:
-                subsOfQuestions[question.subject] = subsOfQuestions[question.subject] ? subsOfQuestions[question.subject] + 1 : 0
+                qSub = question.subject
+                subsOfQuestions[qSub] = subsOfQuestions[qSub] ? subsOfQuestions[qSub] + 1 : 0
 
             # Generation of Bonuses
             bonusQuestions = {}
