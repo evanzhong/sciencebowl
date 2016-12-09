@@ -74,7 +74,7 @@
   <h1>Here are your questions!</h1>
   <h2>Multiple Choice</h2>
   {% for q, bonusq in zList %}
-        {%if forloop.counter0|divisibleby:2%}
+    {%if includeBonuses%}
           <h3>Toss-Up</h3>
           <div class="question">
             <div><p>Competition: {{q.comp}}</p></div>
@@ -95,27 +95,27 @@
               <p class="correct">Answer: {{ q.short_answer_answer_text }}</p>
             {% endif %}
           </div>
-      {%else%}
-        <h3>Bonus</h3>
-        <div class="bonusQuestion">
-              <div><p>Competition: {{bonusq.comp}}</p></div>
-              <div><p>Subject: {{bonusq.subject}}</p></div>
-              <div><p>Sub-Topic: {{bonusq.subtopic}}</p></div>
-              <div><p>MC or SA: {{bonusq.question_type}}</p></div>
-              {{ bonusq.question_text }}
-              {% if bonusq.question_type == "Multiple Choice"%}
-                <ul class="mcChoices">
-                  <li>W: {{ bonusq.w }}</li>
-                  <li>X: {{ bonusq.x }}</li>
-                  <li>Y: {{ bonusq.y }}</li>
-                  <li>Z: {{ bonusq.z }}</li>
-                </ul>
-                <p class="correct">Answer: {{ bonusq.correct }}</p>
-              {% endif %}
-              {% if bonusq.question_type == "Short Answer"%}
-                <p class="correct">Answer: {{ bonusq.short_answer_answer_text }}</p>
-              {% endif %}
-        </div>
+
+          <h3>Bonus</h3>
+          <div class="bonusQuestion">
+            <div><p>Competition: {{bonusq.comp}}</p></div>
+            <div><p>Subject: {{bonusq.subject}}</p></div>
+            <div><p>Sub-Topic: {{bonusq.subtopic}}</p></div>
+            <div><p>MC or SA: {{bonusq.question_type}}</p></div>
+            {{ bonusq.question_text }}
+            {% if bonusq.question_type == "Multiple Choice"%}
+              <ul class="mcChoices">
+                <li>W: {{ bonusq.w }}</li>
+                <li>X: {{ bonusq.x }}</li>
+                <li>Y: {{ bonusq.y }}</li>
+                <li>Z: {{ bonusq.z }}</li>
+              </ul>
+              <p class="correct">Answer: {{ bonusq.correct }}</p>
+            {% endif %}
+            {% if bonusq.question_type == "Short Answer"%}
+              <p class="correct">Answer: {{ bonusq.short_answer_answer_text }}</p>
+            {% endif %}
+          </div>
     {%else%}
       <div class="question">
         <div><p>Competition: {{q.comp}}</p></div>
