@@ -96,26 +96,23 @@
         <h3>Bonus</h3>
         <div class="bonusQuestion">
           {% for bonusQuestion in bonusQuestions %}
-            {% for b in bonusQuestions %}
-            {{b}}
-              <div><p>Competition: {{b.comp}}</p></div>
-              <div><p>Subject: {{b.subject}}</p></div>
-              <div><p>Sub-Topic: {{b.subtopic}}</p></div>
-              <div><p>MC or SA: {{b.question_type}}</p></div>
-              {{ b.question_text }}
-              {% if b.question_type == "Multiple Choice"%}
+              <div><p>Competition: {{bonusQuestion.comp}}</p></div>
+              <div><p>Subject: {{bonusQuestion.subject}}</p></div>
+              <div><p>Sub-Topic: {{bonusQuestion.subtopic}}</p></div>
+              <div><p>MC or SA: {{bonusQuestion.question_type}}</p></div>
+              {{ bonusQuestion.question_text }}
+              {% if bonusQuestion.question_type == "Multiple Choice"%}
                 <ul class="mcChoices">
-                  <li>W: {{ b.w }}</li>
-                  <li>X: {{ b.x }}</li>
-                  <li>Y: {{ b.y }}</li>
-                  <li>Z: {{ b.z }}</li>
+                  <li>W: {{ bonusQuestion.w }}</li>
+                  <li>X: {{ bonusQuestion.x }}</li>
+                  <li>Y: {{ bonusQuestion.y }}</li>
+                  <li>Z: {{ bonusQuestion.z }}</li>
                 </ul>
-                <p class="correct">Answer: {{ b.correct }}</p>
+                <p class="correct">Answer: {{ bonusQuestion.correct }}</p>
               {% endif %}
-              {% if b.question_type == "Short Answer"%}
-                <p class="correct">Answer: {{ b.short_answer_answer_text }}</p>
-              {% endif %}
-            {% endfor %}  
+              {% if bonusQuestion.question_type == "Short Answer"%}
+                <p class="correct">Answer: {{ bonusQuestion.short_answer_answer_text }}</p>
+              {% endif %} 
           {% endfor %}
         </div>
       {% endif %}
