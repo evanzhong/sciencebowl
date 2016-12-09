@@ -74,7 +74,6 @@ def generateset(request):
                 subsOfQuestions.append(qSub)
 
             # Generation of Bonuses
-            bonusQuestions = []
             for subjectOfEach in subsOfQuestions:
                 bonusQuestions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subjectOfEach).order_by('?')[:"1"]
             return render(request, 'questionset.html', {'questions': questions, 'bonusQuestions': bonusQuestions, 'includeBonuses': TUAB})
