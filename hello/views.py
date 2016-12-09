@@ -62,12 +62,12 @@ def generateset(request):
             questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
             return render(request, 'questionset.html', {'questions': questions})
         elif TUAB:
-            tt = int(numQs) * 2
+            tt = int(numQs)
             # vvvvvvvvv Old code vvvvvvvvv
             # questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
 
             # Generation of Toss-Ups
-            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
+            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
             subsOfQuestions = []
             for question in questions:
                 qSub = str(question.subject)
@@ -76,9 +76,7 @@ def generateset(request):
             # Generation of Bonuses
             bonusQuestions = []
             for subjectOfEach in subsOfQuestions:
-                bonusQuestions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subjectOfEach).order_by('?')[:numQs]
-                # bq = Question.objects.get(comp__iexact=comp, subject__iexact=subjectOfEach)#.order_by('?')
-                # bonusQuestions.append(bq[0])
+                bonusQuestions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subjectOfEach).order_by('?')[:1]
             return render(request, 'questionset.html', {'questions': questions, 'bonusQuestions': bonusQuestions, 'includeBonuses': TUAB})
     return render(request, 'generateset.html')
 
