@@ -75,8 +75,8 @@ def generateset(request):
 
             # Generation of Bonuses
             bonusQuestions = []
-            for subjectOfEach in subsOfQuestions:
-                bonusQuestions.append(Question.objects.filter(comp=comp).filter(subject=subjectOfEach).order_by('?')[:1])
+            for s in subsOfQuestions:
+                bonusQuestions.append(Question.objects.filter(comp=comp).filter(subject=s).order_by('?')[:1])
             flattened = [val for sublist in bonusQuestions for val in sublist]
             zList = zip(questions, flattened)
             return render(request, 'questionset.html', {'zList': zList, 'includeBonuses': TUAB})
