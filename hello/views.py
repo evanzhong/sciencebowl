@@ -31,7 +31,6 @@ def questionsconfirmed(request):
 @login_required
 @csrf_exempt
 def generateset(request):
-    Question.objects.all().delete()
     if request.method == 'POST':
         comp = request.POST.get('comp')
         if comp == "":
