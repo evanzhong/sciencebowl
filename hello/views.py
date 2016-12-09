@@ -16,7 +16,6 @@ import parse
 # Create your views here.
 @login_required
 def index(request):
-    Question.objects.all().delete()
     return render(request, 'index.html')
 
 def login(request):
