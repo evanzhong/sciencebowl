@@ -66,6 +66,10 @@
 </style>
 {{subsOfQuestions}}
 {{zList}}
+{% for q, bonusq in zList %}
+  {{q.subject}}
+  {{bonusq.subject}}
+{% endfor%}
 <div>
   <h1>Here are your questions!</h1>
   <h2>Multiple Choice</h2>
