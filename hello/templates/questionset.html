@@ -74,7 +74,6 @@
   <h1>Here are your questions!</h1>
   <h2>Multiple Choice</h2>
   {% for q, bonusq in zList %}
-    {%if includeBonuses%}
         {%if forloop.counter0|divisibleby:2%}
           <h3>Toss-Up</h3>
           <div class="question">
@@ -117,7 +116,6 @@
                 <p class="correct">Answer: {{ bonusq.short_answer_answer_text }}</p>
               {% endif %}
         </div>
-      {% endif %}
     {%else%}
       <div class="question">
         <div><p>Competition: {{q.comp}}</p></div>
