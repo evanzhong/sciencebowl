@@ -5,7 +5,7 @@ def parse(text):
     for row in rows:
         obj = row.split("\t")
         question = Question()
-        if len(obj) == 14:
+        if len(obj) == 15:
             question.comp = obj[0];
             question.subject = obj[1];
             question.subtopic = obj[2];
@@ -19,6 +19,7 @@ def parse(text):
             question.short_answer_answer_text = obj[10];
             question.name = obj[11];
             question.set_number = obj[12];
+            question.tossup_or_bonus = obj[13];
             question.save()
         else:
             print("failed to write question (length is not right)")
