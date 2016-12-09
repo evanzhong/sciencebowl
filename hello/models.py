@@ -6,9 +6,9 @@ class Greeting(models.Model):
 
 class Question(models.Model):
 	tossup_or_bonus = models.CharField(max_length=100,default=None, blank=True, null=True)
-	comp = models.CharField(max_length=100,default=None, blank=True, null=True) #Be consistant w/ either value "NSB" or "NOSB"
-	subject = models.CharField(max_length=100, default=None, blank=True, null=True) #Andrew has a list of subjects (8 for NSB and 5 for NOSB)
-	subtopic = models.CharField(max_length=100, default=None, blank=True, null=True) #This will be harder to keep consistant -> will need better system
+	comp = models.CharField(max_length=10,default=None, blank=True, null=True) #Be consistant w/ either value "NSB" or "NOSB"
+	subject = models.CharField(max_length=200, default=None, blank=True, null=True) #Andrew has a list of subjects (8 for NSB and 5 for NOSB)
+	subtopic = models.CharField(max_length=200, default=None, blank=True, null=True) #This will be harder to keep consistant -> will need better system
 	question_type = models.CharField(max_length=20, default=None, blank=True, null=True)
 	question_text = models.CharField(max_length=10000, default=None, blank=True, null=True) # change max length?
 	w = models.CharField(max_length=500, default=None, blank=True, null=True)
