@@ -43,24 +43,34 @@
     margin-left: 2vw;
     margin-top: 2vh;
     margin-bottom: 2vh;
-    padding: 1vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-right: 2vw;
+    padding-left: 2vw;
   }
   .full{
-    margin-bottom: 1vh;
+    width: 70vw;
+    border: 2px solid black;
+    margin: auto;
+    margin-bottom: 10vh;
+  }
+  .subtopic{
+    opacity: 0.5;
+    font-size: 0.1vw;
   }
     /*Footer Styles*/
     footer{
       background-image: url('pattern.jpg');
       background-repeat: repeat;
-    height: 4vh;
+      height: 4vh;
     }
     #logout{
       margin-left: auto;
       margin-right: auto;
       margin-top: 10vh;
-    vertical-align: middle;
-    width: 10.5vw;
-    height: 3.25vh;
+      vertical-align: middle;
+      width: 10.5vw;
+      height: 3.25vh;
     }
     #logout a{
     display: block;
@@ -101,7 +111,7 @@
             {% if q.question_type == "Short Answer"%}
               <p class="correct">Answer: {{ q.short_answer_answer_text }}</p>
             {% endif %}
-            <div><p>Sub-Topic: {{q.subtopic}}</p></div>
+            <div><p class="subtopic">Sub-Topic: {{q.subtopic}}</p></div>
           </div>
 
           <div class="bonusQuestion">
@@ -119,7 +129,7 @@
             {% if bonusq.question_type == "Short Answer"%}
               <p class="correct">Answer: {{ bonusq.short_answer_answer_text }}</p>
             {% endif %}
-            <div><p>Sub-Topic: {{bonusq.subtopic}}</p></div>
+            <div><p class="subtopic">Sub-Topic: {{bonusq.subtopic}}</p></div>
           </div>
         </div>
     {%else%}
@@ -138,7 +148,7 @@
         {% if q.question_type == "Short Answer"%}
           <p class="correct">Answer: {{ q.short_answer_answer_text }}</p>
         {% endif %}
-        <div><p>Sub-Topic: {{q.subtopic}}</p></div>
+        <div><p class="subtopic">Sub-Topic: {{q.subtopic}}</p></div>
       </div>
     {% endif %}
     <br>
