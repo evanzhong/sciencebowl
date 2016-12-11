@@ -8,11 +8,11 @@
 <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 <style type="text/css">
 	body{
-		background-image: url('test.png');
+		background-image: url({% static 'test.png' %});
 		background-repeat: repeat;
 	}
 	header{
-		background-image: url('pattern.jpg');
+		background-image: url({% static 'pattern.jpg' %});
 		background-repeat: repeat;
 		height: 8vh;
 	}
@@ -78,7 +78,7 @@
 	} 
 	/*Footer Styles*/
     footer{
-    	background-image: url('pattern.jpg');
+		background-image: url({% static 'pattern.jpg' %});
     	background-repeat: repeat;
 		height: 4vh;
     }
