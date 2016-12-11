@@ -56,7 +56,7 @@
   }
   .subtopic{
     opacity: 0.5;
-    font-size: 0.1vw;
+    font-size: 1vw;
   }
     /*Footer Styles*/
     footer{
@@ -101,10 +101,10 @@
             <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}} </strong><span><em>{{q.question_type}}</em></span><span>{{ q.question_text }}</span></p></div>
             {% if q.question_type == "Multiple Choice"%}
               <ul class="mcChoices">
-                <li>W: {{ q.w }}</li>
-                <li>X: {{ q.x }}</li>
-                <li>Y: {{ q.y }}</li>
-                <li>Z: {{ q.z }}</li>
+                <li>W) {{ q.w }}</li>
+                <li>X) {{ q.x }}</li>
+                <li>Y) {{ q.y }}</li>
+                <li>Z) {{ q.z }}</li>
               </ul>
               <p class="correct">Answer: {{ q.correct }}</p>
             {% endif %}
@@ -119,10 +119,10 @@
             <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{bonusq.subject}} </strong><span><em>{{bonusq.question_type}}</em></span><span>{{ bonusq.question_text }}</span></p></div>
             {% if bonusq.question_type == "Multiple Choice"%}
               <ul class="mcChoices">
-                <li>W: {{ bonusq.w }}</li>
-                <li>X: {{ bonusq.x }}</li>
-                <li>Y: {{ bonusq.y }}</li>
-                <li>Z: {{ bonusq.z }}</li>
+                <li>W) {{ bonusq.w }}</li>
+                <li>X) {{ bonusq.x }}</li>
+                <li>Y) {{ bonusq.y }}</li>
+                <li>Z) {{ bonusq.z }}</li>
               </ul>
               <p class="correct">Answer: {{ bonusq.correct }}</p>
             {% endif %}
