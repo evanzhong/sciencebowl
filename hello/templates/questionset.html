@@ -32,7 +32,7 @@
   #home a:hover{
     background-color: #FAFAF0;  
   }
-  .question{
+  .question, .bonusQuestion{
     border: 2px solid black;
     margin: 20px;
   }
@@ -77,9 +77,8 @@
     {%if includeBonuses%}
           <h3>Toss-Up</h3>
           <div class="question">
-            <div><p>Subject: {{q.subject}}</p></div>
+            <div><p>{{q.subject}} <em>{{q.question_type}}</em></p></div>
             <div><p>Sub-Topic: {{q.subtopic}}</p></div>
-            <div><p>MC or SA: {{q.question_type}}</p></div>
             {{ q.question_text }}
             {% if q.question_type == "Multiple Choice"%}
               <ul class="mcChoices">
@@ -97,9 +96,8 @@
 
           <h3>Bonus</h3>
           <div class="bonusQuestion">
-            <div><p>Subject: {{bonusq.subject}}</p></div>
+            <div><p>{{bonusq.subject}} <em>{{bonusq.question_type}}</em></p></div>
             <div><p>Sub-Topic: {{bonusq.subtopic}}</p></div>
-            <div><p>MC or SA: {{bonusq.question_type}}</p></div>
             {{ bonusq.question_text }}
             {% if bonusq.question_type == "Multiple Choice"%}
               <ul class="mcChoices">
@@ -116,10 +114,9 @@
           </div>
     {%else%}
       <div class="question">
-        <div><p>Competition: {{q.comp}}</p></div>
-        <div><p>Subject: {{q.subject}}</p></div>
+        <h3>Toss-Up</h3>
+        <div><p>{{q.subject}} <em>{{q.question_type}}</em></p></div>
         <div><p>Sub-Topic: {{q.subtopic}}</p></div>
-        <div><p>MC or SA: {{q.question_type}}</p></div>
         {{ q.question_text }}
         {% if q.question_type == "Multiple Choice"%}
           <ul class="mcChoices">
