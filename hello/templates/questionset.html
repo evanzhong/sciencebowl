@@ -38,8 +38,15 @@
     background-color: #FAFAF0;  
   }
   .question, .bonusQuestion{
-    border: 2px solid black;
-    margin: 20px;
+/*    border: 2px solid black;*/
+    margin-right: 2vw;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 1vh;
+  }
+  .full{
+    margin-bottom: 1vh;
   }
     /*Footer Styles*/
     footer{
@@ -78,6 +85,7 @@
 <div> -->
   {% for q, bonusq in zList %}
     {%if includeBonuses%}
+        <div class="full">
           <div class="question">
             <h3>Toss-Up</h3>
             <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}} </strong><span><em>{{q.question_type}}</em></span><span>{{ q.question_text }}</span></p></div>
@@ -113,6 +121,7 @@
             {% endif %}
             <div><p>Sub-Topic: {{bonusq.subtopic}}</p></div>
           </div>
+        </div>
     {%else%}
       <div class="question">
         <h3>Toss-Up</h3>
