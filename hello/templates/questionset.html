@@ -98,7 +98,7 @@
         <div class="full">
           <div class="question">
             <h3>Toss-Up</h3>
-            <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}} </strong><span><em>{{q.question_type}}</em></span><span>{{ q.question_text }}</span></p></div>
+            <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}}&nbsp;</strong><span><em>{{q.question_type}}&nbsp;&nbsp;</em></span><span>{{ q.question_text }}</span></p></div>
             {% if q.question_type == "Multiple Choice"%}
               <ul class="mcChoices">
                 <li>W) {{ q.w }}</li>
@@ -116,7 +116,7 @@
 
           <div class="bonusQuestion">
             <h3>Bonus</h3>
-            <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{bonusq.subject}} </strong><span><em>{{bonusq.question_type}}</em></span><span>{{ bonusq.question_text }}</span></p></div>
+            <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{bonusq.subject}}&nbsp;</strong><span><em>{{bonusq.question_type}}&nbsp;&nbsp;</em></span><span>{{ bonusq.question_text }}</span></p></div>
             {% if bonusq.question_type == "Multiple Choice"%}
               <ul class="mcChoices">
                 <li>W) {{ bonusq.w }}</li>
@@ -135,7 +135,7 @@
     {%else%}
       <div class="question">
         <h3>Toss-Up</h3>
-        <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}} </strong><span><em>{{q.question_type}}</em></span><span>{{ q.question_text }}</span></p></div>
+        <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}}&nbsp;</strong><span><em>{{q.question_type}}&nbsp;&nbsp;</em></span><span>{{ q.question_text }}</span></p></div>
         {% if q.question_type == "Multiple Choice"%}
           <ul class="mcChoices">
             <li>W: {{ q.w }}</li>
