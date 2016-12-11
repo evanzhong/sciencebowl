@@ -15,7 +15,9 @@
     height: 8vh;
   }
   h3{
+    text-align: center;
     margin: auto;
+    width: 25vw;
   }
   #home a{
     display: block;
@@ -74,13 +76,11 @@
   <div> Bonus subject: {{bonusq.subject}} </div>
 {% endfor%}
 <div> -->
-  <h1>Here are your questions!</h1>
-  <h2>Multiple Choice</h2>
   {% for q, bonusq in zList %}
     {%if includeBonuses%}
           <div class="question">
             <h3>Toss-Up</h3>
-            <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}} </strong><em>{{q.question_type}}   </em>{{ q.question_text }}</p></div>
+            <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}} </strong><span><em>{{q.question_type}}</em></span><span>{{ q.question_text }}</span></p></div>
             {% if q.question_type == "Multiple Choice"%}
               <ul class="mcChoices">
                 <li>W: {{ q.w }}</li>
@@ -98,7 +98,7 @@
 
           <div class="bonusQuestion">
             <h3>Bonus</h3>
-            <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{bonusq.subject}} </strong><em>{{bonusq.question_type}}   </em>{{ bonusq.question_text }}</p></div>
+            <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{bonusq.subject}} </strong><span><em>{{bonusq.question_type}}</em></span><span>{{ bonusq.question_text }}</span></p></div>
             {% if bonusq.question_type == "Multiple Choice"%}
               <ul class="mcChoices">
                 <li>W: {{ bonusq.w }}</li>
@@ -116,7 +116,7 @@
     {%else%}
       <div class="question">
         <h3>Toss-Up</h3>
-        <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}} </strong><em>{{q.question_type}}   </em>{{ q.question_text }}</p></div>
+        <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}} </strong><span><em>{{q.question_type}}</em></span><span>{{ q.question_text }}</span></p></div>
         {% if q.question_type == "Multiple Choice"%}
           <ul class="mcChoices">
             <li>W: {{ q.w }}</li>
