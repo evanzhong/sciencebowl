@@ -75,9 +75,9 @@
   <h2>Multiple Choice</h2>
   {% for q, bonusq in zList %}
     {%if includeBonuses%}
-          <h3>Toss-Up</h3>
           <div class="question">
-            <div><p>{{q.subject}} <em>{{q.question_type}}</em>  {{ q.question_text }}</p></div>
+            <h3>Toss-Up</h3>
+            <div><p><strong>{{q.subject}}</strong><em>{{q.question_type}}  </em>{{ q.question_text }}</p></div>
             {% if q.question_type == "Multiple Choice"%}
               <ul class="mcChoices">
                 <li>W: {{ q.w }}</li>
@@ -93,9 +93,9 @@
             <div><p>Sub-Topic: {{q.subtopic}}</p></div>
           </div>
 
-          <h3>Bonus</h3>
           <div class="bonusQuestion">
-            <div><p>{{bonusq.subject}} <em>{{bonusq.question_type}}</em>  {{ bonusq.question_text }}</p></div>
+            <h3>Bonus</h3>
+            <div><p><strong>{{bonusq.subject}}</strong><em>{{bonusq.question_type}}  </em>{{ bonusq.question_text }}</p></div>
             {% if bonusq.question_type == "Multiple Choice"%}
               <ul class="mcChoices">
                 <li>W: {{ bonusq.w }}</li>
@@ -113,7 +113,7 @@
     {%else%}
       <div class="question">
         <h3>Toss-Up</h3>
-        <div><p>{{q.subject}} <em>{{q.question_type}}  {{ q.question_text }}</em></p></div>
+        <div><p><strong>{{q.subject}}</strong><em>{{q.question_type}}  </em>{{ q.question_text }}</p></div>
         {% if q.question_type == "Multiple Choice"%}
           <ul class="mcChoices">
             <li>W: {{ q.w }}</li>
