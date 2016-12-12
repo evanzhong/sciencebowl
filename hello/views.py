@@ -60,7 +60,7 @@ def generateset(request):
             raise RuntimeError("empty values")
         if not TUAB:
             questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
-            return render(request, 'questionset.html', {'questions': questions})
+            return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
         elif TUAB:
             tt = int(numQs)
             # vvvvvvvvv Old code vvvvvvvvv
