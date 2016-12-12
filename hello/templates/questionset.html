@@ -144,22 +144,24 @@
     {% endfor %}
   {%else%}
     {%for q in questions%}
-      <div class="question">
-        <h3>Toss-Up</h3>
-        <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}}&nbsp;</strong><span><em>{{q.question_type}}&nbsp;&nbsp;</em></span><span>{{ q.question_text }}</span></p></div>
-        {% if q.question_type == "Multiple Choice"%}
-          <ul class="mcChoices">
-            <li>W: {{ q.w }}</li>
-            <li>X: {{ q.x }}</li>
-            <li>Y: {{ q.y }}</li>
-            <li>Z: {{ q.z }}</li>
-          </ul>
-          <p class="correct">Answer: {{ q.correct }}</p>
-        {% endif %}
-        {% if q.question_type == "Short Answer"%}
-          <p class="correct">Answer: {{ q.short_answer_answer_text }}</p>
-        {% endif %}
-        <div><p class="subtopic">Sub-Topic: {{q.subtopic}}</p></div>
+      <div class="full">
+        <div class="question">
+          <h3>Toss-Up</h3>
+          <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}}&nbsp;</strong><span><em>{{q.question_type}}&nbsp;&nbsp;</em></span><span>{{ q.question_text }}</span></p></div>
+          {% if q.question_type == "Multiple Choice"%}
+            <ul class="mcChoices">
+              <li>W: {{ q.w }}</li>
+              <li>X: {{ q.x }}</li>
+              <li>Y: {{ q.y }}</li>
+              <li>Z: {{ q.z }}</li>
+            </ul>
+            <p class="correct">Answer: {{ q.correct }}</p>
+          {% endif %}
+          {% if q.question_type == "Short Answer"%}
+            <p class="correct">Answer: {{ q.short_answer_answer_text }}</p>
+          {% endif %}
+          <div><p class="subtopic">Sub-Topic: {{q.subtopic}}</p></div>
+        </div>
       </div>
     {% endfor %}  
   {% endif %}
