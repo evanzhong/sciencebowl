@@ -69,14 +69,17 @@ def generateset(request):
             # Generation of Toss-Ups
             questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
             subsOfQuestions = []
+            idOfQuestions = []
             for question in questions:
                 qSub = str(question.subject)
+                i = question.id
                 subsOfQuestions.append(qSub)
+                idOfQuestions.append(i)
 
             # Generation of Bonuses
             bonusQuestions = []
             for s in subsOfQuestions:
-                bonusQuestions.append(Question.objects.filter(comp=comp).filter(subject=s).order_by('?')[:1])
+                bonusQuestions.append(Question.objects.filter(comp=comp).filter(subject=s).exclude(id__in=idOfQuestions).order_by('?')[:1])
             flattened = [val for sublist in bonusQuestions for val in sublist]
             zList = zip(questions, flattened)
             return render(request, 'questionset.html', {'zList': zList, 'subsOfQuestions': subsOfQuestions, 'includeBonuses': TUAB})
