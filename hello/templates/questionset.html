@@ -100,10 +100,10 @@
   <div> Question subject: {{q.subject}} </div>
   <div> Bonus subject: {{bonusq.subject}} </div>
 {% endfor%}
-<div> -->
+-->
 <div id="wrap">
-  {% for q, bonusq in zList %}
-    {%if includeBonuses%}
+  {%if includeBonuses%}
+    {% for q, bonusq in zList %}
         <div class="full">
           <div class="question">
             <h3>Toss-Up</h3>
@@ -141,7 +141,9 @@
             <div><p class="subtopic">Sub-Topic: {{bonusq.subtopic}}</p></div>
           </div>
         </div>
-    {%else%}
+    {% endfor %}
+  {%else%}
+    {%for q in questions%}
       <div class="question">
         <h3>Toss-Up</h3>
         <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}}&nbsp;</strong><span><em>{{q.question_type}}&nbsp;&nbsp;</em></span><span>{{ q.question_text }}</span></p></div>
@@ -159,8 +161,8 @@
         {% endif %}
         <div><p class="subtopic">Sub-Topic: {{q.subtopic}}</p></div>
       </div>
-    {% endif %}
-  {% endfor %}
+    {% endfor %}  
+  {% endif %}
 </div>
 
 <footer>
