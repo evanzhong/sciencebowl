@@ -15,6 +15,9 @@
     background-repeat: repeat;
     height: 8vh;
   }
+  #wrap{
+    margin-top: 3vh;
+  }
   h3{
     text-align: center;
     margin: auto;
@@ -98,6 +101,7 @@
   <div> Bonus subject: {{bonusq.subject}} </div>
 {% endfor%}
 <div> -->
+<div id="wrap">
   {% for q, bonusq in zList %}
     {%if includeBonuses%}
         <div class="full">
@@ -156,9 +160,7 @@
         <div><p class="subtopic">Sub-Topic: {{q.subtopic}}</p></div>
       </div>
     {% endif %}
-    <br>
   {% endfor %}
-
 </div>
 
 <footer>
