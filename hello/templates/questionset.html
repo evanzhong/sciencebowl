@@ -51,7 +51,9 @@
     padding-bottom: 2vh;
     padding-right: 2vw;
     padding-left: 2vw;
-    border-radius: .125rem;
+  }
+  ul.mcChoices{
+    list-style: none;
   }
   .full{
     width: 70vw;
@@ -59,6 +61,7 @@
     background-color: white;
     margin: auto;
     margin-bottom: 10vh;
+    border-radius: .125rem;
   }
   .subtopic{
     opacity: 0.5;
@@ -155,10 +158,10 @@
           <div><p><span>{{ forloop.counter }}</span><span>) </span><strong>{{q.subject}}&nbsp;</strong><span><em>{{q.question_type}}&nbsp;&nbsp;</em></span><span>{{ q.question_text }}</span></p></div>
           {% if q.question_type == "Multiple Choice"%}
             <ul class="mcChoices">
-              <li>W: {{ q.w }}</li>
-              <li>X: {{ q.x }}</li>
-              <li>Y: {{ q.y }}</li>
-              <li>Z: {{ q.z }}</li>
+              <li>W) {{ q.w }}</li>
+              <li>X) {{ q.x }}</li>
+              <li>Y) {{ q.y }}</li>
+              <li>Z) {{ q.z }}</li>
             </ul>
             <p class="correct">Answer: {{ q.correct }}</p>
           {% endif %}
