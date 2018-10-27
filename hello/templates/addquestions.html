@@ -10,11 +10,11 @@
 	body{
 		margin: 0;
 		height: 101vh;
-		background-image: url({% static 'test.png' %});
+		background-image: url('static/test.png');
 		background-repeat: repeat;
 	}
 	header{
-		background-image: url({% static 'pattern.jpg' %});
+		background-image: url('static/pattern.jpg');
 		background-repeat: repeat;
 		height: 8vh;
 	}
@@ -55,6 +55,7 @@
 		margin-top: 2vh;
 		margin-bottom: 2vh;
 		box-shadow: 0px 0px 20px lightgray;
+		border-radius: .125rem;
 		border: none;
 		width: 80vw;
 		height: 70vh;
@@ -81,7 +82,7 @@
 	} 
 	/*Footer Styles*/
     footer{
-		background-image: url({% static 'pattern.jpg' %});
+		background-image: url('static/pattern.jpg');
     	background-repeat: repeat;
 		height: 4vh;
     }

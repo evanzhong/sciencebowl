@@ -15,14 +15,14 @@
 	<style type="text/css">
 		body{
 			margin: 0;
-			background-image: url({% static 'test.png' %});
+			background-image: url('static/test.png');
 			background-repeat: repeat;
 		}
 		form{
 			font-family: Courier;
 		}
 		header{
-			background-image: url({% static 'pattern.jpg' %});
+			background-image: url('static/pattern.jpg');
 			background-repeat: repeat;
 			height: 8vh;
 		}
@@ -86,6 +86,7 @@
 			margin-top: 1vh;
 			padding: 5vh;
 			background-color: #FAFAFA;
+			border-radius: .125rem;
 			box-shadow: 0px 0px 15px #BABABA;
 		}
 		.buttons:hover{
@@ -130,7 +131,7 @@
 			margin: auto;
 			padding: 20px;
 			width: 50%;
-			background-image: url({% static 'd.png' %});
+			background-image: url('static/d.png');
 			background-repeat: repeat;
 			box-shadow: 0px 0px 20px lightgray;
 		}
@@ -145,7 +146,7 @@
 		}
 		/*Footer Styles*/
 	    footer{
-			background-image: url({% static 'pattern.jpg' %});
+			background-image: url('static/pattern.jpg');
 	    	background-repeat: repeat;
 			height: 4vh;
 	    }
