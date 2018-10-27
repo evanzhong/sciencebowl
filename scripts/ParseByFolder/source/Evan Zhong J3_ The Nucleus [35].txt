@@ -1,0 +1,299 @@
+﻿Name: [Evan Zhong]                                                                        Date: [5/16/17]
+Text: [Chemistry]                                                                                        Subtext: Ch. [19], P. [N/A]
+Author: [Zumdahl] Edition: [9th]
+
+
+Chemistry: The Nucleus
+Toss-Up
+1) Chemistry  Multiple Choice   Fermi Numbers Special! On what order of magnitude is the radius of a typical nucleus?
+W) 13
+X) -8
+Y) -13
+Z) -20
+Answer: Y) (Change as necessary)
+
+
+Toss-Up
+2) Chemistry  Short Answer  The greek root for the word Atom means what?
+Answer: indivisible
+
+
+Toss-Up
+3) Chemistry  Short Answer  Name all of the following, in words or numbers, that are true:
+1) Nucleons are all particles found in an atom
+2) The atomic number is denoted by the letter A
+3) In Z-A format A is written as a superscript while Z is written as a subscript
+Answer: 3 only
+
+
+Toss-Up
+4) Chemistry  Short Answer Explain the difference between a Nuclide and an Isotope:
+Answer: Isotope is any atom that has identical atomic numbers but different mass numbers. A nuclide is a specific member of a group of isotopes.
+
+
+Toss-Up
+5) Chemistry  Multiple Choice  Which of the following nuclides are not isotopes of carbon?
+W) Carbon-12
+X) Carbon-13
+Y) Carbon-14
+Z) Carbon-15
+Answer: Z)
+
+
+
+
+
+
+
+
+
+
+
+
+Toss-Up
+6) Chemistry  Short Answer  Name all of the following that contribute to nuclear stability
+1) Kinetic Stability
+2) Thermodynamic Stability
+3) Reference Stability
+Answer: 1, 2
+
+
+Toss-Up
+7) Chemistry  Multiple Choice  Nuclear Thermodynamic Stability references which of the following?
+W) The potential energy of a particular nucleus as a compared with the sum of the potential energies of its component protons and neutrons.
+X) The thermodynamic energy of a particular nucleus as a compared with the sum of the thermodynamic energies of its component protons and neutrons.
+Y)The kinetic energy of a particular nucleus as a compared with the sum of the kinetic energies of its component protons and neutrons.
+Z)The static energy of a particular nucleus as a compared with the sum of the static energies of its component protons and neutrons.
+Answer: W)
+
+
+Toss-Up
+8) Chemistry  Short Answer  An atom that has low kinetic stability will most likely undergo what type of process?
+Answer: Radioactive decay
+
+
+Toss-Up
+9) Chemistry  Multiple Choice  Which of the following nuclides of Uranium has the lowest kinetic stability?
+W) U-238
+X) U-235
+Y) U-236
+Z) U-233
+Answer: Y)
+
+
+Toss-Up
+10) Chemistry  Multiple Choice  Which of the following is closest to the number of stable nuclides with respect to nuclear decay?
+W) 280
+X) 300
+Y) 320
+Z) 340
+Answer: W)
+
+
+
+
+
+
+Toss-Up
+11) Chemistry  Short Answer  After Organesson, further artificially synthesized elements are hypothesized to exist within these types groups in the next period of the periodic table?
+Answer: Islands of Stability
+
+
+Toss-Up
+12) Chemistry  Multiple Choice  Which of the following elements has the largest number of stable isotopes with respect to nuclear decay?
+W) Platinum
+X) Calcium
+Y) Xenon
+Z) Tin
+Answer: Z)
+
+
+Toss-Up
+13) Chemistry  Multiple Choice  The zone of stability lies:
+W) Along the line graphed by a 1:1 ratio of neutrons to protons
+X) Slightly below the line graphed by a 1:1 ratio of neutrons to protons
+Y) Slightly above the line graphed by a 1:1 ratio of neutrons to protons
+Z) The inverse function of the line graphed by a 1:1 ratio of neutrons to protons
+Answer: Y)
+
+
+Toss-Up
+14) Chemistry  Short Answer  Which of the following are true:
+1) All nuclides with 84 or more protons are unstable with respect to radioactive decay
+2) Light and Heavy nuclides are stable when Z = A - Z
+3) Nuclides with even numbers of protons and neutrons are more often stable than those with odd numbers
+Answer: 1, 3
+
+
+Toss-Up
+15) Chemistry  Multiple Choice  You observe a nuclide with neutron to proton ratio of 3. Which of the following best describes the stability of this nuclide:
+W) Stable because it lies within the Zone of Stability
+X) Stable because it lies within the 1st subform of the period 8 Island of Stability
+Y) Unstable due to spontaneous beta production
+Z) Unstable due to spontaneous positron production
+Answer: Y)
+
+
+
+
+
+
+
+
+Toss-Up
+16) Chemistry  Multiple Choice  Elements with too many protons as compared to neutrons undergo what type of decay?
+W) Gamma emission
+X) Beta production
+Y) Position production
+Z) Alpha emission
+Answer: Y)
+
+
+Toss-Up
+17) Chemistry  Short Answer  List 5 of the 7 magic neutron or proton numbers that produce especially stable nuclides
+Answer: Any 5 of (2, 8, 20, 28, 50, 82, 126)
+
+
+Toss-Up
+18) Chemistry  Multiple Choice  Uranium 238 decays into which of the following
+W) Thorium 238
+X) Thorium 234
+Y) Plutonium 238
+Z) Plutonium 234
+Answer: X)
+
+
+Toss-Up
+19) Chemistry  Multiple Choice  Spontaneous fission results in:
+W) An alpha particle, and a nucleus with similar atomic weight as the parent nuclide
+X) A beta particle, and a nucleus with similar atomic weight as the parent nuclide
+Y) Two nuclides that are both around ½ the atomic weight of the parent nuclide
+Z) A gamma ray, and a nucleus with no change in atomic weight compared to the parent nuclide
+Answer: Y)
+
+
+Toss-Up
+20) Chemistry  Multiple Choice  What type of radioactive decay results in a two nuclide with changes to both the A and Z numbers?
+W) alpha decay
+X) beta decay
+Y) gamma decay
+Z) spontaneous fission
+Answer: W)
+
+
+
+
+
+
+
+
+
+
+Toss-Up
+21) Chemistry  Short Answer  Because the beta particle is best represented as an electron, what is the net effect of beta particle production?
+Answer: the change of a neutron to a proton
+
+
+Toss-Up
+22) Chemistry  Multiple Choice  A gamma ray can technically be classified by which of the following particles?
+W) Proton
+X) Neutron
+Y) Electron
+Z) Photon
+Answer: Z)
+
+
+Toss-Up
+23) Chemistry  Multiple Choice  Give the Z and A numbers for a positron respectively?
+W) 0, -1
+X) 0, 1
+Y) 1, 0
+Z) -1, 0
+Answer: Y)
+
+
+Toss-Up
+24) Chemistry  Short Answer  An electron and a positron collision is known an annihilation. What, and in what quantity, are produced as a result of annihilation.  
+Answer 2 gamma rays (must mention number)
+
+
+Toss-Up
+25) Chemistry  Multiple Choice  Which of the following orbitals are most likely to participate in electron capture?
+W) 5f
+X) 2p
+Y) 3d
+Z) 2s
+Answer: Z)
+Toss-Up
+26) Chemistry  Short Answer  What are always produced alongside the process of electron capture and why?
+Answer gamma rays, to release excess energy from captured electron
+
+
+
+
+
+
+
+
+Toss-Up
+27) Chemistry  Multiple Choice  Which of the following methods of radioactive decay does NOT result in an increase in neutron-proton ratio?
+W) Beta production
+X) Positron production
+Y) Alpha production
+Z) Electron Capture
+Answer: W)
+Toss-Up
+28) Chemistry  Multiple Choice  Who observed the first nuclear transformation?
+W) Joseph John Thomson
+X) Lord Rutherford
+Y) Lise Meitner
+Z) Leo Szilard 
+Answer: Y)
+Toss-Up
+29) Chemistry  Multiple Choice  The earliest experiments with nuclear transformations required bombarding a target atom with which of the following particles?
+W) alpha
+X) beta
+Y) neutron
+Z) positron
+Answer: W)
+Toss-Up
+30) Chemistry  Short Answer  Explain why neutrons are often used as bombarding particles.
+Answer: Neutrons are uncharged, and thus not repelled electrostatically by target nucleus and readily absorbed 
+Toss-Up
+30) Chemistry  Short Answer  What is the world’s largest cyclotron and what country/countries is it located in?
+Answer: TRIUMF CYCLOTRON in Canada 
+
+
+Toss-Up
+31) Chemistry  Multiple Choice  What gas is readily ionized and is present in Geiger counters?
+W) Xenon
+X) Oxygen
+Y) Argon
+Z) Fluorine
+Answer: Y)
+
+
+
+
+
+
+Toss-Up
+32) Chemistry  Multiple Choice  Scintillation counters use which of the following to detect radioactive decay?
+W) Light generation
+X) Electron emission
+Y) Noble gas ionization
+Z) Intra-particle collision
+Answer: W)
+Toss-Up
+33) Chemistry  Short Answer  What nuclide has been especially helpful in treating of illness regarding the thyroid gland?
+Answer: Iodine-131
+Toss-Up
+34) Chemistry  Short Answer  In the equation of ΔE = Δmc^2, Δm is also known as what?
+Answer: Mass defect
+Toss-Up
+35) Chemistry  Multiple Choice  When a fission produced fewer than 1 neutron on average per fission event the reaction is deemed?
+W) Stable
+X) Subcritical
+Y) Critical
+Z) Supercritical
+Answer: X)

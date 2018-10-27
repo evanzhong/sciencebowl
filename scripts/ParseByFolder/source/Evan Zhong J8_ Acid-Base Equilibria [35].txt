@@ -1,0 +1,244 @@
+﻿Name: [Evan Zhong]                                                                Date: [7/27/17]
+Text: [Chemistry]                                                                                          Subtext: Ch. [15], P.[711]
+Author: [Zumdahl] Edition: [9th]
+
+
+Chemistry: Acid Base equilibria
+Toss-Up
+1) Chemistry  Multiple Choice   Human blood is mainly buffered through which anion?
+W) Hydroxide
+X) Carbonite
+Y) Bicarbonate
+Z) Chloride
+Answer: Y)
+
+
+Toss-Up
+2) Chemistry  Multiple Choice  In a solution of common table salt and muriatic acid, which of the following is the common ion?
+W) Na+
+X) H+
+Y) Cl-
+Z) OH-
+Answer: Y)
+
+
+Toss-Up
+3) Chemistry  Short Answer  Name all of the following, in words or numbers, that would affect the equilibrium position (if added) of a 1M solution of Hydrofluoric acid:
+1) Hydrochloric acid
+2) Fluorine
+3) Sodium Fluoride
+Answer: 1, 3
+
+
+Toss-Up
+4) Chemistry  Short Answer  The shift in equilibrium position that occurs because of the addition of an ion already involved in the equilibrium reaction is called what?
+Answer: Common ion effect
+
+
+Toss-Up
+5) Chemistry  Multiple Choice  Which of the following is not explained by the common ion effect?
+W) HSO4- has a larger Ka when not in a solution with sulfuric acid
+X) Polyprotic acids have progressively weaker and weaker dissociations
+Y) Addition of sulfate ion reduces the pH of sulfuric acid
+Z) Addition of ammonium chloride shifts the equilibrium position to the left for a solution of ammonia 
+Answer: Y)
+
+
+Toss-Up
+6) Chemistry  Short Answer  All of the following are buffers except
+1) a weak acid and its salt
+2) a weak base and its salt
+3) a weak base and a hydroxide ion
+Answer: 3
+
+
+Toss-Up
+7) Chemistry  Multiple Choice  In the generalized weak acid buffer represented by equation OH-(aq) + HA(aq) → A-(aq) + H2O(l) which of the following best describes why the solution is able to buffer and maintain constant pH?
+W) The OH- ions are not allowed to accumulate but are replaced by A- ions
+X) The OH- ions are neutralized by the H2O species
+Y) The HA molecules neutralizes the OH-
+Z) The OH- is not allowed to dissociate due to the presence of common ion A-
+Answer: W)
+
+
+Toss-Up
+8) Chemistry  Short Answer  What is the difference between neutralization reactions and buffering reactions?
+Answer: Neutralization usually refers to any reaction of acid and base to achieve a pH at or near 7, but a buffer solution always consists of a solution containing significant concentrations of both a weak acid and its conjugate base for the purpose of maintaining a constant pH value (not necessarily near 7).
+Go read: https://socratic.org/questions/how-does-neutralization-reaction-differ-from-buffer 
+
+
+Toss-Up
+9) Chemistry  Multiple Choice  Which of the following is not true?
+W) The concentration of H+ in a buffered solution is determined by the ratio of concentrations of HA and A-
+X) The concentration of H+ in a buffered solution varies directly with the concentration of HA
+Y) The concentration of H+ in a buffered solution varies inversely with the concentration of A-
+Z) The concentration of OH- in a buffered solution varies inversely with the concentration of H+
+Answer: Z)
+
+
+Toss-Up
+10) Chemistry  Multiple Choice  Which of the following has the greatest effect on the buffering capacity of the solution?
+W) The ratio between HA and A-
+X) The conjugate base chosen
+Y) The magnitude of the concentrations of HA and A-
+Z) The pKa of the acid or base to be buffered
+Answer: Y)
+
+
+Toss-Up
+11) Chemistry  Short Answer  Calculate the concentration of H+ ions in a 0.3M solution of HF (Ka = 7.2 * 10^-4) and 0.5M NaF
+Answer: 4.32 * 10-4M
+
+
+Toss-Up
+12) Chemistry  Short Answer  Evan’s “open your mind” acid has a Ka of 8.8 * 10^-8 and a conjugate base of Astatide. He mixes 0.7M of it with 0.4M astatide ions. What is the concentration of the hydrogen ions in Evan’s acid?
+Answer: 1.54 * 10^-7
+
+
+Toss-Up
+13) Chemistry  Short Answer  What is the shorthand equation for the pH of a buffer solution?
+Answer: pH = pKa + log([A-]/[HA])
+
+
+Toss-Up
+14) Chemistry  Short Answer  The imagine you can create a buffer out of HCl. The pH of a 1M HCl and 1M NaCl buffer is what?
+Answer: 0
+
+
+Toss-Up
+15) Chemistry  Multiple Choice  The pH of a buffer solution where the concentration of acid and base are equal will always be?
+W) equal to the Ka of the acid
+X) equal to the pKa of the acid
+Y) equal to the concentration of the base
+Z) equal to the concentration of the acid
+Answer: X)
+
+
+Toss-Up
+16) Chemistry  Short Answer  The equation pH = pKa + log([A-]/[HA]) is named after which two scientists?
+Answer: Henderson and Hasselbalch
+
+
+Toss-Up
+17) Chemistry  Multiple Choice  Which of the following is true regarding a buffer solution of 3M and 5M HCl and NaCl as compared to a buffer solution of 0.6M to 1.0M?
+W) The pH will be different, but the buffering capacity remains the same
+X) The pH will remain the same, and the buffering capacity will remain the same
+Y) The pH will be different, and the buffering capacity will be different
+Z) The pH will remain the same, but the buffering capacity will be different
+Answer: Z)
+
+
+
+
+Toss-Up
+18) Chemistry  Short Answer  Given that the Ka of Evan’s NEW acid is 1.0 * 10^-8, what is the pH of a buffer that is formed from 8M Evan’s NEW acid and 8M of the respective conjugate base?
+Answer: 8
+
+
+Toss-Up
+19) Chemistry  Multiple Choice  The term that best represents the amount of protons or hydroxide ions a buffer can absorb without a significant change in pH is known as?
+W) buffering equilibrium
+X) buffer position
+Y) buffering capacity
+Z) buffer absorbance
+Answer: Y)
+
+
+Toss-Up
+20) Chemistry  Short Answer  Buffering capacity is to magnitudes of acid and base as pH is to?
+Answer: ratio between base and acid (DO NOT ACCEPT ratio between acid and base)
+
+
+Toss-Up
+21) Chemistry  Multiple Choice  Optimal buffering occurs when?
+W) [A-] greatly exceeds that of [HA]
+X) [HA] greatly exceeds that of [A-]
+Y) [HA] is equal to that of [A-]
+Z) [HA] and [A-] will vary with solution parings
+Answer: Y)
+
+
+Toss-Up
+22) Chemistry  Short Answer  Nathan’s sample of Absorbic acid has a Ka of 1.0 * 10^-7. He decides to mix 0.1M absorbic acid with 0.01M of its conjugate base to form a buffer. What is the pH of Nathan’s buffer?
+Answer: 6
+
+
+Toss-Up
+23) Chemistry  Short Answer  When solving titration problems, what unit is used instead of the mole?
+Answer: milimole
+
+
+Toss-Up
+24) Chemistry  Multiple Choice  In the titration of a weak acid by a strong base.
+W) The pH at the equivalence point is always less than 7
+X) The pH at the equivalence point is always greater than 7
+Y) The pH at the equivalence point is always equal to 7
+Z) Indeterminate
+Answer: X)
+
+
+Toss-Up
+25) Chemistry  Short Answer  What is the hydrogen ion concentration of a buffer made from both 0.1M Ammonia and Ammonium Chloride solution, given that the Ka of ammonia is 11.12?
+Answer: 11.12
+Toss-Up
+26) Chemistry Multiple Choice  Hydrocyanic acid is a weaker acid than Acetic Acid. Which of the following can be assumed of the titration of equal molarity and equal volume HCN vs HC2H3O2?
+W) It will take more base to titrate HCN because it is a weaker acid
+X) It will take more base to titrate HC2H3O2 because it is a stronger acid
+Y) It will take equally as much base to titrate HCN as HC2H3O2
+Z) Not enough information is given
+Answer: Y)
+Toss-Up
+27) Chemistry Short Answer  HCN is a weaker acid than HC2H3O2, and while 50mL of HCN and 50mL of HC2H3O2 both take the same volume of base to reach the equivalence point, which will have a higher pH at the equivalence point and why?
+Answer: HCN b/c CN- is a much strong conjugate base.
+
+
+Toss-Up
+28) Chemistry Multiple Choice  The weaker the acid,
+W) The lower the pH is at the equivalence point
+X) The closer the pH is to the pKa of the acid at the equivalence point
+Y) The higher the pH is at the equivalence point
+Z) The closer the pH is to the pKa of the base at the equivalence point
+Answer: Y)
+Toss-Up
+29) Chemistry Multiple Choice  Which of the following is true?
+W) The equivalence point is always the end point of a titration
+X) The equivalence point is defined as the theoretical point where the reaction should stop
+Y) The indicator always will mark the equivalence point by changing color
+Z) pH meters are not able to generate titration curves while indicators are
+Answer: X)
+Toss-Up
+30) Chemistry Multiple Choice  The most common indicators are typically?
+W) strong acids
+X) strong bases
+Y) weak acids
+Z) weak bases
+Answer: Y)
+
+
+
+
+
+
+Toss-Up
+31) Chemistry Multiple Choice  About how much of the initial indicator form must be converted in order to be seen by the naked human eye?
+W) 0.1%
+X) 1%
+Y) 10%
+Z) 100%
+Answer: Y)
+Toss-Up
+32) Chemistry Multiple Choice  Bromothymol blue has a Ka of 1.0 * 10^-7, at what two pHs will the color change become visible to the naked eye?
+W) 5, 7
+X) 6, 8
+Y) 7, 9
+Z) 8, 10
+Answer: X)
+Toss-Up
+33) Chemistry Short Answer  For the typical acid-base indicator with a dissociation constant Ka, the color transition occurs over a range of pH values given by what equation?
+Answer: pKa ± 1
+Toss-Up
+34) Chemistry Short Answer  When pairing an indicator with a titration, what is most important in selection the indicator.
+Answer: That the indicator end point (i.e pH of color change) and the titration equivalence point be as close as possible
+Toss-Up
+35) Chemistry Short Answer  What common indicator, used for measuring pH changes at very low pH, has a transition from yellow to blue, at around pH of 1?
+Answer: Crystal Violet
