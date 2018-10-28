@@ -1,0 +1,25 @@
+NSB	Biology	Water	Multiple Choice	   What is the name for the chemical formula H2O?	 water	 salt water	 the chemical formula for sodium chloride is H2O	 The chemical formula for H2O is H2O	 Z)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  How does water travel up a plant?	 the cells transport water from one cell to the next	 the cells suck up water with sponge-like features	 because of cohesion only	 because of cohesion and adhesion	 Z)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Short Answer	  Name all of the following, in words or numbers, that are false 1) water is a polar molecule 2) water’s high surface tension is due to its cohesion towards each other 3) water is a polar molecule						 all	Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  How much is one calorie?	 The amount of energy needed to raise the temperature of a potato by one degree celsius	 The amount of energy needed to raise one gram of saturated salt water by 1 degree celsius	 The amount of energy needed to raise one gram of water by 1 degree celsius	 the amount of energy needed to run a mile	 Y)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  which of the following is false?	 heat is a kind of energy	 temperature is a measure of the amount of heat	 temperature is the measure of heat intensity	 a pool may have more heat energy than a cup of hot chocolate	 X)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	 which of the following is the least accurate?	 water regulates the temperature on Earth	 When water is at 4* celsius it is at its densest	 Salt dissolves in water because it is non-polar	 water is less dense when a solid	 Y)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  Which of the following are true?	 evaporative cooling happens even if the water is at extremely low temperatures	 oil is hydrophilic	 water has a high heat of vaporization compared to metals	 a colloid is a solution where fine molecules are suspended in water, no dissolved	 Z)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Short Answer	  What makes a substance hydrophilic or hydrophobic respectively?						 whether their molecules are polar or nonpolar.	Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  what is the molecular mass of glucose with the molecular formula of C6H12O6?	  540 daltons	 180 daltons	 170 daltons	 200 daltons	 X)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  Which of the following is NOT a form of Acid precipitation?	 rain with a ph of 5.3	 Snow with a ph of 5	 fog with a ph of 4.2	 Mist with a ph of 5.1	 W)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Short Answer	  How many grams of salt(NaCl) do you have to mix into one liter of water to create a one mol/liter solution of salt? Salt has the molecular mass of 58.4.						 58.4 grams of salt	Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  if solution A has a ph of 2 and another, solution B has a ph of 5, how much higher is the H+ concentration?	 triple	 100	 1,000	 10,000	 Y)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Short Answer	 why are there buffers in blood?						 so the pH of the blood can’t change that drastically	Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	 what do buffers do to prevent change in pH?	 They either donate or take hydrogen ions		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  how were scientists able to measure previous CO2 levels?	 Ice frozen in the ground	 air bubbles trapped in mud	 air bubbles trapped in ice for thousands of years	 fossils	 Y)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  What bonds are broken when water is vaporized?	 polarized covalent	 ionic	 hydrogen	 van der waals	 y)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	 When is water the densest?	 5 C*	 4 C	 <4 C	 <3 C	 x)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Short Answer	 What is the hydration shell?						 Sphere of water molecules surrounding a dissolved ion.	Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Short Answer	 to the nearest whole number, what is the molecular mass of C6H12O6? In daltons						 180 daltons	Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  What property is used by animals to decrease body temp. Through sweating?	 High specific heat	 Evaporative cooling	 Adhesion	 Cohesion	 X)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	 Which of the following is hydrophobic?	 water	 sugar	 honey	 wax	 Z)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	 What is the gas is responsible for ocean acidification?	 H2O2	 HCl	 CO3-	 CO2	 Z)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Short Answer	 what is Avogadro's number?						  6.02 *10^23	Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  how many grams would be one mole of glucose?	 300	 18	 342	 360	 Y)		Allison Lin	F1	Toss-Up	
+NSB	Biology	Water	Multiple Choice	  Evaporative cooling is based off of...?	 High boiling point	 High Specific heat	 High heat of vaporization	 High adhesion	 Y)		Allison Lin	F1	Toss-Up
