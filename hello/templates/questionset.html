@@ -1,5 +1,5 @@
 <header>
-  <div id="home" style="position:fixed;top:0px;"><a href="/">Home</a></div>
+  <div id="home"><a href="/">Home</a></div>
 </header>
 {% extends "base.html" %}
 {% load staticfiles %}
@@ -14,6 +14,8 @@
     background-image: url('static/pattern.jpg');
     background-repeat: repeat;
     height: 8vh;
+    position:fixed;
+		top:0px;
   }
   #wrap{
     margin-top: 3vh;
