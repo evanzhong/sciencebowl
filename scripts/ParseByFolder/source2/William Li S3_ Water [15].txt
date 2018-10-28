@@ -1,0 +1,116 @@
+﻿Name: [insert]                                                                                Date: [insert]
+Text: [insert title]                                                                                          Subtext: Ch. [#], P. [#]
+Author: [name] Edition: [#]
+
+
+Biology: Subtopic
+Toss-Up
+1) Biology  Multiple Choice   What is the name for the sphere of water molecules around a dissolved ion?
+W) aqua sphere
+X) hydration shell
+Y) reagent dome
+Z) aqua dome
+Answer: X) 
+Toss-Up
+2) Biology  Multiple Choice  What is the name for the amount of heat needed for a liquid to absorb in order to enter the gas phase?
+W) phase shift energy
+X) heat of sublimation
+Y) heat of vaporization
+Z) heat of deposition
+Answer: Y)
+
+
+Toss-Up
+3) Biology  Short Answer  Name all of the following, in words or numbers, that would dissolve in water
+1. ethanol
+2. methane
+3. sucrose
+Answer: ALL but 2
+
+
+Toss-Up
+4) Biology  Multiple Choice  What is the heat of vaporization of water?
+W) 420 calories
+X) 580 joules
+Y) 420 joules
+Z) 580 calories
+Answer: Z)
+
+
+Toss-Up
+5) Biology  Multiple Choice Which of the following is not true for evaporative cooling?
+W) The fastest molecules are the ones that evaporate first
+X) Evaporative cooling is a common method of using water to decrease the temperature of organisms
+Y) Evaporative cooling could theoretically work with any liquid, but water is the most common for biological systems
+Z) all of the following above are true
+Answer: Z)
+Toss-Up
+6) Biology  Multiple Choice  Which of the following is not a property of water?
+W) relatively high vapor pressure
+X) high specific heat
+Y) polar
+Z) can form hydrogen bonds
+Answer: Z)
+
+
+Toss-Up
+7) Biology  Multiple Choice  What is the geometric shape of a water molecule?
+W) tetrahedral 
+X) trigonal planar
+Y) bent
+Z) linear
+Answer: Y)
+
+
+Toss-Up
+8) Biology  Short Answer  What is the measure of how difficult it is to stretch or break the surface of a liquid?
+Answer: surface tension
+
+
+Toss-Up
+9) Biology  Short Answer  To the nearest whole number, how many joules would it take to heat up 10 grams of water by 1 degree kelvin?
+Answer: 42 joules
+Toss-Up
+10) Biology  Multiple Choice  In grams what is the molecular mass of glucose?
+W) 80
+X) 100
+Y) 120
+Z) 180
+Answer: Z)
+
+
+Toss-Up
+11) Biology  Short Answer  What is a suspension of fine particles in a liquid known as?
+Answer: colloid 
+
+
+Toss-Up
+12) Biology  Multiple Choice  Which of the following is the most common buffer in the human circulatory system 
+W) bicarbonate
+X) hydrogen peroxide
+Y) water
+Z) hydrogen acetate
+Answer: W)
+
+
+Toss-Up
+13) Biology  Short Answer Which two classes of gases are predominantly responsible for acid rain?
+Answer: sulfur oxides, and nitrogen oxides
+
+
+Toss-Up
+14) Biology  Multiple Choice  In a completely neutral solution what is the concentration of OH^- ?
+W) 1x10^-14
+X) 1
+Y) 1x10-^-7
+Z) Impossible to tell
+Answer: Y)
+
+
+Toss-Up
+15) Biology  Multiple Choice  Which of the following is not true?
+W) Water has a neutral pH
+X) The product of the concentration of OH-and H+ is always equal to 1x10^14
+Y) When the concentration of OH increases, pH increases
+Z) Adding an acid to a solution will increases its pH
+Answer: Z)

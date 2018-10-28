@@ -1,0 +1,160 @@
+﻿Name:        Ruby Tang                                                                         Date: 4/26/17
+Text: Biology                                                                                                    Subtext: 47 - 56
+Author: Campbell                                                                           Edition: 7th
+
+
+Biology: Water
+Toss-Up
+1) Biology  Multiple Choice   Which of the following is false about a sodium chloride when placed in water?
+W) The hydrogen regions of the water molecules cling to chloride anions
+X) The oxygen regions of the water molecules cling to sodium cations
+Y) A heterogeneous mixture of sodium chloride and water will form
+Z) Water molecules surround the individual ions and separate them from one another
+Answer: Y) A heterogeneous mixture of sodium chloride and water will form
+
+
+Toss-Up
+2) Biology  Short Answer  In 5 significant figures and expressed in scientific notation, how much is a mole?
+Answer: 6.0221 x 1023 
+ 
+Toss-Up
+3) Biology  Short Answer  Name all of the following, in words or numbers, that are hydrophilic:
+1) Sodium chloride
+2) Cellulose
+3) Estrogen
+Answer: 1, 2
+ 
+Toss-Up
+4) Biology  Short Answer  Explain how cohesion contributes to the transport of water and dissolved nutrients against gravity in plants.
+Answer: Water from the roots reaches the leaves through a network of water-conducting cells. As water evaporates from a leaf, hydrogen bonds cause water molecules leaving the veins to tug on molecules farther down, and the upward pull is transmitted through the water-conducting cells all the way down to the roots.
+
+
+Toss-Up
+5) Biology  Short Answer  What is a stable suspension of fine particles in a liquid?
+Answer: Colloid
+ 
+Toss-Up
+6) Biology  Multiple Choice  Which of the following is false?
+W) Water molecules stay close to each other as a result of hydrogen bonding
+X) Hydrogen bonds form, break, and reform with great frequency
+Y) Water’s hydrogen bonds are very fragile when it’s in its liquid form
+Z) Each hydrogen bond lasts only a couple of seconds
+Answer: Z) Each hydrogen bond lasts only a couple of seconds
+ 
+Toss-Up
+7) Biology  Short Answer  What is the difference between heat and temperature?
+Answer: Heat is a measure of the total amount of kinetic energy due to molecular motion in a body of matter, while temperature measures the intensity of heat due to the average kinetic energy of the molecules.
+ 
+Toss-Up
+8) Biology  Multiple Choice  Which of the following properties of water are not correctly matched to one of its advantages?
+W) Expansion upon freezing, bodies of water are prevented from freezing solid 
+X) Cohesion, some animals can walk on water without breaking the surface
+Y) Versatility as a solvent, temperature fluctuations on land and in water are kept within limits that permit life
+Z) Evaporative cooling, a mechanism is provided for terrestrial organisms to prevent overheating
+Answer: Y) Versatility as a solvent, temperature fluctuations on land and in water are kept within limits that permit life
+ 
+Toss-Up
+9) Biology  Multiple Choice  What is the sphere of water molecules around each dissolved ion?
+Answer: Hydration shell
+ 
+Toss-Up
+10) Biology  Short Answer  Name two advantages of water’s high specific heat.
+Answer: A large body of water can absorb and store a huge amount of heat while warming up only a few degrees, gradually cooling water can warm the air, it tends to stabilize ocean temperatures, organisms are more able to resist changes in their own temperature, etc.
+ 
+Toss-Up
+11) Biology  Short Answer  What is the maximum number of hydrogen bonds a single water molecule can form?
+Answer: 4
+ 
+Toss-Up
+12) Biology  Multiple Choice  What is heat of vaporization? 
+W) The amount of heat that must be added or removed during a chemical reaction in order to keep all of the substances present at the same temperature
+X) The amount of heat absorbed or evolved at 25°C and at 1 atm when 1 mol of a compound is formed from its constituent elements 
+Y) The energy required to change a gram of a substance from the solid to the liquid state without changing its temperature
+Z) The quantity of heat a liquid must absorb for 1 g of it to be converted from the liquid to the gaseous state
+Answer: Z) The quantity of heat a liquid must absorb for 1 g of it to be converted from the liquid to the gaseous state
+ 
+Toss-Up
+13) Biology  Multiple Choice  Which of the following is NOT true?
+W) Cells are about 70-95% water
+X) The electrons in water are drawn significantly towards oxygen and the atoms become ionized
+Y) Water is the only common substance to exist in the natural environment in all three physical states of matter
+Z) The structure of a water molecule allows it to form weak chemical bonds with other molecules 
+Answer: X) The electrons in water are drawn significantly towards oxygen and the atoms become ionized
+ 
+Toss-Up
+14) Biology  Multiple Choice  What is the specific heat of water?
+W) 1 cal/g/°C
+X) 0.123 cal/g/°C
+Y) 0.9 cal/g/°C
+Z) 0.386 cal/g/°C
+Answer: W) 1 cal/g/°C
+ 
+Toss-Up
+15) Biology  Multiple Choice  Which of the following is NOT true?
+W) Water begins to freeze when its molecules are no longer moving vigorously enough to break their hydrogen bonds
+X) Hydrogen bonds cause ice to be 10% less dense than liquid water at 4°C
+Y) Water is one of many substances that are less dense as a solid than as a liquid
+Z) Water reaches its greatest density at 4°C
+Answer: Y) Water is one of many substances that are less dense as a solid than as a liquid
+
+
+Toss-Up
+16) Biology Short Answer  A solution of pH 3 is how many times more acidic than a solution of pH 6?
+Answer: 1000x
+ 
+Toss-Up
+17) Biology  Multiple Choice  Which of the following is not acidic? 
+W) Human blood
+X) Urine
+Y) Black coffee
+Z) Fresh cow’s milk
+Answer: W) Human blood
+ 
+Toss-Up
+18) Biology  Multiple Choice  In any aqueous solution at 25°C, the product of the H+ and OH- concentrations is constant at: 
+W) 10-13
+X) 10-14
+Y) 10-15
+Z) 10-16
+Answer: X) 10-14 
+ 
+Toss-Up
+19) Biology  Multiple Choice  The pH of a solution is defined as: 
+W) The negative logarithm of the hydroxide ion concentration
+X) The negative logarithm of the hydrogen ion concentration
+Y) The logarithm of the hydroxide ion concentration
+Z) The logarithm of the hydrogen ion concentration
+Answer: X) The negative logarithm of the hydrogen ion concentration
+ 
+Toss-Up
+20) Biology  Short Answer  What ion is formed when a hydrogen ion binds to a water molecule?
+Answer: H3O+ (accept hydronium ion)
+
+
+Toss-Up
+21) Biology  Short Answer  Name two negative effects of acid precipitation.
+Answer: It can damage life in lakes in streams, it washes away certain mineral ions that help buffer the soil solution and are essential for plant growth, increases the solubility of other minerals so they reach toxic concentrations, etc.
+ 
+Toss-Up
+22) Biology  Short Answer  What are substances that minimize changes in the concentrations of H+ and OH- in a solution?
+Answer: Buffers
+ 
+Toss-Up
+23) Biology  Multiple Choice  Uncontaminated rain is slightly acidic, owing to the formation of what substance from carbon dioxide and water?
+W) Carbonic acid
+X) Oxalic acid
+Y) Methanoic acid
+Z) Benzoic acid
+Answer: W) Carbonic acid
+ 
+Toss-Up
+24) Biology  Short Answer  Respectively, what are molarity and molality?
+Answer: Molarity is the number of moles of solute per liter of solution, molality is the number of moles of solute per kilogram of solvent
+ 
+Toss-Up
+25) Biology  Multiple Choice  Most buffer solutions contain:
+W) A strong acid and its conjugate base
+X) A strong base and its conjugate acid
+Y) A weak acid and its conjugate base
+Z) A weak base and its conjugate acid
+Answer: Y) A weak acid and its conjugate base
