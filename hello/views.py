@@ -7,11 +7,11 @@ from .models import Greeting
 from .models import Question
 
 import parse
-# #User has been created, therefore this code is commented out
+# #User has been created, therefore this code is commented out please refer if new user needs to be created
 # from django.contrib.auth.models import User
-# user = User.objects.create_user(username='ScienceBowl',
-#                                  email='',
-#                                  password='cowseatcereal888')
+# user = User.objects.create_user(username='a_username',
+#                                  email='an_email',
+#                                  password='a_password')
 
 # Create your views here.
 @login_required
