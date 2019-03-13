@@ -67,7 +67,11 @@ def generateset(request):
             # questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
 
             # Generation of Toss-Ups
-            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
+            if isNOSB:
+                questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).filter(question_type="Toss Up").order_by('?')[:tt]
+            else:
+                questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
+
             subsOfQuestions = []
             idOfQuestions = []
             for question in questions:
@@ -78,8 +82,13 @@ def generateset(request):
 
             # Generation of Bonuses
             bonusQuestions = []
-            for s in subsOfQuestions:
-                bonusQuestions.append(Question.objects.filter(comp=comp).filter(subject=s).exclude(id__in=idOfQuestions).order_by('?')[:1])
+            if isNOSB:        
+                for s in subsOfQuestions:
+                    bonusQuestions.append(Question.objects.filter(comp=comp).filter(subject=s).filter(question_type="Short Answer").exclude(id__in=idOfQuestions).order_by('?')[:1])
+            else:
+                for s in subsOfQuestions:
+                    bonusQuestions.append(Question.objects.filter(comp=comp).filter(subject=s).exclude(id__in=idOfQuestions).order_by('?')[:1])
+
             flattened = [val for sublist in bonusQuestions for val in sublist]
             zList = zip(questions, flattened)
             return render(request, 'questionset.html', {'zList': zList, 'subsOfQuestions': subsOfQuestions, 'includeBonuses': TUAB})
