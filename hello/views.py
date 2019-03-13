@@ -68,7 +68,7 @@ def generateset(request):
 
             # Generation of Toss-Ups
             if isNOSB:
-                questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).filter(question_type="Toss Up").order_by('?')[:tt]
+                questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).filter(question_type="Multiple Choice").order_by('?')[:tt]
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
 
