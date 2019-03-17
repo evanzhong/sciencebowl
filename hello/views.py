@@ -68,13 +68,11 @@ def generateset(request):
         if not TUAB:
             percentage = 0.0
             if isNOSB:
-                # Evan TODO: make this less bad and hardcoded
                 for each in zip(nosbSubs, subs):
                     percentage = round(each[1] * int(numQs) * 0.01)
                     subject = each[0]
                     temp = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).order_by('?')[:percentage]
                     questions = itertools.chain(questions, temp)
-                
                 questions = random.sample(list(itertools.chain(questions)), int(numQs))
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
@@ -87,7 +85,13 @@ def generateset(request):
 
             # Generation of Toss-Ups
             if isNOSB:
-                questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).filter(question_type="Multiple Choice").order_by('?')[:tt]
+                # questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).filter(question_type="Multiple Choice").order_by('?')[:tt]
+                for each in zip(nosbSubs, subs):
+                    percentage = round(each[1] * int(numQs) * 0.01)
+                    subject = each[0]
+                    temp = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).filter(question_type="Multiple Choice").order_by('?')[:percentage]
+                    questions = itertools.chain(questions, temp)
+                questions = random.sample(list(itertools.chain(questions)), int(numQs))
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
 
