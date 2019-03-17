@@ -61,6 +61,7 @@ def generateset(request):
             if subs == "":
                 raise RuntimeError("empty values")
             subs = dict(zip(nosbSubs, subs))
+            print subs
 
         # Querying
         questions = []
