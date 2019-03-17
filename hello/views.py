@@ -76,7 +76,7 @@ def generateset(request):
                     questions = itertools.chain(questions, temp)
                 pool = tuple(questions)
                 n = len(pool)
-                indices = sorted(random.sample(xrange(n), numQs))
+                indices = sorted(random.sample(xrange(n), n))
                 questions = tuple(pool[i] for i in indices)
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
