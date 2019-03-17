@@ -63,8 +63,7 @@ def generateset(request):
                 raise RuntimeError("empty values")
 
         # Querying
-        questions = []
-        totalQueryset = Question.objects.none();
+        questions = Question.objects.none();
         if not TUAB:
             percentage = 0.0
             if isNOSB:
@@ -73,11 +72,9 @@ def generateset(request):
                     percentage = round(each[1] * int(numQs) * 0.01)
                     subject = each[0]
                     temp = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).order_by('?')[:percentage]
-                    questions.append(temp)
+                    questions = questions | temp
                 # totalQueryset = itertools.chain(questions)
-                for queryset in questions:
-                    totalQueryset.union(queryset)
-                return render(request, 'questionset.html', {'questions': totalQueryset, 'includeBonuses': TUAB})
+                return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
