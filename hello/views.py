@@ -74,11 +74,7 @@ def generateset(request):
                     subject = each[0]
                     temp = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).order_by('?')[:percentage]
                     questions = itertools.chain(questions, temp)
-                pool = tuple(questions)
-                n = len(pool)
-                indices = sorted(random.sample(xrange(n), n))
-                questions = tuple(pool[i] for i in indices)
-                return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
+                return render(request, 'questionset.html', {'questions': random.sample(list(questions)), 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
