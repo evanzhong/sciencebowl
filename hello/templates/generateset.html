@@ -170,6 +170,33 @@
 			background-color: #FAFAF0;	
 		}
 
+		.sliders{
+			-webkit-appearance: none;
+			width: 50%;
+			height: 25px;
+			background: #d3d3d3;
+			outline: none;
+			opacity: 0.7;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+		}
+		.sliders:hover {
+			opacity: 1;
+		}
+		.sliders::-webkit-slider-thumb {
+			-webkit-appearance: none; 
+			appearance: none;
+			width: 25px; 
+			height: 25px;
+			background: #4CAF50; 
+			cursor: pointer; 
+		}
+		.sliders::-moz-range-thumb {
+			width: 25px; 
+			height: 25px; 
+			background: #4CAF50; 
+			cursor: pointer; 
+		}
 		/* JS classes */
 		.visible{
 			display: block;
@@ -215,41 +242,41 @@
 
 			<div id="nosbSubjects">
 				<h3>Subject Select</h3>
-				<div><input type="checkbox" value="General" id="generalSelect" class="nosbSubs" name="subs[]"><label for="generalSelect">General </label></div>
+				<!-- <div><input type="checkbox" value="General" id="generalSelect" class="nosbSubs" name="subs[]"><label for="generalSelect">General </label></div>
 				<div><input type="checkbox" value="Geography" id="geographySelect" class="nosbSubs" name="subs[]"><label for="geographySelect">Geography </label></div>
 				<div><input type="checkbox" value="Marine Biology" id="marinebiologySelect" class="nosbSubs" name="subs[]"><label for="marinebiologySelect">Marine Biology </label></div>
 				<div><input type="checkbox" value="Marine Technology" id="marinetechnologySelect" class="nosbSubs" name="subs[]"><label for="marinetechnologySelect">Marine Technology </label></div>
 				<div><input type="checkbox" value="Marine Policy" id="marinepolicySelect" class="nosbSubs" name="subs[]"><label for="marinepolicySelect">Marine Policy </label></div>
-				<div><input type="checkbox" value="Physical Oceanography" id="physicaloceanographySelect" class="nosbSubs" name="subs[]"><label for="physicaloceanographySelect">Physical Oceanography </label></div>
+				<div><input type="checkbox" value="Physical Oceanography" id="physicaloceanographySelect" class="nosbSubs" name="subs[]"><label for="physicaloceanographySelect">Physical Oceanography </label></div> -->
 				<div>
-					<input id="nosb-general-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+					<input id="nosb-general-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="0" onclick="checkAndCorrect(this)" />
 					<label for="nosb-general-slider">General</label> 
-					<span id='nosb-general-slider-out'> </span>
+					<span id='nosb-general-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="po-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+					<input id="po-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="65" onclick="checkAndCorrect(this)" />
 						<label for="po-slider">Physical Oceanography</label> 
-						<span id='po-slider-out'> </span>
+						<span id='po-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="mb-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+					<input id="mb-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="20" onclick="checkAndCorrect(this)" />
 						<label for="mb-slider">Marine Biology</label> 
-						<span id='mb-slider-out'> </span>
+						<span id='mb-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="policy-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+					<input id="policy-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" onclick="checkAndCorrect(this)" />
 						<label for="policy-slider">Marine Policy</label> 
-						<span id='policy-slider-out'> </span>
+						<span id='policy-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="geo-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+					<input id="geo-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" onclick="checkAndCorrect(this)" />
 					<label for="geo-slider">Geography</label> 
-					<span id='geo-slider-out'> </span>
+					<span id='geo-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="tech-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+					<input id="tech-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" onclick="checkAndCorrect(this)" />
 						<label for="tech-slider">Marine Technology</label> 
-						<span id='tech-slider-out'> </span>
+						<span id='tech-slider-out'><b></b></span>
 				</div>
 				<input type="hidden" name="comp" value="NOSB" id="hNOSBcomp">
 			</div>
@@ -273,12 +300,12 @@
 		tech = Number($('#tech-slider').val());
 		policy = Number($('#policy-slider').val());
 		po = Number($('#po-slider').val());
-		$('#nosb-general-slider-out').html(nosb_gen);
-		$('#geo-slider-out').html(geo);
-		$('#mb-slider-out').html(mb);
-		$('#tech-slider-out').html(tech);
-		$('#policy-slider-out').html(policy);
-		$('#po-slider-out').html(po);
+		$('#nosb-general-slider-out b').html(nosb_gen+ "%");
+		$('#geo-slider-out b').html(geo+ "%");
+		$('#mb-slider-out b').html(mb+ "%");
+		$('#tech-slider-out b').html(tech+ "%");
+		$('#policy-slider-out b').html(policy+ "%");
+		$('#po-slider-out b').html(po+ "%");
 	}
 	
 	function checkAndCorrect(item){
@@ -289,7 +316,7 @@
 		if (total > 100) {
 			overage = total - 100;
 			console.log("overage: " + overage);
-			var changeThese = $.makeArray($('.nosb-subject-sliders').not($(item)))
+			var changeThese = $.makeArray($('.nosb-subject-sliders sliders').not($(item)))
 			console.log(changeThese);
 			while (overage > 0){
 				for (var i=0; i<changeThese.length; i++){
@@ -306,6 +333,7 @@
 				}
 			}
 			updateLabels();
+			console.log("overage post execution: " + overage + " total post execution: " + (nosb_gen + geo + mb + tech + policy + po))
 		}
 	}
 
