@@ -68,9 +68,9 @@ def generateset(request):
             if isNOSB:
                 # Evan TODO: make this less bad and hardcoded
                 for each in zip(nosbSubs, subs):
-                    # percentage = round(each[1] * int(numQs) * 0.01)
-                    # subject = each[0]
-                    questions.append(Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact="Marine Biology").order_by('?')[:2])
+                    percentage = round(each[1] * int(numQs) * 0.01)
+                    subject = each[0]
+                    questions = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).order_by('?')[:percentage]
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
