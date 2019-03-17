@@ -57,7 +57,7 @@ def generateset(request):
                 raise RuntimeError("empty values")
         else:
             isNOSB = True
-            subs = request.POST.getlist('nosb-subs[]')
+            subs = map(int, request.POST.getlist('nosb-subs[]'))
             if subs == "":
                 raise RuntimeError("empty values")
             subs = dict(zip(nosbSubs, subs))
@@ -68,7 +68,7 @@ def generateset(request):
             if isNOSB:
                 # Evan TODO: make this less bad and hardcoded
                 for sub in subs:
-                    print sub
+                    
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
