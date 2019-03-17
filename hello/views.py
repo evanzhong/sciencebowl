@@ -69,7 +69,8 @@ def generateset(request):
                 # Evan TODO: make this less bad and hardcoded
                 for each in zip(nosbSubs, subs):
                     percentage = round(each[1] * int(numQs) * 0.01)
-                    questions.append(Question.objects.filter(comp__iexact=comp).filter(subject__iexact=each[0]).order_by('?')[:percentage])
+                    subject = each[0]
+                    questions.append(Question.objects.filter(comp__iexact=comp).filter(subject="Physical Oceanography").order_by('?')[:percentage])
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
