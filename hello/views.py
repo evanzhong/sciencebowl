@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 import itertools
+import random
 
 from .models import Greeting
 from .models import Question
@@ -74,7 +75,7 @@ def generateset(request):
                     temp = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).order_by('?')[:percentage]
                     questions = itertools.chain(questions, temp)
                 # totalQueryset = itertools.chain(questions)
-                return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
+                return render(request, 'questionset.html', {'questions': random.shuffle(questions), 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
