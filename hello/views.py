@@ -74,7 +74,7 @@ def generateset(request):
                     temp = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).order_by('?')[:percentage]
                     questions = itertools.chain(questions, temp)
                 questions = random.sample(list(itertools.chain(questions)), int(numQs))
-                return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
+                return render(request, 'questionset.html', {'questions': scrambledQuestions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
@@ -91,7 +91,7 @@ def generateset(request):
                     subject = each[0]
                     temp = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).filter(question_type="Multiple Choice").order_by('?')[:percentage]
                     questions = itertools.chain(questions, temp)
-                questions = random.sample(list(itertools.chain(questions)), int(numQs))
+                questions = random.sample(list(itertools.chain(questions)), tt)
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]
 
