@@ -65,10 +65,11 @@ def generateset(request):
         # Querying
         questions = []
         if not TUAB:
+            percentage = 0.0
             if isNOSB:
                 # Evan TODO: make this less bad and hardcoded
                 for sub in subs:
-                    print sub
+                    percentage = 0.01 * sub[1] * numQs
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
