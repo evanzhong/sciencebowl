@@ -57,10 +57,10 @@ def generateset(request):
                 raise RuntimeError("empty values")
         else:
             isNOSB = True
-            subs = dict(zip(nosbSubs, subs))
             subs = request.POST.getlist('nosb-subs[]')
             if subs == "":
                 raise RuntimeError("empty values")
+            subs = dict(zip(nosbSubs, subs))
 
         # Querying
         questions = []
