@@ -59,7 +59,7 @@ def generateset(request):
             isNOSB = True
             subs = map(int, request.POST.getlist('nosb-subs[]'))
             if subs == "":
-                raise RuntimeError("empty values"))
+                raise RuntimeError("empty values")
 
         # Querying
         questions = []
