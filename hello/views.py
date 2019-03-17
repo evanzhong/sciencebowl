@@ -60,6 +60,8 @@ def generateset(request):
             subs = request.POST.getlist('nosb-subs[]')
             if subs == "":
                 raise RuntimeError("empty values")
+            subs = dict(zip(nosbSubs, subs))
+            print subs
 
         # Querying
         questions = []
