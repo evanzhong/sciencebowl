@@ -250,32 +250,32 @@
 				<div><input type="checkbox" value="Marine Policy" id="marinepolicySelect" class="nosbSubs" name="subs[]"><label for="marinepolicySelect">Marine Policy </label></div>
 				<div><input type="checkbox" value="Physical Oceanography" id="physicaloceanographySelect" class="nosbSubs" name="subs[]"><label for="physicaloceanographySelect">Physical Oceanography </label></div> -->
 				<div>
-					<input id="nosb-general-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="0" name="nosb-subs[]" onclick="checkAndCorrect(this)" />
+					<input id="nosb-general-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="0" name="nosb-subs[]" onchange="checkAndCorrect(this)" />
 					<label for="nosb-general-slider">General</label> 
 					<span id='nosb-general-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="po-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="65" name="nosb-subs[]" onclick="checkAndCorrect(this)" />
+					<input id="po-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="65" name="nosb-subs[]" onchange="checkAndCorrect(this)" />
 						<label for="po-slider">Physical Oceanography</label> 
 						<span id='po-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="mb-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="20" name="nosb-subs[]" onclick="checkAndCorrect(this)" />
+					<input id="mb-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="20" name="nosb-subs[]" onchange="checkAndCorrect(this)" />
 						<label for="mb-slider">Marine Biology</label> 
 						<span id='mb-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="policy-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" name="nosb-subs[]" onclick="checkAndCorrect(this)" />
+					<input id="policy-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" name="nosb-subs[]" onchange="checkAndCorrect(this)" />
 						<label for="policy-slider">Marine Policy</label> 
 						<span id='policy-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="geo-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" name="nosb-subs[]" onclick="checkAndCorrect(this)" />
+					<input id="geo-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" name="nosb-subs[]" onchange="checkAndCorrect(this)" />
 					<label for="geo-slider">Geography</label> 
 					<span id='geo-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="tech-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" name="nosb-subs[]" onclick="checkAndCorrect(this)" />
+					<input id="tech-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" name="nosb-subs[]" onchange="checkAndCorrect(this)" />
 						<label for="tech-slider">Marine Technology</label> 
 						<span id='tech-slider-out'><b></b></span>
 				</div>
@@ -308,25 +308,25 @@
 		$('#policy-slider-out b').html(policy+ "%");
 		$('#po-slider-out b').html(po+ "%");
 	}
-	
+
 	function checkAndCorrect(item){
 		// console.log($(item))
 		updateLabels();
 		total = nosb_gen + geo + mb + tech + policy + po;
 		console.log(total);
+		var changeThese = $.makeArray($('.nosb-subject-sliders').not($(item)))
+		console.log(changeThese);
+
 		if (total > 100) {
 			overage = total - 100;
 			console.log("overage: " + overage);
-			var changeThese = $.makeArray($('.nosb-subject-sliders').not($(item)))
-			console.log(changeThese);
 			while (overage > 0){
 				for (var i=0; i<changeThese.length; i++){
-					// console.log(changeThese[i].value);
 					if (changeThese[i].value > 0) {
-						changeThese[i].value = changeThese[i].value - 1;
+						changeThese[i].value--;
 						overage -= 1;
 					} else {
-						continue
+						continue;
 					}
 					if (overage === 0){
 						break;
@@ -334,21 +334,19 @@
 				}
 			}
 			updateLabels();
-			console.log("overage post execution: " + overage + " total post execution: " + (nosb_gen + geo + mb + tech + policy + po))
+			console.log("overage post execution: " + overage + " total post execution: " + (nosb_gen + geo + mb + tech + policy + po));
+			return;
 		}
-		else if (total < 100){
-			underage = 100 - total;
+		if (total < 100) {
+			underage = total - 100;
 			console.log("underage: " + underage);
-			var changeThese = $.makeArray($('.nosb-subject-sliders').not($(item)))
-			console.log(changeThese);
-			while (underage > 0){
+			while (underage < 0){
 				for (var i=0; i<changeThese.length; i++){
-					// console.log(changeThese[i].value);
-					if (changeThese[i].value > 0) {
-						changeThese[i].value = changeThese[i].value + 1;
-						underage -= 1;
+					if (changeThese[i].value < 100) {
+						changeThese[i].value++;
+						underage += 1;
 					} else {
-						continue
+						continue;
 					}
 					if (underage === 0){
 						break;
@@ -356,7 +354,8 @@
 				}
 			}
 			updateLabels();
-			console.log("underage post execution: " + underage + " total post execution: " + (nosb_gen + geo + mb + tech + policy + po))
+			console.log("underage post execution: " + underage + " total post execution: " + (nosb_gen + geo + mb + tech + policy + po));
+			return;
 		}
 	}
 
