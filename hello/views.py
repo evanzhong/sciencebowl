@@ -60,16 +60,13 @@ def generateset(request):
             subs = request.POST.getlist('nosb-subs[]')
             if subs == "":
                 raise RuntimeError("empty values")
-            # subs = dict(zip(nosbSubs, subs))
+            subs = dict(zip(nosbSubs, subs))
 
         # Querying
         questions = []
         if not TUAB:
             if isNOSB:
                 # Evan TODO: make this less bad and hardcoded
-                for x in range(0, 5):
-                    roundedNumQ = round(subs[x] * 0.01 * float(numQs))
-                    questions.append(Question.objects.filter(comp__iexact=comp).filter(subject=nosbSubs[x]).order_by('?')[:roundedNumQ])
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
