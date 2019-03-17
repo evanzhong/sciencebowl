@@ -66,11 +66,9 @@ def generateset(request):
         questions = []
         if not TUAB:
             if isNOSB:
-                counter = 0
-                for sub in subs:
-                    roundedNumQ = round(float(sub * 0.01 * numQs)
-                    questions.append(Question.objects.filter(comp__iexact=comp).filter(subject=nosbSubs[counter]).order_by('?')[:roundedNumQ])
-                    counter += 1
+                for x in range(0, 5):
+                    roundedNumQ = round(float(subs[x] * 0.01 * numQs)
+                    questions.append(Question.objects.filter(comp__iexact=comp).filter(subject=nosbSubs[x]).order_by('?')[:roundedNumQ])
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
