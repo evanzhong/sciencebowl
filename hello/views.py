@@ -43,7 +43,7 @@ def generateset(request):
             TUAB = False;
         else:
             TUAB = True;
-        numQs = int(request.POST.get('numQs'))
+        numQs = request.POST.get('numQs')
         if numQs == "":
             raise RuntimeError("empty values")
         scrammbleQs = request.POST.get('scrammbleQs')
