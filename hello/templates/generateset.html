@@ -314,7 +314,7 @@
 		if (total > 100) {
 			overage = total - 100;
 			console.log("overage: " + overage);
-			var changeThese = $.makeArray($('.nosb-subject-sliders sliders').not($(item)))
+			var changeThese = $.makeArray($('.nosb-subject-sliders').not($(item)))
 			console.log(changeThese);
 			while (overage > 0){
 				for (var i=0; i<changeThese.length; i++){
