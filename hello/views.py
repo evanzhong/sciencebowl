@@ -70,7 +70,8 @@ def generateset(request):
                 for each in zip(nosbSubs, subs):
                     percentage = round(each[1] * int(numQs) * 0.01)
                     subject = each[0]
-                    questions = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).order_by('?')[:percentage]
+                    temp = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).order_by('?')[:percentage]
+                    questions,append(temp)
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
