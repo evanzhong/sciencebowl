@@ -59,8 +59,7 @@ def generateset(request):
             isNOSB = True
             subs = map(int, request.POST.getlist('nosb-subs[]'))
             if subs == "":
-                raise RuntimeError("empty values")
-            subs = dict(zip(nosbSubs, subs))
+                raise RuntimeError("empty values"))
 
         # Querying
         questions = []
@@ -68,8 +67,8 @@ def generateset(request):
             percentage = 0.0
             if isNOSB:
                 # Evan TODO: make this less bad and hardcoded
-                for sub in subs:
-                    percentage = sub[1] * int(numQs) / 100
+                for each in zip(nosbSubs, subs):
+                    percentage = each[1] * int(numQs) / 100
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
