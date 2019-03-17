@@ -43,7 +43,7 @@ def generateset(request):
             TUAB = False;
         else:
             TUAB = True;
-        numQs = int(request.POST.get('numQs'))
+        numQs = float(request.POST.get('numQs'))
         if numQs == "":
             raise RuntimeError("empty values")
         scrammbleQs = request.POST.get('scrammbleQs')
@@ -57,7 +57,7 @@ def generateset(request):
                 raise RuntimeError("empty values")
         else:
             isNOSB = True
-            subs = map(int, request.POST.getlist('nosb-subs[]'))
+            subs = map(float, request.POST.getlist('nosb-subs[]'))
             if subs == "":
                 raise RuntimeError("empty values")
             subs = dict(zip(nosbSubs, subs))
