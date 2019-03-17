@@ -75,6 +75,10 @@ def generateset(request):
                     temp = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).order_by('?')[:percentage]
                     questions = itertools.chain(questions, temp)
                 # totalQueryset = itertools.chain(questions)
+                pool = tuple(question)
+                n = len(pool)
+                indices = sorted(random.sample(xrange(n), r))
+                question = tuple(pool[i] for i in indices)
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
