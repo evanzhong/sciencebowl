@@ -50,14 +50,17 @@ def generateset(request):
         if scrammbleQs == "":
             raise RuntimeError("empty values")
         # Getting subjects
-        subs = request.POST.getlist('subs[]')
-        if subs == "":
-            raise RuntimeError("empty values")
         if comp == "NSB":
             isNOSB = False
+            subs = request.POST.getlist('subs[]')
+            if subs == "":
+                raise RuntimeError("empty values")
         else:
             isNOSB = True
             subs = dict(zip(nosbSubs, subs))
+            subs = request.POST.getlist('nosb-subs[]')
+            if subs == "":
+                raise RuntimeError("empty values")
 
         # Querying
         questions = []
