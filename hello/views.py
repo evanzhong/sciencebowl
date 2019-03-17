@@ -67,8 +67,8 @@ def generateset(request):
         if not TUAB:
             if isNOSB:
                 # Evan TODO: make this less bad and hardcoded
-                for key, value in subs:
-                    print value
+                for sub in subs:
+                    print sub
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
