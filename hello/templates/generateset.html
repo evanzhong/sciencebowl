@@ -1,11 +1,7 @@
-<header>
-	<div id="home"><a href="/">Home</a></div>
-</header>
 {% extends "base.html" %}
 {% load staticfiles %}
 
 {% block content %}
-<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 <div id="main">
 	<div id="content">
 		<p class="buttons" id="back">Back</p>
@@ -180,86 +176,18 @@
 		}
 	</style>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$("#nosbButton.buttons").toggle();
-			$("#nsbButton.buttons").toggle();
-			var clickedNSB = false;
-			var clickedNOSB = false;
-
-			$("#nosbButton").click(function (event){
-				var clickedNOSB = true;
-				$(".nosbSubs").prop('checked', true);
-				$(".buttons").toggle();
-				setTimeout(function(){
-					$("#qSelection").fadeIn(1000);
-					$("#nosbSubjects").fadeIn(1000);
-					$("#NOSBHeader").fadeIn(400);
-				}, 100);
-				console.log("clicked");
-				console.log(clickedNSB);
-				console.log(clickedNOSB);
-				$("#hNSBcomp").remove();
-			});
-
-			$("#nsbButton").click(function (event){
-				var clickedNSB = true;
-				$(".nsbSubs").prop('checked', true);
-				$(".buttons").toggle();
-				setTimeout(function(){
-					$("#qSelection").fadeIn(1000);
-					$("#nsbSubjects").fadeIn(1000);
-					$("#NSBHeader").fadeIn(400);
-				}, 100);
-				console.log("clicked");
-				console.log(clickedNSB);
-				console.log(clickedNOSB);
-				$("#hNOSBcomp").remove();
-			});
-		
-			$("#back").click(function (event){	
-				$("#back").toggle();
-				$(".nsbSubs").prop('checked', false);
-				$(".nosbSubs").prop('checked', false);
-				$("#qSelection").fadeOut(300);
-				$("#nsbSubjects").fadeOut(300);
-				$("#nosbSubjects").fadeOut(300);
-				$("#NOSBHeader").fadeOut(300);
-				$("#NSBHeader").fadeOut(300);
-				setTimeout(function(){
-					$("#nosbButton").fadeIn(700);
-					$("#nsbButton").fadeIn(700);
-				}, 400);
-				if (!$("#hNOSBcomp").length) {
-					$("<input type=\"hidden\" name=\"comp\" value=\"NOSB\" id=\"hNOSBcomp\">").appendTo("#nosbSubjects");
-					console.log("reAppended hNOSB");
-				}
-				if (!$("#hNSBcomp").length) {
-					$("<input type=\"hidden\" name=\"comp\" value=\"NSB\" id=\"hNSBcomp\">").appendTo("#nsbSubjects");
-					console.log("reAppended hNSB");
-				}
-				clickedNOSB = false;
-				clickedNSB = false;
-				console.log("clicked");
-				console.log(clickedNSB);
-				console.log(clickedNOSB);
-			});
-		});
-	</script>
-
 	<h1 id="NSBHeader">NSB Set Generation</h1>
 	<h1 id="NOSBHeader">NOSB Set Generation</h1>
 	<div id="qSelection">
 		<form action="generateset" method="post">
-			<div id="difficultyWrapper">
+			<!-- <div id="difficultyWrapper">
 				<h3>Difficulty</h3>
 				<div><label for="1d">1</label><input type="checkbox" name="diff[]" value="1" id="1d" checked> </div>
 				<div><label for="2d">2</label><input type="checkbox" name="diff[]" value="2" id="2d" checked> </div>
 				<div><label for="3d">3</label><input type="checkbox" name="diff[]" value="3" id="3d" checked> </div>
 				<div><label for="4d">4</label><input type="checkbox" name="diff[]" value="4" id="4d" checked> </div>
 				<div><label for="5d">5</label><input type="checkbox" name="diff[]" value="5" id="5d" checked> </div>
-			</div>
+			</div> -->
 
 			<div id="rndTypeWrapper">
 				<h3>Round Type</h3>
@@ -269,9 +197,8 @@
 			
 			<div id="numQuestionsWrapper">
 				<h3>Number of Questions</h3>
-				<div><label for="numQs">Number of Questions: </label><input type="Number" name="numQs" id="numQs" min="1" placeholder="25"></div>
+				<div><label for="numQs">Number of Questions: </label><input type="Number" name="numQs" id="numQs" min="1" placeholder="Enter number of questions: (ie. 25)"></div>
 			</div>
-
 
 			<div id="nsbSubjects">
 				<h3>Subtopic Select</h3>
@@ -294,17 +221,160 @@
 				<div><input type="checkbox" value="Marine Technology" id="marinetechnologySelect" class="nosbSubs" name="subs[]"><label for="marinetechnologySelect">Marine Technology </label></div>
 				<div><input type="checkbox" value="Marine Policy" id="marinepolicySelect" class="nosbSubs" name="subs[]"><label for="marinepolicySelect">Marine Policy </label></div>
 				<div><input type="checkbox" value="Physical Oceanography" id="physicaloceanographySelect" class="nosbSubs" name="subs[]"><label for="physicaloceanographySelect">Physical Oceanography </label></div>
+				<div>
+					<input id="nosb-general-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+					<label for="nosb-general-slider">General</label> 
+					<span id='nosb-general-slider-out'> </span>
+				</div>
+				<div>
+					<input id="po-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+						<label for="po-slider">Physical Oceanography</label> 
+						<span id='po-slider-out'> </span>
+				</div>
+				<div>
+					<input id="mb-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+						<label for="mb-slider">Marine Biology</label> 
+						<span id='mb-slider-out'> </span>
+				</div>
+				<div>
+					<input id="policy-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+						<label for="policy-slider">Marine Policy</label> 
+						<span id='policy-slider-out'> </span>
+				</div>
+				<div>
+					<input id="geo-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+					<label for="geo-slider">Geography</label> 
+					<span id='geo-slider-out'> </span>
+				</div>
+				<div>
+					<input id="tech-slider" type="range" class="nosb-subject-sliders" min="0" max="100" step="1" value="10" onclick="checkAndCorrect(this)" />
+						<label for="tech-slider">Marine Technology</label> 
+						<span id='tech-slider-out'> </span>
+				</div>
 				<input type="hidden" name="comp" value="NOSB" id="hNOSBcomp">
 			</div>
 
 			<div id="scrammbleWrapper">
 				<h3>Additional Options</h3>
-				<div><input type="checkbox" value="Y" name="scrammbleQs"><label for="scrammbleQs">Scramble Question Choices</label></div>
+				<div><input type="checkbox" value="Y" id="scrammbleQs"><label for="scrammbleQs">Scramble Question Choices</label></div>
 			</div>
 			<div id="sub"><input type="submit" name="submit" value="submit" id="sub"></div>
 		</form>
 	</div>
 </div>
+
+<script type="text/javascript">
+	var nosb_gen, geo, mb, tech, policy, po;
+	var total, overage;
+	function updateLabels(){
+		nosb_gen = Number($('#nosb-general-slider').val());
+		geo = Number($('#geo-slider').val());
+		mb = Number($('#mb-slider').val());
+		tech = Number($('#tech-slider').val());
+		policy = Number($('#policy-slider').val());
+		po = Number($('#po-slider').val());
+		$('#nosb-general-slider-out').html(nosb_gen);
+		$('#geo-slider-out').html(geo);
+		$('#mb-slider-out').html(mb);
+		$('#tech-slider-out').html(tech);
+		$('#policy-slider-out').html(policy);
+		$('#po-slider-out').html(po);
+	}
+	
+	function checkAndCorrect(item){
+		// console.log($(item))
+		updateLabels();
+		total = nosb_gen + geo + mb + tech + policy + po;
+		console.log(total);
+		if (total > 100) {
+			overage = total - 100;
+			console.log("overage: " + overage);
+			var changeThese = $.makeArray($('.nosb-subject-sliders').not($(item)))
+			console.log(changeThese);
+			while (overage > 0){
+				for (var i=0; i<changeThese.length; i++){
+					// console.log(changeThese[i].value);
+					if (changeThese[i].value > 0) {
+						changeThese[i].value = changeThese[i].value - 1;
+						overage -= 1;
+					} else {
+						continue
+					}
+					if (overage === 0){
+						break;
+					}
+				}
+			}
+			updateLabels();
+		}
+	}
+
+	$(document).ready(function() {
+		$("#nosbButton.buttons").toggle();
+		$("#nsbButton.buttons").toggle();
+		var clickedNSB = false;
+		var clickedNOSB = false;
+
+		$("#nosbButton").click(function (event){
+			var clickedNOSB = true;
+			$(".nosbSubs").prop('checked', true);
+			$(".buttons").toggle();
+			setTimeout(function(){
+				$("#qSelection").fadeIn(1000);
+				$("#nosbSubjects").fadeIn(1000);
+				$("#NOSBHeader").fadeIn(400);
+			}, 100);
+			console.log("clicked");
+			console.log(clickedNSB);
+			console.log(clickedNOSB);
+			$("#hNSBcomp").remove();
+		});
+
+		$("#nsbButton").click(function (event){
+			var clickedNSB = true;
+			$(".nsbSubs").prop('checked', true);
+			$(".buttons").toggle();
+			setTimeout(function(){
+				$("#qSelection").fadeIn(1000);
+				$("#nsbSubjects").fadeIn(1000);
+				$("#NSBHeader").fadeIn(400);
+			}, 100);
+			console.log("clicked");
+			console.log(clickedNSB);
+			console.log(clickedNOSB);
+			$("#hNOSBcomp").remove();
+		});
+	
+		$("#back").click(function (event){	
+			$("#back").toggle();
+			$(".nsbSubs").prop('checked', false);
+			$(".nosbSubs").prop('checked', false);
+			$("#qSelection").fadeOut(300);
+			$("#nsbSubjects").fadeOut(300);
+			$("#nosbSubjects").fadeOut(300);
+			$("#NOSBHeader").fadeOut(300);
+			$("#NSBHeader").fadeOut(300);
+			setTimeout(function(){
+				$("#nosbButton").fadeIn(700);
+				$("#nsbButton").fadeIn(700);
+			}, 400);
+			if (!$("#hNOSBcomp").length) {
+				$("<input type=\"hidden\" name=\"comp\" value=\"NOSB\" id=\"hNOSBcomp\">").appendTo("#nosbSubjects");
+				console.log("reAppended hNOSB");
+			}
+			if (!$("#hNSBcomp").length) {
+				$("<input type=\"hidden\" name=\"comp\" value=\"NSB\" id=\"hNSBcomp\">").appendTo("#nsbSubjects");
+				console.log("reAppended hNSB");
+			}
+			clickedNOSB = false;
+			clickedNSB = false;
+			console.log("clicked");
+			console.log(clickedNSB);
+			console.log(clickedNOSB);
+		});
+		updateLabels();
+	})
+</script>
 
 <footer>
 	<div id="logout"><a href="logout/">LOGOUT</a></div>
