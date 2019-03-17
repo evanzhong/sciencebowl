@@ -73,8 +73,7 @@ def generateset(request):
                     subject = each[0]
                     temp = Question.objects.filter(comp__iexact="NOSB").filter(subject__iexact=subject).order_by('?')[:percentage]
                     questions.append(temp)
-                for question in questions:
-                    totalQueryset = totalQueryset | question
+                totalQueryset = itertools.chain(question)
 
                 return render(request, 'questionset.html', {'questions': totalQueryset, 'includeBonuses': TUAB})
             else:
