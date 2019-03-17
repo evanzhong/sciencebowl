@@ -64,7 +64,7 @@ def generateset(request):
         if not TUAB:
             if isNOSB:
                 for key, val in subs:
-                    questions.append(Question.objects.filter(comp__iexact=comp).filter(subject=key).order_by('?')[:round(val * numQs)]
+                    questions.append(Question.objects.filter(comp__iexact=comp).filter(subject=key).order_by('?')[:round(val * numQs)])
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
