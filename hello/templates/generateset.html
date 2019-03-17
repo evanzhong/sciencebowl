@@ -293,7 +293,7 @@
 
 <script type="text/javascript">
 	var nosb_gen, geo, mb, tech, policy, po;
-	var total, overage;
+	var total, overage, underage;
 	function updateLabels(){
 		nosb_gen = Number($('#nosb-general-slider').val());
 		geo = Number($('#geo-slider').val());
@@ -335,6 +335,28 @@
 			}
 			updateLabels();
 			console.log("overage post execution: " + overage + " total post execution: " + (nosb_gen + geo + mb + tech + policy + po))
+		}
+		else if (total < 100){
+			underage = 100 - total;
+			console.log("underage: " + underage);
+			var changeThese = $.makeArray($('.nosb-subject-sliders').not($(item)))
+			console.log(changeThese);
+			while (underage > 0){
+				for (var i=0; i<changeThese.length; i++){
+					// console.log(changeThese[i].value);
+					if (changeThese[i].value > 0) {
+						changeThese[i].value = changeThese[i].value + 1;
+						underage -= 1;
+					} else {
+						continue
+					}
+					if (underage === 0){
+						break;
+					}
+				}
+			}
+			updateLabels();
+			console.log("underage post execution: " + underage + " total post execution: " + (nosb_gen + geo + mb + tech + policy + po))
 		}
 	}
 
