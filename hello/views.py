@@ -31,37 +31,44 @@ def questionsconfirmed(request):
 @login_required
 @csrf_exempt
 def generateset(request):
+    nosbSubs = ["General", "Physical Oceanography", "Marine Biology", "Marine Policy", "Geography", "Marine Technology"]
     if request.method == 'POST':
         comp = request.POST.get('comp')
         if comp == "":
-            raise RuntimeError("empty values")
-        if comp == "NSB":
-            isNOSB = False
-        else:
-            isNOSB = True
-        diff = request.POST.getlist('diff[]')
-        if diff == "":
             raise RuntimeError("empty values")
         rndType = request.POST.get('rndType')
         if rndType == "":
             raise RuntimeError("empty values")
         if rndType == "1":
-            TUAB = False
+            TUAB = False;
         else:
-            TUAB = True
+            TUAB = True;
         numQs = request.POST.get('numQs')
         if numQs == "":
-            raise RuntimeError("empty values")
-        subs = request.POST.getlist('subs[]')
-        if subs == "":
             raise RuntimeError("empty values")
         scrammbleQs = request.POST.get('scrammbleQs')
         if scrammbleQs == "":
             raise RuntimeError("empty values")
+        # Getting subjects
+        subs = request.POST.getlist('subs[]')
+        if subs == "":
+            raise RuntimeError("empty values")
+        if comp == "NSB":
+            isNOSB = False
+        else:
+            isNOSB = True
+            subs = dict(zip(nosbSubs, subs))
+
+        # Querying
+        questions = []
         if not TUAB:
-            questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
-            return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
-        elif TUAB:
+            if isNOSB:
+                for key, val in subs:
+                    questions.append(Question.objects.filter(comp__iexact=comp).filter(subject=key).order_by('?')[:round(val * numQs)]
+            else:
+                questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
+                return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
+        else:
             tt = int(numQs)
             # vvvvvvvvv Old code vvvvvvvvv
             # questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:tt]

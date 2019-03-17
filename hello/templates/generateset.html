@@ -170,19 +170,16 @@
 			background-color: #FAFAF0;	
 		}
 
-		.sliders{
-			-webkit-appearance: none;
+		/* .sliders{
 			width: 50%;
 			height: 25px;
 			background: #d3d3d3;
 			outline: none;
 			opacity: 0.7;
-			-webkit-transition: .2s;
-			transition: opacity .2s;
 		}
 		.sliders:hover {
 			opacity: 1;
-		}
+		} */
 		/* For some reason this styling kills performance */
 		/* .sliders::-webkit-slider-thumb {
 			-webkit-appearance: none; 
@@ -250,32 +247,32 @@
 				<div><input type="checkbox" value="Marine Policy" id="marinepolicySelect" class="nosbSubs" name="subs[]"><label for="marinepolicySelect">Marine Policy </label></div>
 				<div><input type="checkbox" value="Physical Oceanography" id="physicaloceanographySelect" class="nosbSubs" name="subs[]"><label for="physicaloceanographySelect">Physical Oceanography </label></div> -->
 				<div>
-					<input id="nosb-general-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="0" onclick="checkAndCorrect(this)" />
+					<input id="nosb-general-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="0" name="subs[]" onclick="checkAndCorrect(this)" />
 					<label for="nosb-general-slider">General</label> 
 					<span id='nosb-general-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="po-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="65" onclick="checkAndCorrect(this)" />
+					<input id="po-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="65" name="subs[]" onclick="checkAndCorrect(this)" />
 						<label for="po-slider">Physical Oceanography</label> 
 						<span id='po-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="mb-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="20" onclick="checkAndCorrect(this)" />
+					<input id="mb-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="20" name="subs[]" onclick="checkAndCorrect(this)" />
 						<label for="mb-slider">Marine Biology</label> 
 						<span id='mb-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="policy-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" onclick="checkAndCorrect(this)" />
+					<input id="policy-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" name="subs[]" onclick="checkAndCorrect(this)" />
 						<label for="policy-slider">Marine Policy</label> 
 						<span id='policy-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="geo-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" onclick="checkAndCorrect(this)" />
+					<input id="geo-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" name="subs[]" onclick="checkAndCorrect(this)" />
 					<label for="geo-slider">Geography</label> 
 					<span id='geo-slider-out'><b></b></span>
 				</div>
 				<div>
-					<input id="tech-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" onclick="checkAndCorrect(this)" />
+					<input id="tech-slider" type="range" class="nosb-subject-sliders sliders" min="0" max="100" step="1" value="5" name="subs[]" onclick="checkAndCorrect(this)" />
 						<label for="tech-slider">Marine Technology</label> 
 						<span id='tech-slider-out'><b></b></span>
 				</div>
