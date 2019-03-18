@@ -65,7 +65,7 @@ def generateset(request):
 
         # Querying
         questions = Question.objects.none();
-        questionCastedtoList = []]
+        questionCastedtoList = []
         if not TUAB:
             percentage = 0.0
             if isNOSB:
