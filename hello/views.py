@@ -76,7 +76,7 @@ def generateset(request):
                     questions = itertools.chain(questions, temp)
                 for question in questions:
                     questionCastedtoList.append(question)
-                questions = random.sample(questionCastedtoList, numQs)
+                questions = random.sample(questionCastedtoList, int(numQs))
                 return render(request, 'questionset.html', {'questions': questions, 'includeBonuses': TUAB})
             else:
                 questions = Question.objects.filter(comp__iexact=comp).filter(subject__in=subs).order_by('?')[:numQs]
