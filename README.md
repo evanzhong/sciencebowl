@@ -3,7 +3,7 @@
 A question bank application for National Science Bowl / National Ocean Sciences Bowl.
 Created for and by Albany High School Science Bowl team members and alums.
 
-Upload questions written by the team, and have the db generate custom question sets (randomly picking from the questions previously uploaded), so you never run out of question sets to practice on.
+Upload questions written by the team, and use the db to generate custom question sets (randomly picking from the questions previously uploaded), so you never run out of question sets to practice on.
 
 New students? Please contact [@andimus](https://github.com/andimus) or [@evazhog](https://github.com/evazhog) about usage or maintenance.
 
