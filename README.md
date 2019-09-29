@@ -72,3 +72,19 @@ $ heroku run python manage.py migrate
 For more information about using Python on Heroku, see these Dev Center articles:
 
 - [Python on Heroku](https://devcenter.heroku.com/categories/python)
+
+
+---
+## Scripts
+
+In /scripts, you can find two python text parsers that will parse through and convert your self written questions into Tab-separated values (.tsv) that you can upload to the database.
+
+The parser found in `/ParseByFolder` is the best and fastest parser to use. Please note the .txt files must be in the format: 
+
+> `AUTHOR_NAME QUESTION_SET_CODE_ SUBTOPIC [NUM_QUESTIONS].txt` 
+
+> i.e. `Evan Zhong J8_ Acid-Base Equilibria [35].txt`
+
+This formatting is optimized for downloading question sets from our team Google Drive (ahssciencebowl@gmail.com), as all downloads from the drive should automatically be in the above format (assuming you guys are still following the question template and naming nomenclature outlined in the club handbook).
+
+If you're looking to parse a single question set use the parser found in `/ParseByFolder`. This, however, is significantly slower because you have to manually input all the header fields (Subject, Subtopic, Question code, etc.), as the parser isn't smart enough to extract them from the file.
