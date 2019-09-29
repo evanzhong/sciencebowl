@@ -1,16 +1,17 @@
 # sciencebowl
 
-A question bank application for Science Bowl created by Albany High School students and alums.
+A question bank application for National Science Bowl / National Ocean Sciences Bowl.
+Created for and by Albany High School Science Bowl team members and alums.
 
 
-
+New students? Please contact @andimus or @evazhog about usage or maintenance.
 ## Setting up your enviornment
 
 Make sure you have Python [installed properly](http://install.python-guide.org) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup)
 
 Then:
 ```sh
-$ git clone https://github.com/andimus/sciencebowl
+$ git clone https://github.com/evazhog/sciencebowl
 $ cd sciencebowl
 $ pip install -r requirements.txt
 $ createdb sciencebowl
