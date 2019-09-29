@@ -5,6 +5,8 @@ Created for and by Albany High School Science Bowl team members and alums.
 
 
 New students? Please contact @andimus or @evazhog about usage or maintenance.
+
+---
 ## Setting up your enviornment
 
 Make sure you have Python [installed properly](http://install.python-guide.org) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup)
