@@ -3,8 +3,9 @@
 A question bank application for National Science Bowl / National Ocean Sciences Bowl.
 Created for and by Albany High School Science Bowl team members and alums.
 
+Upload questions written by the team, and have the db generate custom question sets (randomly picking from the questions previously uploaded), so you never run out of question sets to practice on.
 
-New students? Please contact @andimus or @evazhog about usage or maintenance.
+New students? Please contact [@andimus](https://github.com/andimus) or [@evazhog](https://github.com/evazhog) about usage or maintenance.
 
 ---
 ## Setting up your enviornment
@@ -37,13 +38,17 @@ $ heroku local
 
 Your app should now be running on [localhost:5000](http://localhost:5000/).
 
+## Populating the db
+Run the parser found in `/scripts/ParseByFolder` to generate some question data.
+Paste question data in `/addquestions.html` when running app.
+
 ## Deploying to Heroku
 
 ```
 $ git push heroku master
 ```
 The app is now live at: [https://sciencebowl.herokuapp.com](https://sciencebowl.herokuapp.com).
-
+You will need the club's login credentials to access the app.
 
 ## Admin Functionality
 Python has some nice built in admin functionality we can use to edit the DB.
@@ -88,5 +93,7 @@ The parser found in `/ParseByFolder` is the best and fastest parser to use. Plea
 > i.e. `Evan Zhong J8_ Acid-Base Equilibria [35].txt`
 
 This formatting is optimized for downloading question sets from our team Google Drive (ahssciencebowl@gmail.com), as all downloads from the drive should automatically be in the above format (assuming you guys are still following the question template and naming nomenclature outlined in the club handbook).
+
+![Question template](/scripts/Question_template_example.png)
 
 If you're looking to parse a single question set use the parser found in `/ParseByFolder`. This, however, is significantly slower because you have to manually input all the header fields (Subject, Subtopic, Question code, etc.), as the parser isn't smart enough to extract them from the file.
